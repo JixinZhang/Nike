@@ -19,6 +19,8 @@
 
 @implementation ZGCDViewController
 
+static NSString *cellIdentifier = @"ZGCDCell";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = @[
@@ -50,6 +52,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [UIView new];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
     [self.tableView reloadData];
     
 }
@@ -59,9 +62,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ZGCDTableViewCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ZGCDTableViewCell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     NSDictionary *item = [self.dataSource objectAtIndex:indexPath.row];
     cell.textLabel.text = [item valueForKey:@"title"];
