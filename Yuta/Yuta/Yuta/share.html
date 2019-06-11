@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <title>Yuta test</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="Yuta.js"></script>
+</head>
+<body>
+<button id="image">图片分享</button>
+<button id="music">音乐分享</button>
+<button id="video">视频分享</button>
+<button id="web">web分享</button>
+</body>
+<script>
+    $('#image').click(function () {
+        Yuta.Share.image("https://dn-wscn-avatar.qbox.me/60/6c/b4/loading8.gif", "http://wallstreetcn.com", function (e) {
+            alert('a')
+        })
+    });
+    $('#closeAll').click(function () {
+        Yuta.WebView.closeAll("http://wallstreetcn.com")
+    });
+    $('#video').click(function () {
+        Yuta.Share.video("http://wallstreetcn.com", "https://dn-wscn-avatar.qbox.me/60/6c/b4/loading8.gif", 'title', function (e) {
+            alert('a')
+        })
+    });
+    $('#web').click(function () {
+        Yuta.Share.web("https://dn-wscn-avatar.qbox.me/60/6c/b4/loading8.gif",
+                "title", "http://wallstreetcn.com", 'content', function (e) {
+                    alert('a')
+                })
+    })
+</script>
+</html>

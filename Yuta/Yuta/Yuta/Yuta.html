@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0"
+          name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <title>Yuta test</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+</head>
+<body>
+<nav>
+    <ul>
+        <a href="#">
+            <li>Home</li>
+        </a>
+        <a href="camera.html">
+            <li>照相机</li>
+        </a>
+        <a href="webview.html">
+            <li>webview</li>
+        </a>
+        <a href="share.html">
+            <li>分享</li>
+        </a>
+        <a href="device.html">
+            <li>设备属性</li>
+        </a>
+        <a href="dialogs.html">
+            <li>dialogs</li>
+        </a>
+    </ul>
+    <div class="handle">Menu</div>
+</nav>
+
+<div style="padding-bottom: 60px;">
+    <form id="camera-form">
+        容许编辑 <input type="radio" checked value="false" name="allowEdit">
+        <input type="radio" value="true" name="allowEdit">
+        <br>
+        是否保存到相册
+        <input type="radio" checked value="false" name="saveToPhotoAlbum">
+        <input type="radio" value="true" name="saveToPhotoAlbum">
+        <br>
+
+        高 <input type="number" id="img-height" value="300" name="targetHeight">
+        宽 <input type="number" id="img-width" value="300" name="targetWidth">
+
+        <br>
+        摄像头
+        <select id="camera-direction" name="cameraDirection">
+            <option value="0" selected>后置</option>
+            <option value="1">前置</option>
+        </select>
+        <br>
+
+        目标资源类型
+        <select id="destination-type" name="destinationType">
+            <option value="0" selected>base64</option>
+            <option value="1">文件地址</option>
+        </select>
+        <br>
+
+        图片类型
+        <select id="encoding-type" name="encodingType">
+            <option value="0" selected>JPG</option>
+            <option value="1">PNG</option>
+        </select>
+        <br>
+
+
+        图片质量
+        <select id="quality" name="quality">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50" selected>50</option>
+            <option value="60">60</option>
+            <option value="70">70</option>
+            <option value="80">80</option>
+            <option value="90">90</option>
+            <option value="100">100</option>
+        </select>
+        <br>
+
+        图片来源
+        <select id="source-type" name="sourceType">
+            <option value="1" selected>相机</option>
+            <option value="0">相册</option>
+        </select>
+        <br>
+        *媒体类型
+        <select id="media-type" name="mediaType">
+            <option value="0" selected>图片</option>
+            <option value="1">视频</option>
+            <option value="2">all</option>
+        </select>
+    </form>
+    <img id="img">
+    <br>
+    <input type="button" id='camera' value="相机">
+    <br>
+    <input type="button" id='image' value="图片加载">
+    <br>
+    <input type="button" id="share-img" value="image分享">
+    <br>
+    <input type="button" id="open" value="open webview">
+    <br>
+    <input type="button" id="getType" value="网络类型">
+    <br>
+    <input type="button" id="device" value="设备属性">
+    <br>
+    <input type="button" id="confirm" value="confirm框">
+
+    <input type="button" id="alert" value="alert框">
+
+
+</div>
+<div id="log-msg"></div>
+<script>
+    function log(msg) {
+        if (typeof msg == 'object') {
+            msg = JSON.stringify(msg, 2)
+        }
+        $('#log-msg').html(msg)
+    }
+    window.onerror = function (message, source, lineno) {
+        log('Error: ' + message + ' Script: ' + source + ' Line: ' + lineno)
+    }
+</script>
+<script src="Yuta.js"></script>
+
+<script>
+    $('.handle').on('click', function(){
+        $('nav ul').toggleClass('showing');
+    });
+    $('#camera').click(function () {
+        var formData = $('#camera-form').serializeArray()
+        var data = {}
+        for (var i = 0; i < formData.length; i++) {
+            var item = formData[i]
+            if (item.name == 'saveToPhotoAlbum' || item.name == 'allowEdit') {
+                item.value = item.value == 'true'
+            } else {
+                item.value = item.value * 1
+            }
+            data[item.name] = item.value
+        }
+//        console.log(data)
+        Yuta.Camera.getPicture(function (e) {
+            $('#img')[0].src = 'data:image/jpeg;base64,' + e.data
+        }, function (e) {
+            log(e)
+        }, data)
+    })
+    $('#image').click(function () {
+        var data = {
+            "image":"https://wpimg.wallstcn.com/a8/72/e2/3dr99L.jpg!app.list.thumbnail"
+        }
+            Yuta.Load.loadImage(function (e) {
+            $('#img')[0].src =  e.data
+        },function (e) {
+            log(e)
+        }, data)
+    })
+    $('#share-img').click(function () {
+        Yuta.Share.web("http://tp2.sinaimg.cn/1934160513/180/5718508909/1",
+                "http://wallstreetcn.com", "title", 'content', function (e) {
+                    log(e)
+                })
+    })
+    $('#open').click(function () {
+        Yuta.WebView.open("https://jianshu.com")
+    })
+    $('#getType').click(function () {
+        Yuta.Connection.getType(function (obj) {
+            log(obj)
+        })
+    })
+    $('#device').click(function () {
+        Yuta.Device.getProperties(function (obj) {
+            log(obj)
+        })
+    })
+    $('#confirm').click(function () {
+        Yuta.Dialogs.confirm("我长的帅吗", function (obj) {
+            log(obj)
+        }, '标题', '确认', '取消', function (obj) {
+            log(obj)
+        })
+    })
+    $('#alert').click(function () {
+        Yuta.Dialogs.alert("我就是我,是不一样的烟花", function (obj) {
+            log(obj)
+        }, '一个标题', '确认')
+    })
+</script>
+</body>
+</html>

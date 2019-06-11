@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <title>Yuta test</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="Yuta.js"></script>
+</head>
+<body>
+    <button id="close">close</button>
+    <button id="closeAll">closeAll</button>
+    <button id="load">load</button>
+    <button id="open">open</button>
+</body>
+<script>
+    $('#close').click(function () {
+        Yuta.WebView.close("http://wallstreetcn.com")
+    });
+    $('#closeAll').click(function () {
+        Yuta.WebView.closeAll("http://wallstreetcn.com")
+    });
+    $('#load').click(function () {
+        Yuta.WebView.load("http://wallstreetcn.com")
+    });
+    $('#open').click(function () {
+        Yuta.WebView.open("http://wallstreetcn.com")
+    })
+</script>
+</html>

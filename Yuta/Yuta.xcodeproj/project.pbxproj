@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0900FDD322A66EA6004535D3 /* dialogs.html in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDCB22A66EA6004535D3 /* dialogs.html */; };
+		0900FDD422A66EA6004535D3 /* Yuta.html in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDCC22A66EA6004535D3 /* Yuta.html */; };
+		0900FDD522A66EA6004535D3 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDCD22A66EA6004535D3 /* index.css */; };
+		0900FDD622A66EA6004535D3 /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDCE22A66EA6004535D3 /* webview.html */; };
+		0900FDD722A66EA6004535D3 /* device.html in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDCF22A66EA6004535D3 /* device.html */; };
+		0900FDD822A66EA6004535D3 /* Yuta.js in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDD022A66EA6004535D3 /* Yuta.js */; };
+		0900FDD922A66EA6004535D3 /* camera.html in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDD122A66EA6004535D3 /* camera.html */; };
+		0900FDDA22A66EA6004535D3 /* share.html in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDD222A66EA6004535D3 /* share.html */; };
+		789FBF1F1E9731720087B364 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF1E1E9731720087B364 /* main.m */; };
+		789FBF221E9731720087B364 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF211E9731720087B364 /* AppDelegate.m */; };
+		789FBF251E9731720087B364 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF241E9731720087B364 /* ViewController.m */; };
+		789FBF281E9731720087B364 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF261E9731720087B364 /* Main.storyboard */; };
+		789FBF2A1E9731720087B364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF291E9731720087B364 /* Assets.xcassets */; };
+		789FBF2D1E9731720087B364 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF2B1E9731720087B364 /* LaunchScreen.storyboard */; };
+		789FBF371E9734AA0087B364 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789FBF361E9734AA0087B364 /* JavaScriptCore.framework */; };
+		789FBF391E9734DE0087B364 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789FBF381E9734DE0087B364 /* WebKit.framework */; };
+		789FBF3D1E9735120087B364 /* GoldLogFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789FBF3C1E9735120087B364 /* GoldLogFramework.framework */; };
+		789FBF401E9735AE0087B364 /* WKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF3F1E9735AE0087B364 /* WKViewController.m */; };
+		789FBF4A1E97368C0087B364 /* camera.html in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF421E97368C0087B364 /* camera.html */; };
+		789FBF4B1E97368C0087B364 /* device.html in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF431E97368C0087B364 /* device.html */; };
+		789FBF4C1E97368C0087B364 /* dialogs.html in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF441E97368C0087B364 /* dialogs.html */; };
+		789FBF4D1E97368C0087B364 /* index.css in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF451E97368C0087B364 /* index.css */; };
+		789FBF4E1E97368C0087B364 /* share.html in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF461E97368C0087B364 /* share.html */; };
+		789FBF4F1E97368C0087B364 /* webview.html in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF471E97368C0087B364 /* webview.html */; };
+		789FBF501E97368C0087B364 /* Yuta.html in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF481E97368C0087B364 /* Yuta.html */; };
+		789FBF511E97368C0087B364 /* Yuta.js in Resources */ = {isa = PBXBuildFile; fileRef = 789FBF491E97368C0087B364 /* Yuta.js */; };
+		789FBF7E1E973E6F0087B364 /* HybridImageClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF651E973E6F0087B364 /* HybridImageClipView.m */; };
+		789FBF7F1E973E6F0087B364 /* HybridImagePickerOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF671E973E6F0087B364 /* HybridImagePickerOptions.m */; };
+		789FBF801E973E6F0087B364 /* HybridImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF691E973E6F0087B364 /* HybridImagePickerViewController.m */; };
+		789FBF811E973E6F0087B364 /* HybridJsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF6B1E973E6F0087B364 /* HybridJsApi.m */; };
+		789FBF831E973E6F0087B364 /* HybridJsApiHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF6F1E973E6F0087B364 /* HybridJsApiHandler.m */; };
+		789FBF841E973E6F0087B364 /* HybridJsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF711E973E6F0087B364 /* HybridJsBridge.m */; };
+		789FBF851E973E6F0087B364 /* HybridJsManager+Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF731E973E6F0087B364 /* HybridJsManager+Application.m */; };
+		789FBF861E973E6F0087B364 /* HybridJsManager+Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF751E973E6F0087B364 /* HybridJsManager+Camera.m */; };
+		789FBF871E973E6F0087B364 /* HybridJsManager+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF771E973E6F0087B364 /* HybridJsManager+View.m */; };
+		789FBF881E973E6F0087B364 /* HybridJsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF791E973E6F0087B364 /* HybridJsManager.m */; };
+		789FBF891E973E6F0087B364 /* NSDictionary+HybridContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF7B1E973E6F0087B364 /* NSDictionary+HybridContext.m */; };
+		789FBF8A1E973E6F0087B364 /* UIImage+HybrideImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF7D1E973E6F0087B364 /* UIImage+HybrideImage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0900FDCB22A66EA6004535D3 /* dialogs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dialogs.html; sourceTree = "<group>"; };
+		0900FDCC22A66EA6004535D3 /* Yuta.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Yuta.html; sourceTree = "<group>"; };
+		0900FDCD22A66EA6004535D3 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
+		0900FDCE22A66EA6004535D3 /* webview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
+		0900FDCF22A66EA6004535D3 /* device.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = device.html; sourceTree = "<group>"; };
+		0900FDD022A66EA6004535D3 /* Yuta.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Yuta.js; sourceTree = "<group>"; };
+		0900FDD122A66EA6004535D3 /* camera.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = camera.html; sourceTree = "<group>"; };
+		0900FDD222A66EA6004535D3 /* share.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = share.html; sourceTree = "<group>"; };
+		789FBF1A1E9731720087B364 /* Yuta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yuta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		789FBF1E1E9731720087B364 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		789FBF201E9731720087B364 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		789FBF211E9731720087B364 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		789FBF231E9731720087B364 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		789FBF241E9731720087B364 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		789FBF271E9731720087B364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		789FBF291E9731720087B364 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		789FBF2C1E9731720087B364 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		789FBF2E1E9731720087B364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		789FBF361E9734AA0087B364 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		789FBF381E9734DE0087B364 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		789FBF3C1E9735120087B364 /* GoldLogFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoldLogFramework.framework; sourceTree = "<group>"; };
+		789FBF3E1E9735AE0087B364 /* WKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
+		789FBF3F1E9735AE0087B364 /* WKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKViewController.m; sourceTree = "<group>"; };
+		789FBF421E97368C0087B364 /* camera.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = camera.html; sourceTree = "<group>"; };
+		789FBF431E97368C0087B364 /* device.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = device.html; sourceTree = "<group>"; };
+		789FBF441E97368C0087B364 /* dialogs.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dialogs.html; sourceTree = "<group>"; };
+		789FBF451E97368C0087B364 /* index.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = index.css; sourceTree = "<group>"; };
+		789FBF461E97368C0087B364 /* share.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = share.html; sourceTree = "<group>"; };
+		789FBF471E97368C0087B364 /* webview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webview.html; sourceTree = "<group>"; };
+		789FBF481E97368C0087B364 /* Yuta.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Yuta.html; sourceTree = "<group>"; };
+		789FBF491E97368C0087B364 /* Yuta.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Yuta.js; sourceTree = "<group>"; };
+		789FBF641E973E6F0087B364 /* HybridImageClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridImageClipView.h; sourceTree = "<group>"; };
+		789FBF651E973E6F0087B364 /* HybridImageClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridImageClipView.m; sourceTree = "<group>"; };
+		789FBF661E973E6F0087B364 /* HybridImagePickerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridImagePickerOptions.h; sourceTree = "<group>"; };
+		789FBF671E973E6F0087B364 /* HybridImagePickerOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridImagePickerOptions.m; sourceTree = "<group>"; };
+		789FBF681E973E6F0087B364 /* HybridImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridImagePickerViewController.h; sourceTree = "<group>"; };
+		789FBF691E973E6F0087B364 /* HybridImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridImagePickerViewController.m; sourceTree = "<group>"; };
+		789FBF6A1E973E6F0087B364 /* HybridJsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridJsApi.h; sourceTree = "<group>"; };
+		789FBF6B1E973E6F0087B364 /* HybridJsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridJsApi.m; sourceTree = "<group>"; };
+		789FBF6E1E973E6F0087B364 /* HybridJsApiHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridJsApiHandler.h; sourceTree = "<group>"; };
+		789FBF6F1E973E6F0087B364 /* HybridJsApiHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridJsApiHandler.m; sourceTree = "<group>"; };
+		789FBF701E973E6F0087B364 /* HybridJsBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridJsBridge.h; sourceTree = "<group>"; };
+		789FBF711E973E6F0087B364 /* HybridJsBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridJsBridge.m; sourceTree = "<group>"; };
+		789FBF721E973E6F0087B364 /* HybridJsManager+Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HybridJsManager+Application.h"; sourceTree = "<group>"; };
+		789FBF731E973E6F0087B364 /* HybridJsManager+Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HybridJsManager+Application.m"; sourceTree = "<group>"; };
+		789FBF741E973E6F0087B364 /* HybridJsManager+Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HybridJsManager+Camera.h"; sourceTree = "<group>"; };
+		789FBF751E973E6F0087B364 /* HybridJsManager+Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HybridJsManager+Camera.m"; sourceTree = "<group>"; };
+		789FBF761E973E6F0087B364 /* HybridJsManager+View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HybridJsManager+View.h"; sourceTree = "<group>"; };
+		789FBF771E973E6F0087B364 /* HybridJsManager+View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HybridJsManager+View.m"; sourceTree = "<group>"; };
+		789FBF781E973E6F0087B364 /* HybridJsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridJsManager.h; sourceTree = "<group>"; };
+		789FBF791E973E6F0087B364 /* HybridJsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridJsManager.m; sourceTree = "<group>"; };
+		789FBF7A1E973E6F0087B364 /* NSDictionary+HybridContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HybridContext.h"; sourceTree = "<group>"; };
+		789FBF7B1E973E6F0087B364 /* NSDictionary+HybridContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HybridContext.m"; sourceTree = "<group>"; };
+		789FBF7C1E973E6F0087B364 /* UIImage+HybrideImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HybrideImage.h"; sourceTree = "<group>"; };
+		789FBF7D1E973E6F0087B364 /* UIImage+HybrideImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HybrideImage.m"; sourceTree = "<group>"; };
+		789FBF8B1E973E990087B364 /* GoldHybridFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoldHybridFramework.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		789FBF171E9731720087B364 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789FBF3D1E9735120087B364 /* GoldLogFramework.framework in Frameworks */,
+				789FBF391E9734DE0087B364 /* WebKit.framework in Frameworks */,
+				789FBF371E9734AA0087B364 /* JavaScriptCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0900FDCA22A66EA6004535D3 /* Yuta */ = {
+			isa = PBXGroup;
+			children = (
+				0900FDCB22A66EA6004535D3 /* dialogs.html */,
+				0900FDCC22A66EA6004535D3 /* Yuta.html */,
+				0900FDCD22A66EA6004535D3 /* index.css */,
+				0900FDCE22A66EA6004535D3 /* webview.html */,
+				0900FDCF22A66EA6004535D3 /* device.html */,
+				0900FDD022A66EA6004535D3 /* Yuta.js */,
+				0900FDD122A66EA6004535D3 /* camera.html */,
+				0900FDD222A66EA6004535D3 /* share.html */,
+			);
+			path = Yuta;
+			sourceTree = "<group>";
+		};
+		785235591F55ACDD003BA2B3 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				789FBF7C1E973E6F0087B364 /* UIImage+HybrideImage.h */,
+				789FBF7D1E973E6F0087B364 /* UIImage+HybrideImage.m */,
+				789FBF641E973E6F0087B364 /* HybridImageClipView.h */,
+				789FBF651E973E6F0087B364 /* HybridImageClipView.m */,
+				789FBF661E973E6F0087B364 /* HybridImagePickerOptions.h */,
+				789FBF671E973E6F0087B364 /* HybridImagePickerOptions.m */,
+				789FBF681E973E6F0087B364 /* HybridImagePickerViewController.h */,
+				789FBF691E973E6F0087B364 /* HybridImagePickerViewController.m */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		7852355A1F55AD09003BA2B3 /* HybridJsManager */ = {
+			isa = PBXGroup;
+			children = (
+				789FBF721E973E6F0087B364 /* HybridJsManager+Application.h */,
+				789FBF731E973E6F0087B364 /* HybridJsManager+Application.m */,
+				789FBF741E973E6F0087B364 /* HybridJsManager+Camera.h */,
+				789FBF751E973E6F0087B364 /* HybridJsManager+Camera.m */,
+				789FBF761E973E6F0087B364 /* HybridJsManager+View.h */,
+				789FBF771E973E6F0087B364 /* HybridJsManager+View.m */,
+				789FBF781E973E6F0087B364 /* HybridJsManager.h */,
+				789FBF791E973E6F0087B364 /* HybridJsManager.m */,
+			);
+			name = HybridJsManager;
+			sourceTree = "<group>";
+		};
+		7852355B1F55AD29003BA2B3 /* Hybrid */ = {
+			isa = PBXGroup;
+			children = (
+				789FBF6A1E973E6F0087B364 /* HybridJsApi.h */,
+				789FBF6B1E973E6F0087B364 /* HybridJsApi.m */,
+				789FBF6E1E973E6F0087B364 /* HybridJsApiHandler.h */,
+				789FBF6F1E973E6F0087B364 /* HybridJsApiHandler.m */,
+				789FBF701E973E6F0087B364 /* HybridJsBridge.h */,
+				789FBF711E973E6F0087B364 /* HybridJsBridge.m */,
+			);
+			name = Hybrid;
+			sourceTree = "<group>";
+		};
+		789FBF111E9731720087B364 = {
+			isa = PBXGroup;
+			children = (
+				789FBF1C1E9731720087B364 /* Yuta */,
+				789FBF1B1E9731720087B364 /* Products */,
+				789FBF351E9734AA0087B364 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		789FBF1B1E9731720087B364 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				789FBF1A1E9731720087B364 /* Yuta.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		789FBF1C1E9731720087B364 /* Yuta */ = {
+			isa = PBXGroup;
+			children = (
+				789FBF631E973E6F0087B364 /* GoldHybrid */,
+				789FBF201E9731720087B364 /* AppDelegate.h */,
+				789FBF211E9731720087B364 /* AppDelegate.m */,
+				789FBF231E9731720087B364 /* ViewController.h */,
+				789FBF241E9731720087B364 /* ViewController.m */,
+				789FBF3E1E9735AE0087B364 /* WKViewController.h */,
+				789FBF3F1E9735AE0087B364 /* WKViewController.m */,
+				789FBF261E9731720087B364 /* Main.storyboard */,
+				789FBF291E9731720087B364 /* Assets.xcassets */,
+				789FBF2B1E9731720087B364 /* LaunchScreen.storyboard */,
+				0900FDCA22A66EA6004535D3 /* Yuta */,
+				789FBF2E1E9731720087B364 /* Info.plist */,
+				789FBF1D1E9731720087B364 /* Supporting Files */,
+			);
+			path = Yuta;
+			sourceTree = "<group>";
+		};
+		789FBF1D1E9731720087B364 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				789FBF411E97368C0087B364 /* Yuta */,
+				789FBF1E1E9731720087B364 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		789FBF351E9734AA0087B364 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				789FBF3C1E9735120087B364 /* GoldLogFramework.framework */,
+				789FBF381E9734DE0087B364 /* WebKit.framework */,
+				789FBF361E9734AA0087B364 /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		789FBF411E97368C0087B364 /* Yuta */ = {
+			isa = PBXGroup;
+			children = (
+				789FBF421E97368C0087B364 /* camera.html */,
+				789FBF431E97368C0087B364 /* device.html */,
+				789FBF441E97368C0087B364 /* dialogs.html */,
+				789FBF451E97368C0087B364 /* index.css */,
+				789FBF461E97368C0087B364 /* share.html */,
+				789FBF471E97368C0087B364 /* webview.html */,
+				789FBF481E97368C0087B364 /* Yuta.html */,
+				789FBF491E97368C0087B364 /* Yuta.js */,
+			);
+			path = Yuta;
+			sourceTree = "<group>";
+		};
+		789FBF631E973E6F0087B364 /* GoldHybrid */ = {
+			isa = PBXGroup;
+			children = (
+				785235591F55ACDD003BA2B3 /* Camera */,
+				7852355B1F55AD29003BA2B3 /* Hybrid */,
+				7852355A1F55AD09003BA2B3 /* HybridJsManager */,
+				789FBF7A1E973E6F0087B364 /* NSDictionary+HybridContext.h */,
+				789FBF7B1E973E6F0087B364 /* NSDictionary+HybridContext.m */,
+				789FBF8B1E973E990087B364 /* GoldHybridFramework.h */,
+			);
+			path = GoldHybrid;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		789FBF191E9731720087B364 /* Yuta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 789FBF311E9731720087B364 /* Build configuration list for PBXNativeTarget "Yuta" */;
+			buildPhases = (
+				789FBF161E9731720087B364 /* Sources */,
+				789FBF171E9731720087B364 /* Frameworks */,
+				789FBF181E9731720087B364 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yuta;
+			productName = Yuta;
+			productReference = 789FBF1A1E9731720087B364 /* Yuta.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		789FBF121E9731720087B364 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = wallstreetcn.com;
+				TargetAttributes = {
+					789FBF191E9731720087B364 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 49FUNDNGC6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 789FBF151E9731720087B364 /* Build configuration list for PBXProject "Yuta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 789FBF111E9731720087B364;
+			productRefGroup = 789FBF1B1E9731720087B364 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				789FBF191E9731720087B364 /* Yuta */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		789FBF181E9731720087B364 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789FBF4E1E97368C0087B364 /* share.html in Resources */,
+				789FBF2D1E9731720087B364 /* LaunchScreen.storyboard in Resources */,
+				0900FDD322A66EA6004535D3 /* dialogs.html in Resources */,
+				789FBF2A1E9731720087B364 /* Assets.xcassets in Resources */,
+				0900FDDA22A66EA6004535D3 /* share.html in Resources */,
+				0900FDD522A66EA6004535D3 /* index.css in Resources */,
+				789FBF4C1E97368C0087B364 /* dialogs.html in Resources */,
+				0900FDD622A66EA6004535D3 /* webview.html in Resources */,
+				0900FDD922A66EA6004535D3 /* camera.html in Resources */,
+				789FBF281E9731720087B364 /* Main.storyboard in Resources */,
+				789FBF511E97368C0087B364 /* Yuta.js in Resources */,
+				789FBF4D1E97368C0087B364 /* index.css in Resources */,
+				789FBF4F1E97368C0087B364 /* webview.html in Resources */,
+				0900FDD422A66EA6004535D3 /* Yuta.html in Resources */,
+				789FBF4B1E97368C0087B364 /* device.html in Resources */,
+				789FBF4A1E97368C0087B364 /* camera.html in Resources */,
+				0900FDD722A66EA6004535D3 /* device.html in Resources */,
+				0900FDD822A66EA6004535D3 /* Yuta.js in Resources */,
+				789FBF501E97368C0087B364 /* Yuta.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		789FBF161E9731720087B364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				789FBF891E973E6F0087B364 /* NSDictionary+HybridContext.m in Sources */,
+				789FBF861E973E6F0087B364 /* HybridJsManager+Camera.m in Sources */,
+				789FBF7F1E973E6F0087B364 /* HybridImagePickerOptions.m in Sources */,
+				789FBF851E973E6F0087B364 /* HybridJsManager+Application.m in Sources */,
+				789FBF811E973E6F0087B364 /* HybridJsApi.m in Sources */,
+				789FBF881E973E6F0087B364 /* HybridJsManager.m in Sources */,
+				789FBF251E9731720087B364 /* ViewController.m in Sources */,
+				789FBF831E973E6F0087B364 /* HybridJsApiHandler.m in Sources */,
+				789FBF7E1E973E6F0087B364 /* HybridImageClipView.m in Sources */,
+				789FBF221E9731720087B364 /* AppDelegate.m in Sources */,
+				789FBF841E973E6F0087B364 /* HybridJsBridge.m in Sources */,
+				789FBF8A1E973E6F0087B364 /* UIImage+HybrideImage.m in Sources */,
+				789FBF401E9735AE0087B364 /* WKViewController.m in Sources */,
+				789FBF1F1E9731720087B364 /* main.m in Sources */,
+				789FBF801E973E6F0087B364 /* HybridImagePickerViewController.m in Sources */,
+				789FBF871E973E6F0087B364 /* HybridJsManager+View.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		789FBF261E9731720087B364 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				789FBF271E9731720087B364 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		789FBF2B1E9731720087B364 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				789FBF2C1E9731720087B364 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		789FBF2F1E9731720087B364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		789FBF301E9731720087B364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		789FBF321E9731720087B364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 49FUNDNGC6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Yuta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wallstreetcn.com.Yuta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		789FBF331E9731720087B364 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 49FUNDNGC6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Yuta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wallstreetcn.com.Yuta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		789FBF151E9731720087B364 /* Build configuration list for PBXProject "Yuta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789FBF2F1E9731720087B364 /* Debug */,
+				789FBF301E9731720087B364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		789FBF311E9731720087B364 /* Build configuration list for PBXNativeTarget "Yuta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				789FBF321E9731720087B364 /* Debug */,
+				789FBF331E9731720087B364 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 789FBF121E9731720087B364 /* Project object */;
+}
