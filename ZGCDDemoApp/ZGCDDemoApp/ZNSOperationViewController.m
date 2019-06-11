@@ -8,6 +8,9 @@
 
 #import "ZNSOperationViewController.h"
 
+/**
+ https://www.jianshu.com/p/4b1d77054b35
+ */
 @interface ZNSOperationViewController()
 
 @property (nonatomic, strong) NSArray<NSDictionary *> *dataSource;
@@ -433,7 +436,7 @@ static NSString *cellIdentifier = @"ZNSOperationCell";
         }
         [self.lock unlock];
     }
-    [[NSRunLoop mainRunLoop] addTimer:<#(nonnull NSTimer *)#> forMode:NSRunLoopCommonModes]
+//    [[NSRunLoop mainRunLoop] addTimer:(nonnull NSTimer *) forMode:NSRunLoopCommonModes]
 }
 
 @end

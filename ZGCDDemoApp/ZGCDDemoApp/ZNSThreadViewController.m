@@ -9,6 +9,9 @@
 #import "ZNSThreadViewController.h"
 #import <pthread.h>
 
+/**
+ https://www.jianshu.com/p/cbaeea5368b1
+ */
 @interface ZNSThreadViewController()
 
 @property (nonatomic, strong) NSArray<NSDictionary *> *dataSource;

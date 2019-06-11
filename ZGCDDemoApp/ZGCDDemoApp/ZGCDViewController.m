@@ -8,6 +8,9 @@
 
 #import "ZGCDViewController.h"
 
+/**
+ https://www.jianshu.com/p/2d57c72016c6
+ */
 @interface ZGCDViewController()<UITableViewDelegate, UITableViewDataSource>{
     dispatch_semaphore_t _semaphoreLock;
 }
