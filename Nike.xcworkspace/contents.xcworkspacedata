@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ZGestureConflictDemo/ZGestureConflictDemo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ZAlgoDemo/ZAlgoDemo.xcodeproj">
    </FileRef>
    <FileRef
