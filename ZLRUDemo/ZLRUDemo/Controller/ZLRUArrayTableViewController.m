@@ -16,6 +16,9 @@
 @property (nonatomic, strong) ZLRUCache *lruCache;
 @property (nonatomic, assign) NSTimeInterval timeInterval;
 
+@property (nonatomic, copy) NSString *str1;
+@property (nonatomic, strong) NSString *str2;
+
 @end
 
 @implementation ZLRUArrayTableViewController
@@ -31,6 +34,14 @@ static NSString *cellIdentifier = @"ZLRUDemoCell";
     self.tableView.tableHeaderView = self.textView;
     self.dataSource = @[@"a", @"b", @"c", @"d", @"e", @"f", @"g", @"h", @"i", @"j", @"k", @"l", @"m", @"n"];
     [self.tableView reloadData];
+    
+    NSMutableString *str = [NSMutableString stringWithString:@"123"];
+    NSLog(@"str = %p", str);
+    self.str1 = str;
+    self.str2 = str;
+    [str appendString:@"234"];
+    NSLog(@"self.str1 = %@", self.str1);
+    NSLog(@"self.str2 = %@", self.str2);
     
 }
 

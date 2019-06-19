@@ -56,13 +56,11 @@
         return;
     }
     
-    //如果加入的数据超出了maxCapacity, 则先将超出的部分移除，然后再将加入的数据放到第一个位置
-    if (self.list.count >= self.maxCapacity) {
-        NSMutableArray *tempList = [NSMutableArray arrayWithCapacity:self.maxCapacity];
-        for (NSInteger index = 0; index < self.maxCapacity - 1; index++) {
-            [tempList addObject:self.list[index]];
-        }
-        self.list = [NSMutableArray arrayWithArray:[tempList copy]];
+    NSMutableArray *temp = [NSMutableArray arrayWithCapacity:self.maxCapacity];
+    while (self.list.count >= self.maxCapacity) {
+        NSString *lastModel = self.list.lastObject;
+        [temp addObject:lastModel];
+        [self.list removeLastObject];
     }
     [self.list insertObject:model atIndex:0];
 }
