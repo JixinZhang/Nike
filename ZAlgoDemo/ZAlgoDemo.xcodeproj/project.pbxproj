@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		0998D5E622B8CF1500D4D6AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D5E522B8CF1500D4D6AB /* AppDelegate.m */; };
-		0998D5E922B8CF1500D4D6AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D5E822B8CF1500D4D6AB /* ViewController.m */; };
+		0998D5E922B8CF1500D4D6AB /* ZAlgoSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D5E822B8CF1500D4D6AB /* ZAlgoSortViewController.m */; };
 		0998D5EC22B8CF1500D4D6AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0998D5EA22B8CF1500D4D6AB /* Main.storyboard */; };
 		0998D5EE22B8CF1600D4D6AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0998D5ED22B8CF1600D4D6AB /* Assets.xcassets */; };
 		0998D5F122B8CF1600D4D6AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0998D5EF22B8CF1600D4D6AB /* LaunchScreen.storyboard */; };
 		0998D5F422B8CF1600D4D6AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D5F322B8CF1600D4D6AB /* main.m */; };
+		09D2CBBB22BB71E000772B4D /* ZAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */; };
+		09D2CBBE22BB74CF00772B4D /* ZAlgoStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D2CBBD22BB74CF00772B4D /* ZAlgoStringViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0998D5E122B8CF1500D4D6AB /* ZAlgoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZAlgoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0998D5E422B8CF1500D4D6AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0998D5E522B8CF1500D4D6AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0998D5E722B8CF1500D4D6AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0998D5E822B8CF1500D4D6AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0998D5E722B8CF1500D4D6AB /* ZAlgoSortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoSortViewController.h; sourceTree = "<group>"; };
+		0998D5E822B8CF1500D4D6AB /* ZAlgoSortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoSortViewController.m; sourceTree = "<group>"; };
 		0998D5EB22B8CF1500D4D6AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0998D5ED22B8CF1600D4D6AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0998D5F022B8CF1600D4D6AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0998D5F222B8CF1600D4D6AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0998D5F322B8CF1600D4D6AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09D2CBB922BB71E000772B4D /* ZAlgoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoViewController.h; sourceTree = "<group>"; };
+		09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoViewController.m; sourceTree = "<group>"; };
+		09D2CBBC22BB74CF00772B4D /* ZAlgoStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoStringViewController.h; sourceTree = "<group>"; };
+		09D2CBBD22BB74CF00772B4D /* ZAlgoStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoStringViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +66,35 @@
 			children = (
 				0998D5E422B8CF1500D4D6AB /* AppDelegate.h */,
 				0998D5E522B8CF1500D4D6AB /* AppDelegate.m */,
-				0998D5E722B8CF1500D4D6AB /* ViewController.h */,
-				0998D5E822B8CF1500D4D6AB /* ViewController.m */,
 				0998D5EA22B8CF1500D4D6AB /* Main.storyboard */,
 				0998D5ED22B8CF1600D4D6AB /* Assets.xcassets */,
 				0998D5EF22B8CF1600D4D6AB /* LaunchScreen.storyboard */,
 				0998D5F222B8CF1600D4D6AB /* Info.plist */,
 				0998D5F322B8CF1600D4D6AB /* main.m */,
+				09D2CBB922BB71E000772B4D /* ZAlgoViewController.h */,
+				09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */,
+				09D2CBBF22BB760D00772B4D /* ZAlgoSort */,
+				09D2CBC022BB762500772B4D /* ZAlgoString */,
 			);
 			path = ZAlgoDemo;
+			sourceTree = "<group>";
+		};
+		09D2CBBF22BB760D00772B4D /* ZAlgoSort */ = {
+			isa = PBXGroup;
+			children = (
+				0998D5E722B8CF1500D4D6AB /* ZAlgoSortViewController.h */,
+				0998D5E822B8CF1500D4D6AB /* ZAlgoSortViewController.m */,
+			);
+			path = ZAlgoSort;
+			sourceTree = "<group>";
+		};
+		09D2CBC022BB762500772B4D /* ZAlgoString */ = {
+			isa = PBXGroup;
+			children = (
+				09D2CBBC22BB74CF00772B4D /* ZAlgoStringViewController.h */,
+				09D2CBBD22BB74CF00772B4D /* ZAlgoStringViewController.m */,
+			);
+			path = ZAlgoString;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0998D5E922B8CF1500D4D6AB /* ViewController.m in Sources */,
+				09D2CBBE22BB74CF00772B4D /* ZAlgoStringViewController.m in Sources */,
+				09D2CBBB22BB71E000772B4D /* ZAlgoViewController.m in Sources */,
+				0998D5E922B8CF1500D4D6AB /* ZAlgoSortViewController.m in Sources */,
 				0998D5F422B8CF1600D4D6AB /* main.m in Sources */,
 				0998D5E622B8CF1500D4D6AB /* AppDelegate.m in Sources */,
 			);

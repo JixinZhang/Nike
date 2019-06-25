@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  ZAlgoSortViewController.m
 //  ZAlgoDemo
 //
 //  Created by zjixin on 2019/6/18.
 //  Copyright © 2019 zjixin. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ZAlgoSortViewController.h"
 
 /**
  iOS开发几大算法资料整理
  https://www.jianshu.com/p/77ba54a46ad7
  */
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ZAlgoSortViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ZAlgoSortViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,9 +34,9 @@
                         @{@"title" : @"1. 冒泡排序",
                           @"subtitle": @"(O(n^2))",
                           @"action" : @"bubbleSortDemo"},
-//                        @{@"title" : @"2. 选择排序--堆排序",
-//                          @"subtitle": @"(O(n^2))",
-//                          @"action" : @"selectSortDemo"},
+                        @{@"title" : @"2. 选择排序",
+                          @"subtitle": @"(O(n^2))",
+                          @"action" : @"selectSortDemo"},
                         @{@"title" : @"3. 插入排序",
                           @"subtitle": @"(O(n^2))",
                           @"action" : @"insertSortDemo"},
@@ -117,10 +117,10 @@
 
 - (void)bubbleSortDemo {
     NSMutableArray *temp = [NSMutableArray arrayWithArray:self.originalArray];
-    for (NSInteger index = 0; index < temp.count; index++) {
-        for (NSInteger j = index + 1; j < temp.count; j++) {
-            if ([temp[j] integerValue] < [temp[index] integerValue]) {
-                [temp exchangeObjectAtIndex:index withObjectAtIndex:j];
+    for (NSInteger index = 0; index < temp.count - 1; index++) {
+        for (NSInteger j = 0; j < temp.count - 1 - index; j++) {
+            if ([temp[j + 1] integerValue] < [temp[j] integerValue]) {
+                [temp exchangeObjectAtIndex:j withObjectAtIndex:j+1];
                 self.stepCount++;
             }
         }
@@ -128,6 +128,58 @@
     NSLog(@"%@ step = %ld", NSStringFromSelector(_cmd), (long)self.stepCount);
     NSLog(@"temp = %@",temp);
 }
+
+#pragma mark - SelectSort
+
+- (void)selectSortDemo {
+    //直接选择排序
+    NSMutableArray *temp = [NSMutableArray arrayWithArray:self.originalArray];
+    for (NSInteger i = 0; i < temp.count; i++) {
+        for (NSInteger j = i + 1; j < temp.count; j++) {
+            if ([temp[j] integerValue] < [temp[i] integerValue]) {
+                [temp exchangeObjectAtIndex:i withObjectAtIndex:j];
+                self.stepCount++;
+            }
+        }
+    }
+    
+    NSLog(@"%@ step = %ld", NSStringFromSelector(_cmd), (long)self.stepCount);
+    NSLog(@"temp = %@",temp);
+}
+
+#pragma mark -- insertSort
+
+- (void)insertSortDemo {
+    NSMutableArray *temp = [NSMutableArray arrayWithArray:self.originalArray];
+    [self insertSortWith:temp];
+    NSLog(@"%@ step = %ld", NSStringFromSelector(_cmd), (long)self.stepCount);
+    NSLog(@"temp = %@",temp);
+    
+}
+
+- (void)insertSortWith:(NSMutableArray *)array {
+    if (array.count <= 1) {
+        return;
+    }
+    /* 插入排序
+     1.将未排序序列的第一个元素作为有序序列，把第二个元素到最后一个元素当做未排序序列
+     2.从头到尾一次扫描未排序序列，将每个元素插入到适当的位置（相等，则插入到相等元素的后面）
+     */
+    for (NSInteger index = 1; index < array.count; index++) {
+        NSInteger value = [array[index] integerValue];
+        NSInteger j = index - 1;
+        for (; j >= 0; --j) {
+            if ([array[j] integerValue] > value) {
+                array[j+1] = array[j];
+                self.stepCount++;
+            } else {
+                break;
+            }
+        }
+        array[j+1] = @(value);
+    }
+}
+
 
 #pragma mark -- Quick sort
 
@@ -179,45 +231,6 @@
    
     [self quickSortWithArray:array left:left right:i - 1];
     [self quickSortWithArray:array left:i + 1 right:right];
-}
-
-#pragma mark - SelectSort
-
-- (void)selectSortDemo {
-    //堆排序(heap sort 涉及到完全二叉树的概念)
-    NSMutableArray *temp = [NSMutableArray arrayWithArray:self.originalArray];
-    [self mergeSortWithArray:temp left:0 right:temp.count - 1];
-    NSLog(@"%@ step = %ld", NSStringFromSelector(_cmd), (long)self.stepCount);
-    NSLog(@"temp = %@",temp);
-}
-
-#pragma mark -- insertSort
-
-- (void)insertSortDemo {
-    NSMutableArray *temp = [NSMutableArray arrayWithArray:self.originalArray];
-    [self insertSortWith:temp];
-    NSLog(@"%@ step = %ld", NSStringFromSelector(_cmd), (long)self.stepCount);
-    NSLog(@"temp = %@",temp);
-
-}
-
-- (void)insertSortWith:(NSMutableArray *)array {
-    if (array.count <= 1) {
-        return;
-    }
-    for (NSInteger index = 1; index < array.count; index++) {
-        NSInteger value = [array[index] integerValue];
-        NSInteger j = index - 1;
-        for (; j >= 0; --j) {
-            if ([array[j] integerValue] > value) {
-                array[j+1] = array[j];
-                self.stepCount++;
-            } else {
-                break;
-            }
-        }
-        array[j+1] = @(value);
-    }
 }
 
 #pragma mark -- mergeSort

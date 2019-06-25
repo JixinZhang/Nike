@@ -73,7 +73,8 @@
     NSString *title = [model valueForKey:@"title"];
     ZGCDViewController *vc = [[ZGCDViewController alloc] init];
     vc.title = title;
-    [self.navigationController pushViewController:vc animated:YES];}
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)NSThreadDemo:(NSDictionary *)model {
     NSString *title = [model valueForKey:@"title"];

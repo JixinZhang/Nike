@@ -5,6 +5,9 @@
       location = "group:ZGestureConflictDemo/ZGestureConflictDemo.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:ZAlgoDemoSwift/ZAlgoDemoSwift.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ZAlgoDemo/ZAlgoDemo.xcodeproj">
    </FileRef>
    <FileRef

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZAlgoSortViewController.h
 //  ZAlgoDemo
 //
 //  Created by zjixin on 2019/6/18.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ZAlgoSortViewController : UIViewController
 
 
 @end
