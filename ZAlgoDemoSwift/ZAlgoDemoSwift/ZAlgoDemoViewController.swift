@@ -20,18 +20,44 @@ class ZAlgoDemoViewController: UIViewController, UITableViewDelegate, UITableVie
     var dataSource:Array<Dictionary<String, String>>!
     var subVC:UIViewController!
     
+    var tableFooterView: UIImageView!
+    
     override func viewDidLoad() {
-        self.view.addSubview(self.tableView)
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ZAlgoDemoSwiftCell")
+        self.title = "algorithm by swift"
         
         self.dataSource = [
             ["title": "1. 排序算法",
              "subtitle":"",
              "viewController":"ZAlgoDemoSortViewController"],
-            ["title" : "2. 其他",
+            
+            ["title": "2. 链表(linked list)",
+             "subtitle":"",
+             "viewController":"ZAlgoDemoLinkedListViewController"],
+            
+            ["title" : "3. 其他",
             "subtitle": "",
             "viewController":"ZAlgoDemoStringViewController"],
         ];
+        
+        self.view.addSubview(self.tableView)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ZAlgoDemoSwiftCell")
+        
+        self.tableFooterView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: self.view.frame.width, height: 200))
+        self.tableFooterView.backgroundColor = .white
+        self.tableView.tableFooterView = self.tableFooterView
+        
+        DispatchQueue.global().async {
+            let url = URL.init(string: "https://images.shobserver.com/news/690_390/2017/4/17/7abba2ae-b988-4c15-afeb-ebc7b042b61f.jpg")
+            var imageData: Data?
+            do {
+                try imageData =  Data.init(contentsOf: url!)
+            } catch  {
+                imageData = nil;
+            }
+            DispatchQueue.main.async {
+                self.tableFooterView.image = UIImage.init(data: imageData!, scale: UIScreen.main.scale)
+            }
+        }
         
     }
     
@@ -61,6 +87,8 @@ class ZAlgoDemoViewController: UIViewController, UITableViewDelegate, UITableVie
             subVC = ZAlgoDemoStringViewController.init()
         } else if (vcClassName == "ZAlgoDemoSortViewController") {
             subVC = ZAlgoDemoSortViewController.init()
+        } else if (vcClassName == "ZAlgoDemoLinkedListViewController") {
+            subVC = ZAlgoDemoLinkedListViewController.init()
         }
         
         subVC.title = title

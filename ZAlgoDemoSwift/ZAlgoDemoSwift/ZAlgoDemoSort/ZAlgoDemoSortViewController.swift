@@ -16,6 +16,12 @@ class ZAlgoDemoSortViewController: UITableViewController {
     var originalArray:Array<Int>!
     var stepCount:Int = 0
     
+    lazy var tableViewRefreshControl:UIRefreshControl = {
+        let tableViewRefreshControl = UIRefreshControl.init()
+        tableViewRefreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        return tableViewRefreshControl
+    }()
+    
     override func viewDidLoad() {
         setupData()
         self.tableView.tableFooterView = UIView.init()
@@ -23,8 +29,23 @@ class ZAlgoDemoSortViewController: UITableViewController {
         self.tableView.dataSource = self;
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
         
-        self.tableView.reloadData()
         
+        
+        self.tableView.refreshControl = self.tableViewRefreshControl
+        
+        self.tableView.reloadData()
+    }
+    
+    @objc
+    func refreshData() {
+        self.tableViewRefreshControl.beginRefreshing()
+        setupData()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.3) {
+            self.tableViewRefreshControl.endRefreshing()
+        }
+    }
+    
+    func setupData() {
         let count:Int = 1000;
         self.originalArray = [Int](repeating: 0, count: count)
         for index in 0 ..< self.originalArray.count {
@@ -32,9 +53,7 @@ class ZAlgoDemoSortViewController: UITableViewController {
             self.originalArray[index] = value
         }
 //        self.originalArray = [6, 1, 2, 7, 9, 3, 4, 5, 10, 8, 6]
-    }
-    
-    func setupData() {
+        
         self.dataSource = [
             ["title" : "1. 冒泡排序",
              "subtitle": "(O(n^2))",
