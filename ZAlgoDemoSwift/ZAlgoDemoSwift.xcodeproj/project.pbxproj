@@ -18,6 +18,9 @@
 		093C4DA122C0BBAE006FF0C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C4DA022C0BBAE006FF0C6 /* Foundation.framework */; };
 		09C5730F22C1FD980087645F /* ZAlgoDemoLinkedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5730E22C1FD980087645F /* ZAlgoDemoLinkedListViewController.swift */; };
 		09C5731222C2013D0087645F /* ZAlgoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5731122C2013D0087645F /* ZAlgoList.swift */; };
+		09C5731722C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5731622C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift */; };
+		09C5731B22C34EB40087645F /* ZAlgoDemoTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5731A22C34EB40087645F /* ZAlgoDemoTreeViewController.swift */; };
+		09C5731E22C353C00087645F /* ZAlgoTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5731D22C353C00087645F /* ZAlgoTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		093C4DA022C0BBAE006FF0C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09C5730E22C1FD980087645F /* ZAlgoDemoLinkedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoLinkedListViewController.swift; sourceTree = "<group>"; };
 		09C5731122C2013D0087645F /* ZAlgoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoList.swift; sourceTree = "<group>"; };
+		09C5731622C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoBinarySearchViewController.swift; sourceTree = "<group>"; };
+		09C5731A22C34EB40087645F /* ZAlgoDemoTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoTreeViewController.swift; sourceTree = "<group>"; };
+		09C5731D22C353C00087645F /* ZAlgoTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoTree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +79,9 @@
 				093C4D9722C0B2D7006FF0C6 /* ZAlgoDemoViewController.swift */,
 				09C5731422C234320087645F /* ZAlgoDemoSort */,
 				09C5731022C201160087645F /* ZAlgoDemoLinkedList */,
-				093C4D9B22C0BB8E006FF0C6 /* ZAlgoDemoStringViewController.swift */,
+				09C5731822C3159A0087645F /* ZAlgoDemoString */,
+				09C5731922C315A40087645F /* ZAlgoDemoBinarySearch */,
+				09C5731C22C34EB80087645F /* ZAlgoDemoTree */,
 				093C4D8922C0B275006FF0C6 /* Main.storyboard */,
 				093C4D8C22C0B276006FF0C6 /* Assets.xcassets */,
 				093C4D8E22C0B276006FF0C6 /* LaunchScreen.storyboard */,
@@ -106,6 +114,31 @@
 				093C4D9922C0BB72006FF0C6 /* ZAlgoDemoSortViewController.swift */,
 			);
 			path = ZAlgoDemoSort;
+			sourceTree = "<group>";
+		};
+		09C5731822C3159A0087645F /* ZAlgoDemoString */ = {
+			isa = PBXGroup;
+			children = (
+				093C4D9B22C0BB8E006FF0C6 /* ZAlgoDemoStringViewController.swift */,
+			);
+			path = ZAlgoDemoString;
+			sourceTree = "<group>";
+		};
+		09C5731922C315A40087645F /* ZAlgoDemoBinarySearch */ = {
+			isa = PBXGroup;
+			children = (
+				09C5731622C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift */,
+			);
+			path = ZAlgoDemoBinarySearch;
+			sourceTree = "<group>";
+		};
+		09C5731C22C34EB80087645F /* ZAlgoDemoTree */ = {
+			isa = PBXGroup;
+			children = (
+				09C5731A22C34EB40087645F /* ZAlgoDemoTreeViewController.swift */,
+				09C5731D22C353C00087645F /* ZAlgoTree.swift */,
+			);
+			path = ZAlgoDemoTree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,10 +214,13 @@
 			files = (
 				09C5730F22C1FD980087645F /* ZAlgoDemoLinkedListViewController.swift in Sources */,
 				093C4D9A22C0BB72006FF0C6 /* ZAlgoDemoSortViewController.swift in Sources */,
+				09C5731E22C353C00087645F /* ZAlgoTree.swift in Sources */,
 				093C4D9822C0B2D7006FF0C6 /* ZAlgoDemoViewController.swift in Sources */,
 				09C5731222C2013D0087645F /* ZAlgoList.swift in Sources */,
 				093C4D9C22C0BB8E006FF0C6 /* ZAlgoDemoStringViewController.swift in Sources */,
 				093C4D8622C0B275006FF0C6 /* AppDelegate.swift in Sources */,
+				09C5731722C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift in Sources */,
+				09C5731B22C34EB40087645F /* ZAlgoDemoTreeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

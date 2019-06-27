@@ -34,7 +34,16 @@ class ZAlgoDemoViewController: UIViewController, UITableViewDelegate, UITableVie
              "subtitle":"",
              "viewController":"ZAlgoDemoLinkedListViewController"],
             
-            ["title" : "3. 其他",
+            ["title": "3. 二分查找(Binary search)",
+             "subtitle":"",
+             "viewController":"ZAlgoDemoBinarySearchViewController"],
+            
+            ["title": "4. 二叉搜索树(Binary Search tree)",
+             "subtitle":"",
+             "viewController":"ZAlgoDemoTreeViewController"],
+            
+            
+            ["title" : "0. 其他",
             "subtitle": "",
             "viewController":"ZAlgoDemoStringViewController"],
         ];
@@ -70,7 +79,7 @@ class ZAlgoDemoViewController: UIViewController, UITableViewDelegate, UITableVie
         let dic:Dictionary = self.dataSource[indexPath.row]
         let title:String = dic["title"]!
         let subtitle:String = dic["subtitle"]!
-        cell.textLabel?.text = title + "--" + subtitle
+        cell.textLabel?.text = title + " -- " + subtitle
         return cell
     }
     
@@ -89,6 +98,12 @@ class ZAlgoDemoViewController: UIViewController, UITableViewDelegate, UITableVie
             subVC = ZAlgoDemoSortViewController.init()
         } else if (vcClassName == "ZAlgoDemoLinkedListViewController") {
             subVC = ZAlgoDemoLinkedListViewController.init()
+        } else if (vcClassName == "ZAlgoDemoBinarySearchViewController") {
+            subVC = ZAlgoDemoBinarySearchViewController.init()
+        } else if (vcClassName == "ZAlgoDemoTreeViewController") {
+            subVC = ZAlgoDemoTreeViewController.init()
+        } else if (vcClassName == "") {
+            
         }
         
         subVC.title = title

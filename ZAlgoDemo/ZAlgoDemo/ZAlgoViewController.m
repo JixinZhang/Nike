@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = "algorithm by Objective-C"
+    self.title = @"algorithm by Objective-C";
     [self.view addSubview:self.tableView];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ZAlgoDemoCell"];
@@ -35,6 +35,7 @@
     [self.tableView reloadData];
     
     [self.view.layer.delegate actionForLayer:self.view.layer forKey:@"position"];
+    sort();
 }
 
 - (UITableView *)tableView {
@@ -75,6 +76,19 @@
     if (viewController) {
         [self.navigationController pushViewController:viewController animated:YES];
     }
+}
+
+int compar_int(const void* _a, const void* _b) {
+    int *a = (int* )_a;
+    int *b = (int *)_b;
+    return *a - *b;
+}
+
+void sort() {
+    int array[] = {6, 1 ,2 ,7, 9, 3, 4, 5, 10, 8};
+    //C语言提供的快速排序函数
+    qsort(array, 10, sizeof(int), compar_int);
+    printf("");
 }
 
 @end

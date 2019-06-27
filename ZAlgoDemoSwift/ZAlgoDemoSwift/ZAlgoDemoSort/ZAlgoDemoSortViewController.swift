@@ -28,11 +28,7 @@ class ZAlgoDemoSortViewController: UITableViewController {
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
-        
-        
-        
         self.tableView.refreshControl = self.tableViewRefreshControl
-        
         self.tableView.reloadData()
     }
     
