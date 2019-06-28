@@ -16,6 +16,8 @@
 		093C4D9C22C0BB8E006FF0C6 /* ZAlgoDemoStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C4D9B22C0BB8E006FF0C6 /* ZAlgoDemoStringViewController.swift */; };
 		093C4D9F22C0BBA6006FF0C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C4D9E22C0BBA6006FF0C6 /* UIKit.framework */; };
 		093C4DA122C0BBAE006FF0C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093C4DA022C0BBAE006FF0C6 /* Foundation.framework */; };
+		0944EDCA22C5FB7A00F663A6 /* ZAlgoDemoHeapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944EDC922C5FB7A00F663A6 /* ZAlgoDemoHeapViewController.swift */; };
+		0944EDCD22C5FBA200F663A6 /* ZAlgoHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944EDCC22C5FBA200F663A6 /* ZAlgoHeap.swift */; };
 		09C5730F22C1FD980087645F /* ZAlgoDemoLinkedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5730E22C1FD980087645F /* ZAlgoDemoLinkedListViewController.swift */; };
 		09C5731222C2013D0087645F /* ZAlgoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5731122C2013D0087645F /* ZAlgoList.swift */; };
 		09C5731722C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5731622C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift */; };
@@ -35,6 +37,8 @@
 		093C4D9B22C0BB8E006FF0C6 /* ZAlgoDemoStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoStringViewController.swift; sourceTree = "<group>"; };
 		093C4D9E22C0BBA6006FF0C6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		093C4DA022C0BBAE006FF0C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0944EDC922C5FB7A00F663A6 /* ZAlgoDemoHeapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoHeapViewController.swift; sourceTree = "<group>"; };
+		0944EDCC22C5FBA200F663A6 /* ZAlgoHeap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoHeap.swift; sourceTree = "<group>"; };
 		09C5730E22C1FD980087645F /* ZAlgoDemoLinkedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoLinkedListViewController.swift; sourceTree = "<group>"; };
 		09C5731122C2013D0087645F /* ZAlgoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoList.swift; sourceTree = "<group>"; };
 		09C5731622C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoBinarySearchViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 				09C5731822C3159A0087645F /* ZAlgoDemoString */,
 				09C5731922C315A40087645F /* ZAlgoDemoBinarySearch */,
 				09C5731C22C34EB80087645F /* ZAlgoDemoTree */,
+				0944EDCB22C5FB8200F663A6 /* ZAlgoDemoHeap */,
 				093C4D8922C0B275006FF0C6 /* Main.storyboard */,
 				093C4D8C22C0B276006FF0C6 /* Assets.xcassets */,
 				093C4D8E22C0B276006FF0C6 /* LaunchScreen.storyboard */,
@@ -97,6 +102,15 @@
 				093C4D9E22C0BBA6006FF0C6 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0944EDCB22C5FB8200F663A6 /* ZAlgoDemoHeap */ = {
+			isa = PBXGroup;
+			children = (
+				0944EDC922C5FB7A00F663A6 /* ZAlgoDemoHeapViewController.swift */,
+				0944EDCC22C5FBA200F663A6 /* ZAlgoHeap.swift */,
+			);
+			path = ZAlgoDemoHeap;
 			sourceTree = "<group>";
 		};
 		09C5731022C201160087645F /* ZAlgoDemoLinkedList */ = {
@@ -217,8 +231,10 @@
 				09C5731E22C353C00087645F /* ZAlgoTree.swift in Sources */,
 				093C4D9822C0B2D7006FF0C6 /* ZAlgoDemoViewController.swift in Sources */,
 				09C5731222C2013D0087645F /* ZAlgoList.swift in Sources */,
+				0944EDCD22C5FBA200F663A6 /* ZAlgoHeap.swift in Sources */,
 				093C4D9C22C0BB8E006FF0C6 /* ZAlgoDemoStringViewController.swift in Sources */,
 				093C4D8622C0B275006FF0C6 /* AppDelegate.swift in Sources */,
+				0944EDCA22C5FB7A00F663A6 /* ZAlgoDemoHeapViewController.swift in Sources */,
 				09C5731722C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift in Sources */,
 				09C5731B22C34EB40087645F /* ZAlgoDemoTreeViewController.swift in Sources */,
 			);

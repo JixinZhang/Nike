@@ -32,8 +32,7 @@ class ZAlgoDemoSortViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    @objc
-    func refreshData() {
+    @objc func refreshData() {
         self.tableViewRefreshControl.beginRefreshing()
         setupData()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.3) {
@@ -114,8 +113,7 @@ class ZAlgoDemoSortViewController: UITableViewController {
         }
     }
     
-    @objc
-    func bubbleSortDemo() {
+    @objc func bubbleSortDemo() {
         /* 冒泡排序
          1.比较当前的元素和其下一个元素，第一个比第二个大则交换；
          2.一个迭代后最后一个元素是最大
@@ -138,8 +136,7 @@ class ZAlgoDemoSortViewController: UITableViewController {
         print(temp)
     }
     
-    @objc
-    func selectSortDemo() {
+    @objc func selectSortDemo() {
         /*选择排序是冒泡排序的改进
          1.首先找到最小（最大）的元素放到排序序列的起始位置
          2.再从剩下的未排序序列中找到最小（最大）的元素，放到已排序序列的末尾
@@ -161,8 +158,7 @@ class ZAlgoDemoSortViewController: UITableViewController {
         print(temp)
     }
     
-    @objc
-    func insertSortDemo() {
+    @objc func insertSortDemo() {
         /* 插入排序
          1.将未排序序列的第一个元素作为有序序列，把第二个元素到最后一个元素当做未排序序列
          2.从头到尾一次扫描未排序序列，将每个元素插入到适当的位置（相等，则插入到相等元素的后面）
@@ -186,8 +182,7 @@ class ZAlgoDemoSortViewController: UITableViewController {
 
     }
     
-    @objc
-    func quickSortDemo() {
+    @objc func quickSortDemo() {
         // https://blog.csdn.net/vayne_xiao/article/details/53508973
         var temp:Array = self.originalArray
         quickSort(array: &temp, left: 0, right: temp.count - 1)
@@ -234,8 +229,7 @@ class ZAlgoDemoSortViewController: UITableViewController {
         quickSort(array: &array, left: i + 1, right: right)
     }
     
-    @objc
-    func mergeSortDemo() {
+    @objc func mergeSortDemo() {
         // https://www.jianshu.com/p/77ba54a46ad7
         var temp:Array = self.originalArray
         mergeSort(array: &temp, left: 0, right: temp.count - 1)
@@ -299,8 +293,7 @@ class ZAlgoDemoSortViewController: UITableViewController {
         }
     }
     
-    @objc
-    func mergeBottomToTopDemo() {
+    @objc func mergeBottomToTopDemo() {
         var temp:Array = self.originalArray
         
         var size = 1;

@@ -33,6 +33,8 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: treeIdentifier)
         
         self.tableView.reloadData()
+        
+        self.subtitle = "subtitle"
     }
     
     func setupData() {
@@ -59,6 +61,9 @@ class ZAlgoDemoTreeViewController: UITableViewController {
             
             ["title" : "4. 层级遍历 -- 队列",
              "action" : "levelOrderDemo"],
+            
+            ["title" : "5. 删除二叉树中的节点",
+             "action" : "deleteDemo"],
             
             
         ]
@@ -95,8 +100,8 @@ class ZAlgoDemoTreeViewController: UITableViewController {
     }
     
     //MARK: Binary search
-    @objc
-    func generateBinarySearchTree() {
+    @objc func generateBinarySearchTree() {
+        self.originalArray = [33, 17, 13, 16, 18, 25, 19, 27, 50, 34, 58, 66, 51, 55];
         let rootValue = self.originalArray.first!
         self.originalArray.removeFirst()
         let treeRoot = ZAlgoTreeNode.init(rootValue);
@@ -120,8 +125,7 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         self.textView.text = string
     }
     
-    @objc
-    func bstPreOrderRecursionDemo() {
+    @objc func bstPreOrderRecursionDemo() {
         let result = self.tree?.preOrderRecursion()
         var array:Array<Int> = Array.init()
         if result != nil {
@@ -139,8 +143,7 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         self.textView.text = string
     }
     
-    @objc
-    func inOrderRecursionDemo() {
+    @objc func inOrderRecursionDemo() {
         let result = self.tree?.inOrderRecursion()
         var array:Array<Int> = Array.init()
         if result != nil {
@@ -158,8 +161,7 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         self.textView.text = string
     }
     
-    @objc
-    func postOrderRecursionDemo() {
+    @objc func postOrderRecursionDemo() {
         let result = self.tree?.postOrderRecursion()
         var array:Array<Int> = Array.init()
         if result != nil {
@@ -177,8 +179,7 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         self.textView.text = string
     }
     
-    @objc
-    func preOrderStackDemo() {
+    @objc func preOrderStackDemo() {
         let result = self.tree?.preOrderStack()
         var array:Array<Int> = Array.init()
         if result != nil {
@@ -196,8 +197,7 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         self.textView.text = string
     }
     
-    @objc
-    func inOrderStackDemo() {
+    @objc func inOrderStackDemo() {
         let result = self.tree?.inOrderStack()
         var array:Array<Int> = Array.init()
         if result != nil {
@@ -215,8 +215,7 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         self.textView.text = string
     }
     
-    @objc
-    func postOrderStackDemo() {
+    @objc func postOrderStackDemo() {
         let result = self.tree?.postOrderStack()
         var array:Array<Int> = Array.init()
         if result != nil {
@@ -234,8 +233,7 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         self.textView.text = string
     }
     
-    @objc
-    func postOrderStackWithRecordDemo() {
+    @objc func postOrderStackWithRecordDemo() {
         let result = self.tree?.postOrderStackWithRecord()
         var array:Array<Int> = Array.init()
         if result != nil {
@@ -253,8 +251,7 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         self.textView.text = string
     }
     
-    @objc
-    func levelOrderDemo() {
+    @objc func levelOrderDemo() {
         let result = self.tree?.levelOrder()
         var array = [String].init()
         guard result != nil else {
@@ -277,5 +274,26 @@ class ZAlgoDemoTreeViewController: UITableViewController {
         string.append(contentsOf: "\n\n")
         string.append(#function)
         self.textView.text = string
+    }
+    
+    @objc func deleteDemo() {
+        let targe = 50//13
+        self.tree?.delete(value: targe)
+        preOrderStackDemo()
+    }
+}
+
+private var subtitleNameKey = "subtitleNameKey"
+
+// MARK: - 分类，类扩展
+extension ZAlgoDemoTreeViewController {
+    var subtitle: String? {
+        get {
+            return objc_getAssociatedObject(self, &subtitleNameKey) as? String
+        }
+        
+        set {
+            return objc_setAssociatedObject(self, &subtitleNameKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
+        }
     }
 }

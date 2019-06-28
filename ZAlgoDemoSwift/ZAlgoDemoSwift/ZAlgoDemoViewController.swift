@@ -42,6 +42,9 @@ class ZAlgoDemoViewController: UIViewController, UITableViewDelegate, UITableVie
              "subtitle":"",
              "viewController":"ZAlgoDemoTreeViewController"],
             
+            ["title": "5. 堆(Heap)",
+             "subtitle":"",
+             "viewController":"ZAlgoDemoHeapViewController"],
             
             ["title" : "0. 其他",
             "subtitle": "",
@@ -102,8 +105,8 @@ class ZAlgoDemoViewController: UIViewController, UITableViewDelegate, UITableVie
             subVC = ZAlgoDemoBinarySearchViewController.init()
         } else if (vcClassName == "ZAlgoDemoTreeViewController") {
             subVC = ZAlgoDemoTreeViewController.init()
-        } else if (vcClassName == "") {
-            
+        } else if (vcClassName == "ZAlgoDemoHeapViewController") {
+            subVC = ZAlgoDemoHeapViewController.init()
         }
         
         subVC.title = title

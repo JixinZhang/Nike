@@ -132,6 +132,63 @@ class ZAlgoBinarySearchTree: NSObject {
         }
     }
     
+    /// 二叉查找树的删除操作
+    ///
+    /// 第一种情况是，如果要删除的节点没有子节点，我们只需要直接将父节点中，指向要删除节点的指针置为 null。
+    ///
+    /// 第二种情况是，如果要删除的节点只有一个子节点（只有左子节点或者右子节点），我们只需要更新父节点中，指向要删除节点的指针，让它指向要删除节点的子节点就可以了。
+    ///
+    /// 第三种情况是，如果要删除的节点有两个子节点，这就比较复杂了。我们需要找到这个节点的右子树中的最小节点，把它替换到要删除的节点上。然后再删除掉这个最小节点，因为最小节点肯定没有左子节点（如果有左子结点，那就不是最小节点了），所以，我们可以应用上面第一条和第二条两条规则来删除这个最小节点。
+    ///
+    /// - Parameter value: 要删除的目标值
+    public func delete(value: Int) {
+        var node = self.root    //
+        var nodeParent:ZAlgoTreeNode?     //当前节点的父节点
+        
+        //找到值为value的节点，并且记录其父节点
+        while node != nil && node!.value != value {
+            nodeParent = node
+            if value < node!.value {
+                node = node!.left
+            } else {
+                node = node!.right
+            }
+        }
+        
+        // 删除的节点有两个子节点
+        if node!.left != nil && node!.right != nil {
+            //要找到其右子树中最小的节点
+            var minNode:ZAlgoTreeNode? = node!.right
+            var minNodeParent:ZAlgoTreeNode?            //最小节点的父节点
+            while minNode!.left != nil {
+                minNodeParent = minNode
+                minNode = minNode!.left
+            }
+            node!.value = minNode!.value    //将最小节点的数据更新到需要删除的节点上，相当于删除了目标节点
+            node = minNode                  //记录minNode，下面执行删除
+            nodeParent = minNodeParent
+        }
+        
+        //删除节点是叶子节点或者仅有一个子节点
+        var child:ZAlgoTreeNode?
+        if node!.left != nil {
+            child = node!.left
+        } else if node!.right != nil {
+            child = node!.right
+        } else {
+            child = nil
+        }
+        
+        if nodeParent == nil {
+            //删除的是根节点
+            self.root = child
+        } else if nodeParent?.left == node {
+            nodeParent?.left = child
+        } else {
+            nodeParent?.right = child
+        }
+    }
+    
     /// 以递归的方式前序遍历二叉搜索树
     ///
     /// - Returns: 包含所有节点的数组
@@ -375,14 +432,18 @@ class ZAlgoBinarySearchTree: NSObject {
             let size = queue.count
             var level = Array<ZAlgoTreeNode>.init()
             
+            //遍历当前层的所有节点
             for _ in 0 ..< size {
+                //记录当前已经查询过得节点，并将节点从队列中移除
                 let node = queue.removeFirst()
                 level.append(node)
                 
+                //更新当前层的下一层的节点队列
                 if let left = node.left {
                     queue.append(left)
                 }
                 
+                //更新当前层的下一层的节点队列
                 if let right = node.right {
                     queue.append(right)
                 }
@@ -391,4 +452,13 @@ class ZAlgoBinarySearchTree: NSObject {
         }
         return result
     }
+    
+    
+    //MARK: DFS & BFS
+    /*
+     深度优先搜索（Depth-First-Search，以下简称DFS）
+     广度优先搜索（Breadth-First-Search，以下简称BFS）
+     
+     永远记住：DFS 的实现用递归，BFS 的实现用循环（配合队列）。
+     */
 }

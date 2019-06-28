@@ -100,8 +100,7 @@ class ZAlgoDemoBinarySearchViewController: UITableViewController {
     }
     
     //MARK: Binary search
-    @objc
-    func binarySearchForTheFirstMatched(_ array:Array<Int>, target:Int) -> Int {
+    @objc func binarySearchForTheFirstMatched(_ array:Array<Int>, target:Int) -> Int {
         var low = 0, high = array.count - 1
         while low <= high {
             let mid = low + (high - low)>>1
@@ -120,8 +119,7 @@ class ZAlgoDemoBinarySearchViewController: UITableViewController {
         return -1
     }
     
-    @objc
-    func binarySearchForTheLastMatched(_ array: Array<Int>, target:Int) -> Int {
+    @objc func binarySearchForTheLastMatched(_ array: Array<Int>, target:Int) -> Int {
         var low = 0, high = array.count - 1
         while low <= high {
             let mid = low + (high - low)>>1
@@ -140,8 +138,7 @@ class ZAlgoDemoBinarySearchViewController: UITableViewController {
         return -1
     }
     
-    @objc
-    func binarySearchForTheFirstBiggerOrEqual(_ array: Array<Int>, target:Int) -> Int {
+    @objc func binarySearchForTheFirstBiggerOrEqual(_ array: Array<Int>, target:Int) -> Int {
         var low = 0, high = array.count - 1
         while low <= high {
             let mid = low + (high - low)>>1
@@ -158,8 +155,7 @@ class ZAlgoDemoBinarySearchViewController: UITableViewController {
         return -1
     }
     
-    @objc
-    func binarySearchForTheLastSmallerOrEqual(_ array: Array<Int>, target:Int) -> Int {
+    @objc func binarySearchForTheLastSmallerOrEqual(_ array: Array<Int>, target:Int) -> Int {
         var low = 0, high = array.count - 1
         while low <= high {
             let mid = low + (high - low)>>1
