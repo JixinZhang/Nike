@@ -23,6 +23,7 @@
 		09C5731722C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5731622C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift */; };
 		09C5731B22C34EB40087645F /* ZAlgoDemoTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5731A22C34EB40087645F /* ZAlgoDemoTreeViewController.swift */; };
 		09C5731E22C353C00087645F /* ZAlgoTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5731D22C353C00087645F /* ZAlgoTree.swift */; };
+		09F5819622C9FEED00B75149 /* ZAlgoDemoLeetCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F5819522C9FEED00B75149 /* ZAlgoDemoLeetCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		09C5731622C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoBinarySearchViewController.swift; sourceTree = "<group>"; };
 		09C5731A22C34EB40087645F /* ZAlgoDemoTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoTreeViewController.swift; sourceTree = "<group>"; };
 		09C5731D22C353C00087645F /* ZAlgoTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoTree.swift; sourceTree = "<group>"; };
+		09F5819522C9FEED00B75149 /* ZAlgoDemoLeetCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoLeetCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				09C5731922C315A40087645F /* ZAlgoDemoBinarySearch */,
 				09C5731C22C34EB80087645F /* ZAlgoDemoTree */,
 				0944EDCB22C5FB8200F663A6 /* ZAlgoDemoHeap */,
+				09F5819722C9FEF500B75149 /* ZAlgoLeetCode */,
 				093C4D8922C0B275006FF0C6 /* Main.storyboard */,
 				093C4D8C22C0B276006FF0C6 /* Assets.xcassets */,
 				093C4D8E22C0B276006FF0C6 /* LaunchScreen.storyboard */,
@@ -153,6 +156,14 @@
 				09C5731D22C353C00087645F /* ZAlgoTree.swift */,
 			);
 			path = ZAlgoDemoTree;
+			sourceTree = "<group>";
+		};
+		09F5819722C9FEF500B75149 /* ZAlgoLeetCode */ = {
+			isa = PBXGroup;
+			children = (
+				09F5819522C9FEED00B75149 /* ZAlgoDemoLeetCodeViewController.swift */,
+			);
+			path = ZAlgoLeetCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +239,7 @@
 			files = (
 				09C5730F22C1FD980087645F /* ZAlgoDemoLinkedListViewController.swift in Sources */,
 				093C4D9A22C0BB72006FF0C6 /* ZAlgoDemoSortViewController.swift in Sources */,
+				09F5819622C9FEED00B75149 /* ZAlgoDemoLeetCodeViewController.swift in Sources */,
 				09C5731E22C353C00087645F /* ZAlgoTree.swift in Sources */,
 				093C4D9822C0B2D7006FF0C6 /* ZAlgoDemoViewController.swift in Sources */,
 				09C5731222C2013D0087645F /* ZAlgoList.swift in Sources */,

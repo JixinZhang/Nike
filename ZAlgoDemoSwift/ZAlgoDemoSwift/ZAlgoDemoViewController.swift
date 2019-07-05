@@ -46,6 +46,11 @@ class ZAlgoDemoViewController: UIViewController, UITableViewDelegate, UITableVie
              "subtitle":"",
              "viewController":"ZAlgoDemoHeapViewController"],
             
+            ["title": "5. LeetCode",
+             "subtitle":"",
+             "viewController":"ZAlgoDemoLeetCodeViewController"],
+            
+            
             ["title" : "0. 其他",
             "subtitle": "",
             "viewController":"ZAlgoDemoStringViewController"],
@@ -107,6 +112,8 @@ class ZAlgoDemoViewController: UIViewController, UITableViewDelegate, UITableVie
             subVC = ZAlgoDemoTreeViewController.init()
         } else if (vcClassName == "ZAlgoDemoHeapViewController") {
             subVC = ZAlgoDemoHeapViewController.init()
+        } else if (vcClassName == "ZAlgoDemoLeetCodeViewController") {
+            subVC = ZAlgoDemoLeetCodeViewController.init()
         }
         
         subVC.title = title
