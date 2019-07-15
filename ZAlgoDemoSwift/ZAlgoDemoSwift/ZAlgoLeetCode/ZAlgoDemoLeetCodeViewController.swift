@@ -10,6 +10,11 @@ import UIKit
 
 let leetCodeIdenfifier = "ZAlgoLeetCodeCell"
 
+/// LeetCode算法
+///
+/// https://github.com/knightsj/awesome-algorithm-question-solution
+///
+/// /Users/zjixin/Document/zjixin/Library/awesome-algorithm-question-solution
 class ZAlgoDemoLeetCodeViewController: UITableViewController {
     var dataSource:Array<Dictionary<String, String>>!
     var stepCount:Int = 0
@@ -20,9 +25,11 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
         textView.backgroundColor = .brown
         return textView
     }()
+    
+    var fibonacciResult: Dictionary<NSInteger, NSInteger>?
+    
     override func viewDidLoad() {
         setupData()
-        
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: leetCodeIdenfifier)
         self.tableView.tableFooterView = self.textView
         self.tableView.reloadData()
@@ -35,8 +42,9 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
             
             ["title" : "2. 三数和等于0",
              "action" : "threeSumEqualToZeroDemo"],
-            ["title" : "2.2 前序遍历(根左右) -- 队列",
-             "action" : "preOrderStackDemo"],
+            
+            ["title" : "3. Fibonacci(斐波那契额数列)",
+             "action" : "fibonacciDemo"],
         ]
     }
     
@@ -170,5 +178,37 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
             }
         }
         return result
+    }
+    
+    @objc func fibonacciDemo() {
+        self.fibonacciResult = Dictionary<NSInteger, NSInteger>.init()
+        let number = 90
+        let value = fibonacci(n: number)
+        
+        var string = #function + "\n"
+        string.append(contentsOf: "stepCount = \(self.stepCount)\n")
+        string.append(contentsOf: "fibonacci(\(number)) = \(value)")
+        self.textView.text = string
+    }
+    
+    func fibonacci(n: NSInteger) -> NSInteger {
+        if n == 0 || n == 1 {
+            self.stepCount += 1
+            return 1
+            
+        } else if n > 1 {
+            self.stepCount += 1
+            if let value = self.fibonacciResult?[n] {
+                return value
+            } else {
+                let result = fibonacci(n: n - 1) + fibonacci(n: n - 2)
+                self.fibonacciResult?[n] = result
+                return result
+            }
+            
+        } else {
+            return 0
+            
+        }
     }
 }
