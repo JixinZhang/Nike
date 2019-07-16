@@ -16,11 +16,12 @@ let leetCodeHeaderIdentifier = "ZAlgoLettCodeHeader"
 /// https://github.com/knightsj/awesome-algorithm-question-solution
 ///
 /// /Users/zjixin/Document/zjixin/Library/awesome-algorithm-question-solution
-class ZAlgoDemoLeetCodeViewController: UITableViewController {
-    var dataSource:Array<Dictionary<String, Any>>!
-    var stepCount:Int = 0
-    lazy var textView:UITextView = {
-        let textView:UITextView = UITextView.init(frame: CGRect.init(x: 0, y: 0, width: view.frame.width, height: 200))
+class ZAlgoDemoLeetCodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var dataSource: Array<Dictionary<String, Any>>!
+    var stepCount: Int = 0
+    var tableView: UITableView!
+    lazy var textView: UITextView = {
+        let textView: UITextView = UITextView.init(frame: CGRect.init(x: 0, y: KNavHeight, width: KScreenWidth, height: 200))
         textView.font = UIFont.systemFont(ofSize: 15)
         textView.textColor = .black
         textView.backgroundColor = .brown
@@ -31,10 +32,18 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
     
     override func viewDidLoad() {
         setupData()
+        self.view.backgroundColor = .white
+        
+        self.tableView = UITableView.init(frame: CGRect.init(x: 0, y: self.textView.frame.maxY, width: UIScreen.main.bounds.width, height: self.view.bounds.height - self.textView.frame.maxY))
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: leetCodeIdenfifier)
         self.tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: leetCodeHeaderIdentifier)
-        self.tableView.tableFooterView = self.textView
+        self.tableView.tableFooterView = UIView.init()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
         self.tableView.reloadData()
+        
+        self.view.addSubview(self.textView)
+        self.view.addSubview(self.tableView)
     }
     
     func setupData() {
@@ -80,21 +89,21 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
         ]
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.dataSource.count
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let dict: Dictionary! = self.dataSource[section]
         let data: Array? = dict["data"] as? Array<Dictionary<String, String>>
         return data!.count
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         var header: UITableViewHeaderFooterView? = tableView.dequeueReusableHeaderFooterView(withIdentifier: leetCodeHeaderIdentifier)
         
         if header == nil {
@@ -107,7 +116,7 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
         return header
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: leetCodeIdenfifier, for: indexPath)
         
         let dict: Dictionary! = self.dataSource[indexPath.section]
@@ -118,7 +127,7 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let dict: Dictionary! = self.dataSource[indexPath.section]
         let data: Array? = dict["data"] as? Array<Dictionary<String, String>>

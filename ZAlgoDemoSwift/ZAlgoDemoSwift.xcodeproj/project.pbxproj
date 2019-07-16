@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0907DD8F22DDB99500D4BBB1 /* ZAlgoDemoSwiftPrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0907DD8E22DDB99500D4BBB1 /* ZAlgoDemoSwiftPrefixHeader.swift */; };
 		093C4D8622C0B275006FF0C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C4D8522C0B275006FF0C6 /* AppDelegate.swift */; };
 		093C4D8B22C0B275006FF0C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 093C4D8922C0B275006FF0C6 /* Main.storyboard */; };
 		093C4D8D22C0B276006FF0C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093C4D8C22C0B276006FF0C6 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0907DD8E22DDB99500D4BBB1 /* ZAlgoDemoSwiftPrefixHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZAlgoDemoSwiftPrefixHeader.swift; sourceTree = "<group>"; };
 		093C4D8222C0B275006FF0C6 /* ZAlgoDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZAlgoDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		093C4D8522C0B275006FF0C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		093C4D8A22C0B275006FF0C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				093C4D8C22C0B276006FF0C6 /* Assets.xcassets */,
 				093C4D8E22C0B276006FF0C6 /* LaunchScreen.storyboard */,
 				093C4D9122C0B276006FF0C6 /* Info.plist */,
+				0907DD8E22DDB99500D4BBB1 /* ZAlgoDemoSwiftPrefixHeader.swift */,
 			);
 			path = ZAlgoDemoSwift;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				0944EDCA22C5FB7A00F663A6 /* ZAlgoDemoHeapViewController.swift in Sources */,
 				09C5731722C313D30087645F /* ZAlgoDemoBinarySearchViewController.swift in Sources */,
 				09C5731B22C34EB40087645F /* ZAlgoDemoTreeViewController.swift in Sources */,
+				0907DD8F22DDB99500D4BBB1 /* ZAlgoDemoSwiftPrefixHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/ZAlgoDemoSwift/ZAlgoDemoSwiftPrefixHeader.swift";
 				INFOPLIST_FILE = ZAlgoDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,6 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/ZAlgoDemoSwift/ZAlgoDemoSwiftPrefixHeader.swift";
 				INFOPLIST_FILE = ZAlgoDemoSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
