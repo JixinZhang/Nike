@@ -9,6 +9,7 @@
 import UIKit
 
 let leetCodeIdenfifier = "ZAlgoLeetCodeCell"
+let leetCodeHeaderIdentifier = "ZAlgoLettCodeHeader"
 
 /// LeetCode算法
 ///
@@ -16,7 +17,7 @@ let leetCodeIdenfifier = "ZAlgoLeetCodeCell"
 ///
 /// /Users/zjixin/Document/zjixin/Library/awesome-algorithm-question-solution
 class ZAlgoDemoLeetCodeViewController: UITableViewController {
-    var dataSource:Array<Dictionary<String, String>>!
+    var dataSource:Array<Dictionary<String, Any>>!
     var stepCount:Int = 0
     lazy var textView:UITextView = {
         let textView:UITextView = UITextView.init(frame: CGRect.init(x: 0, y: 0, width: view.frame.width, height: 200))
@@ -31,30 +32,87 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
     override func viewDidLoad() {
         setupData()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: leetCodeIdenfifier)
+        self.tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: leetCodeHeaderIdentifier)
         self.tableView.tableFooterView = self.textView
         self.tableView.reloadData()
     }
     
     func setupData() {
         self.dataSource = [
-            ["title" : "1. two-sum",
-             "action" : "twoSumDemo"],
-            
-            ["title" : "2. 三数和等于0",
-             "action" : "threeSumEqualToZeroDemo"],
-            
-            ["title" : "3. Fibonacci(斐波那契额数列)",
-             "action" : "fibonacciDemo"],
+            ["section" : "Mathematics",
+             "data" : [["title" : "1. two-sum",
+                        "action" : "twoSumDemo"],
+                       
+                       ["title" : "2. 三数和等于0",
+                        "action" : "threeSumEqualToZeroDemo"],
+                       
+                       ["title" : "3. Fibonacci(斐波那契额数列)",
+                        "action" : "fibonacciDemo"],
+                       
+                       ["title" : "4. 是否为质数（素数）",
+                        "action" : "isPrimeNumberDemo"],
+                       
+                       ["title" : "5.1 是否为丑数（质因子仅为2，3，5的数）习惯上数字1为第一个丑数",
+                        "action" : "isUglyNumberDemo"],
+                       
+                       ["title" : "5.2 求第n个丑数",
+                        "action" : "nthUglyNumberDemo"]]
+            ],
+//            ["section" : "Array",
+//             "data" : [["title" : "1. two-sum",
+//                        "action" : "twoSumDemo"],
+//
+//                       ["title" : "2. 三数和等于0",
+//                        "action" : "threeSumEqualToZeroDemo"],
+//
+//                       ["title" : "3. Fibonacci(斐波那契额数列)",
+//                        "action" : "fibonacciDemo"],
+//
+//                       ["title" : "4. 是否为质数（素数）",
+//                        "action" : "isPrimeNumberDemo"],
+//
+//                       ["title" : "5.1 是否为丑数（质因子仅为2，3，5的数）习惯上数字1为第一个丑数",
+//                        "action" : "isUglyNumberDemo"],
+//
+//                       ["title" : "5.2 求第n个丑数",
+//                        "action" : "nthUglyNumberDemo"]]
+//            ],
         ]
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return self.dataSource.count
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let dict: Dictionary! = self.dataSource[section]
+        let data: Array? = dict["data"] as? Array<Dictionary<String, String>>
+        return data!.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var header: UITableViewHeaderFooterView? = tableView.dequeueReusableHeaderFooterView(withIdentifier: leetCodeHeaderIdentifier)
+        
+        if header == nil {
+            header = UITableViewHeaderFooterView.init(reuseIdentifier: leetCodeHeaderIdentifier)
+        }
+        
+        let dict: Dictionary! = self.dataSource[section]
+        let sectionTitle: String? = dict["section"] as? String
+        header?.textLabel?.text = sectionTitle;
+        return header
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: leetCodeIdenfifier, for: indexPath)
-        let item = self.dataSource[indexPath.row]
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: leetCodeIdenfifier, for: indexPath)
+        
+        let dict: Dictionary! = self.dataSource[indexPath.section]
+        let data: Array? = dict["data"] as? Array<Dictionary<String, String>>
+        let item = data![indexPath.row]
         let title = item["title"]
         cell.textLabel?.text = title
         return cell
@@ -62,18 +120,20 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let dic:Dictionary = self.dataSource[indexPath.row]
-        let action:String! = dic["action"]
+        let dict: Dictionary! = self.dataSource[indexPath.section]
+        let data: Array? = dict["data"] as? Array<Dictionary<String, String>>
+        let item = data![indexPath.row]
+        let action:String! = item["action"]
         self.stepCount = 0
         if (action != nil) {
             let sel:Selector! = Selector.init(action)
             if (self.responds(to: sel)) {
-                self.perform(sel, with: dic)
+                self.perform(sel, with: item)
             }
         }
     }
     
-    //MARK: action
+    //MARK: Mathematics
     
     @objc func twoSumDemo() {
         
@@ -211,4 +271,117 @@ class ZAlgoDemoLeetCodeViewController: UITableViewController {
             
         }
     }
+    
+    @objc func isPrimeNumberDemo() {
+        
+        let number = 1234783763
+        let value = isPrimeNumber(num: number)
+        var string = #function + "\n"
+        string.append(contentsOf: "stepCount = \(self.stepCount)\n")
+        string.append(contentsOf: "\(number) " + (value == true ? "is" : "is not") + " a prime number")
+        self.textView.text = string
+    }
+    
+    func isPrimeNumber(num: NSInteger) -> Bool {
+        let temp = sqrt(Double(num))
+        for i in 2 ..< NSInteger(temp + 1) {
+            self.stepCount += 1
+            if num % i == 0 {
+                return false
+            }
+        }
+        return true
+    }
+    
+    @objc func isUglyNumberDemo() {
+        let number = 1234783763
+        let value = isUglyNumber(num: number)
+        var string = #function + "\n"
+        string.append(contentsOf: "stepCount = \(self.stepCount)\n")
+        string.append(contentsOf: "\(number) " + (value == true ? "is" : "is not") + " a ugly number")
+        self.textView.text = string
+    }
+    /// 判断方法首先除2，直到不能整除为止，然后除5到不能整除为止，然后除3直到不能整除为止。最终判断剩余的数字是否为1，如果是1则为丑数，否则不是丑数
+    func isUglyNumber(num: NSInteger) -> Bool {
+        var temp = num
+        
+        if num == 0 {
+            return false
+        } else if num == 1 {
+            return true
+        }
+        
+        while temp % 2 == 0 {
+            temp = temp / 2
+            self.stepCount += 1
+        }
+        
+        while temp % 5 == 0 {
+            temp = temp / 5
+            self.stepCount += 1
+        }
+        
+        while temp % 3 == 0 {
+            temp = temp / 3
+            self.stepCount += 1
+        }
+        
+        if temp == 1 {
+            return true
+        }
+        
+        return false
+    }
+    
+    @objc func nthUglyNumberDemo() {
+        let number = 10
+        let value = nthUglyNumber(n: number)
+        var string = #function + "\n"
+        string.append(contentsOf: "stepCount = \(self.stepCount)\n")
+        string.append(contentsOf: "the \(number)th ugly number is \(value)")
+        self.textView.text = string
+    }
+    
+    func nthUglyNumber(n: NSInteger) -> NSInteger {
+        if n == 0 {
+            return 1
+        }
+        var array = Array.init(repeating: 0, count: n)
+        array[0] = 1
+        var index2 = 0
+        var index3 = 0
+        var index5 = 0
+        
+        //生成前n个丑数的数组，第n个丑数肯定是前面的某个数*2,或者*3，或者*5得到的。
+        //1, 2, 3, 4, 5, 6, 8, 9, 10, 12
+        //1, 1*2, 1*3, 2*2, 1*5, 2*3, 4*2, 3*3, 5*2, 6*2
+        for index in 1 ..< n {
+            let min = MIN(array[index2] * 2, MIN(array[index3] * 3, array[index5] * 5))
+            array[index] = min
+            while array[index2] * 2 <= min {
+                index2 += 1
+            }
+            
+            while array[index3] * 3 <= min {
+                index3 += 1
+            }
+            
+            while array[index5] * 5 <= min {
+                index5 += 1
+            }
+            self.stepCount += 1
+        }
+        
+        return array[n - 1]
+    }
+    
+    func MIN(_ a: NSInteger, _ b: NSInteger) -> NSInteger {
+        if a <= b {
+            return a
+        } else {
+            return b
+        }
+    }
+    
+    //MARK: Array
 }
