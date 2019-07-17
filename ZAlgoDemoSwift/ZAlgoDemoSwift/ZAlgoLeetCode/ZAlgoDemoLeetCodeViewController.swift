@@ -65,7 +65,11 @@ class ZAlgoDemoLeetCodeViewController: UIViewController, UITableViewDelegate, UI
                         "action" : "isUglyNumberDemo"],
                        
                        ["title" : "5.2 求第n个丑数",
-                        "action" : "nthUglyNumberDemo"]]
+                        "action" : "nthUglyNumberDemo"],
+                       
+                       ["title" : "6. 是否是2的次幂",
+                        "action" : "isPowerOfTwoDemo"],
+                ]
             ],
 //            ["section" : "Array",
 //             "data" : [["title" : "1. two-sum",
@@ -390,6 +394,34 @@ class ZAlgoDemoLeetCodeViewController: UIViewController, UITableViewDelegate, UI
         } else {
             return b
         }
+    }
+    
+    @objc func isPowerOfTwoDemo() {
+        let number = 8
+        let value = isPowerOfTwo(num: number)
+        var string = #function + "\n"
+        string.append(contentsOf: "stepCount = \(self.stepCount)\n")
+        string.append(contentsOf: "\(number) " + (value ? "is" : "is not") + " power of two")
+        self.textView.text = string
+    }
+    
+    func isPowerOfTwo(num: Int) -> Bool {
+        if num == 1 {
+            return true
+        } else if num == 0 {
+            return false
+        }
+        var temp = num
+        while temp % 2 == 0 {
+            temp = temp / 2
+            self.stepCount += 1
+        }
+        
+        if temp == 1 {
+            return true
+        }
+        
+        return false
     }
     
     //MARK: Array
