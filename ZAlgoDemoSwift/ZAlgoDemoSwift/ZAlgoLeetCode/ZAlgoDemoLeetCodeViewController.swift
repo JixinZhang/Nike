@@ -69,6 +69,9 @@ class ZAlgoDemoLeetCodeViewController: UIViewController, UITableViewDelegate, UI
                        
                        ["title" : "6. 是否是2的次幂",
                         "action" : "isPowerOfTwoDemo"],
+                       
+                       ["title" : "7. 统计所有小于非负整数 n 的质数的数量",
+                        "action" : "countPrimesDemo"],
                 ]
             ],
 //            ["section" : "Array",
@@ -422,6 +425,31 @@ class ZAlgoDemoLeetCodeViewController: UIViewController, UITableViewDelegate, UI
         }
         
         return false
+    }
+    
+    @objc func countPrimesDemo() {
+        let number = 3
+        let value = countPrimes(n: number)
+        var string = #function + "\n"
+        string.append(contentsOf: "stepCount = \(self.stepCount)\n")
+        string.append(contentsOf: "小于\(number) 质数有 \(value)个")
+        self.textView.text = string
+    }
+    
+    func countPrimes(n: Int) -> Int {
+        var count = 0
+        if n > 2 {
+            count += 1
+        } else {
+            return count
+        }
+        
+        for i in 3 ..< n {
+            if isPrimeNumber(num: i) {
+                count += 1
+            }
+        }
+        return count
     }
     
     //MARK: Array
