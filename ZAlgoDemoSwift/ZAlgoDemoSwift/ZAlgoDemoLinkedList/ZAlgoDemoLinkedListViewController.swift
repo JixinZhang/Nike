@@ -10,22 +10,82 @@ import Foundation
 import UIKit
 
 class ZAlgoDemoLinkedListViewController: UITableViewController {
+    var dataSource:Array<Dictionary<String, String>>!
+    var originalArray:Array<Int>!
+    var stepCount:Int = 0
+    var tree:ZAlgoBinarySearchTree?
+    var list:ZAlgoList? = nil
+    
+    lazy var textView:UITextView = {
+        let textView:UITextView = UITextView.init(frame: CGRect.init(x: 0, y: 0, width: view.frame.width, height: 200))
+        textView.font = UIFont.systemFont(ofSize: 15)
+        textView.textColor = .black
+        textView.backgroundColor = .brown
+        return textView
+    }()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
+        setupData()
+        self.tableView.tableFooterView = textView
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: treeIdentifier)
+        
+        self.tableView.reloadData()
+    }
+    
+    func setupData() {
+        self.dataSource = [
+            ["title" : "1. 链表",
+             "action" : "createLinkedList"],
+            ["title" : "2.2. 小于目标值x的放在链表左侧，大于x的放在链表右侧，原链表节点顺序不能变",
+             "action" : "partitionListDemo"],
+            ["title" : "3. 链表是否有环",
+             "action" : "listHasCycleDemo"],
+            ["title" : "4. 两个链表相交的第一个节点",
+             "action" : "getIntersectionNodeDemo"],
+            ["title" : "5. 链表反转",
+             "action" : "reverseListDemo"],
+        ]
+    }
+    
+    //MARK: UITableViewDataSource
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataSource.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: treeIdentifier, for: indexPath)
+        let dic:Dictionary = self.dataSource[indexPath.row]
+        let title:String = dic["title"]!
+        cell.textLabel?.text = title
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.stepCount = 0
+        let dic:Dictionary = self.dataSource[indexPath.row]
+        let action:String! = dic["action"]
+        if (action != nil) {
+            let sel:Selector! = Selector.init(action)
+            if (self.responds(to: sel)) {
+                self.perform(sel, with: dic)
+            }
+        }
+    }
+    
+    //MARK: Binary search
+    
+    @objc func createLinkedList() {
         let array = [1, 5, 3, 2, 4, 2]
-        
-        //1. test
-        let list:ZAlgoList? = createLinkedList(array: array)
-//        list?.appendToTail(val: 6)
-//        list?.displayAllNodeValue()
-//        _ = list?.deleteTail()
+        list = createLinkedList(array: array)
         list?.displayAllNodeValue()
-        
-//        let leftListHead = getLeftList(list?.head, 3)
-//        print(leftListHead)
-        
+    }
+    
+    @objc func partitionListDemo() {
         /*2. 题目
          给一个链表和一个值 x，要求将链表中所有小于 x 的值放到左边，所有大于等于 x 的值放到右边。原链表的节点顺序不能变。
          
@@ -46,10 +106,43 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
         let newListHead = partitionList(list?.head, 3)
         let newList = ZAlgoList.init()
         newList.head = newListHead
-        if hasCycle(newListHead) {
+        if newListHead.hasCycle() {
             print("contans cycle")
         }
         newList.displayAllNodeValue()
+    }
+    
+    @objc func listHasCycleDemo() {
+        let newListHead = partitionList(list?.head, 3)
+        let newList = ZAlgoList.init()
+        newList.head = newListHead
+        if newListHead.hasCycle() {
+            print("contans cycle")
+        }
+        newList.displayAllNodeValue()
+    }
+    
+    @objc func getIntersectionNodeDemo() {
+        let array = [1, 5, 3, 2, 4, 2]
+        list = createLinkedList(array: array)
+        list?.displayAllNodeValue()
+        
+        let arrayB = [10, 12, 19]
+        let listB: ZAlgoList = createLinkedList(array: arrayB)
+        
+        let arrayC = [20, 21, 23, 24]
+        for item in arrayC {
+            let node = ZAlgoListNode.init(item)
+            list?.appendNodeToTail(node: node)
+            listB.appendNodeToTail(node: node)
+        }
+        
+        let resultNode: ZAlgoListNode? = getIntersectionNode(headA: list?.head, headB: listB.head)
+        if resultNode != nil {
+            print("listA 和 listB 相交的第一个节点val = \(resultNode!.val)");
+        } else {
+            print("listA 和 listB 没有相交的节点")
+        }
     }
     
     func createLinkedList(array:Array<Int>) -> ZAlgoList {
@@ -117,26 +210,48 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
         return (leftDummy.next ?? nil)!
     }
     
-    
-    /*  快行指针
-        两个指针访问链表，一个在前一个在后，或者一个移动快另一个移动慢，这就是快行指针
-     */
-    ///  判断一个链表是否有环
-    ///
-    /// - Parameter head: 链表的头结点
-    /// - Returns: YES：包含环
-    func hasCycle(_ head: ZAlgoListNode?) -> Bool {
-        var slow = head;
-        var fast = head;
+    func getIntersectionNode(headA: ZAlgoListNode?, headB: ZAlgoListNode?) -> ZAlgoListNode? {
+        guard headA != nil else {
+            return nil
+        }
         
-        while (fast != nil && fast!.next != nil) {
-            slow = slow!.next
-            fast = fast!.next!.next
-            
-            if slow === fast {
-                return true
+        guard headB != nil else {
+            return nil
+        }
+        
+        let lengthA = headA!._calculateLinkedListLength()
+        let lengthB = headB!._calculateLinkedListLength()
+        
+        let result: Int = lengthA - lengthB
+        
+        var nodeA: ZAlgoListNode? = headA!
+        var nodeB: ZAlgoListNode? = headB!
+        
+        for _ in 0 ..< abs(result) {
+            if result > 0 {
+                nodeA = nodeA?.next
+            } else {
+                nodeB = nodeB?.next
             }
         }
-        return false
+        
+        while nodeA != nil && nodeB != nil {
+            if nodeA === nodeB {
+                return nodeA
+            }
+            
+            nodeA = nodeA?.next
+            nodeB = nodeB?.next
+        }
+        return nil
+    }
+    
+    @objc func reverseListDemo() {
+        let array = [1, 2, 3, 4, 5, 6]
+        list = createLinkedList(array: array)
+        list?.displayAllNodeValue()
+        let newList = ZAlgoList.init()
+        newList.head = list?.reverserList()
+        newList.displayAllNodeValue()
     }
 }

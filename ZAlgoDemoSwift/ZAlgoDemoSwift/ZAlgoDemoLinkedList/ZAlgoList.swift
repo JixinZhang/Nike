@@ -17,6 +17,36 @@ class ZAlgoListNode : NSObject {
         self.val = value
         self.next = nil
     }
+    /*  快行指针
+     两个指针访问链表，一个在前一个在后，或者一个移动快另一个移动慢，这就是快行指针
+     */
+    
+    /// 判断一个链表是否有环
+    ///
+    /// - Returns: YES：包含环
+    open func hasCycle() -> Bool {
+        var slow: ZAlgoListNode? = self
+        var fast: ZAlgoListNode? = self
+        
+        while ((fast != nil) && fast?.next != nil) {
+            slow = slow!.next
+            fast = fast!.next?.next
+            if slow === fast {
+                return true
+            }
+        }
+        return false
+    }
+    
+    open func _calculateLinkedListLength() -> Int {
+        var count = 0
+        var node: ZAlgoListNode? = self
+        while node != nil {
+            count += 1
+            node = node?.next
+        }
+        return count
+    }
 }
 
 /// 单向链表
@@ -38,6 +68,20 @@ class ZAlgoList: NSObject {
         } else {
             tail!.next = ZAlgoListNode.init(val)
             tail = tail!.next
+        }
+    }
+    
+    open func appendNodeToTail(node: ZAlgoListNode?) {
+        guard node != nil else {
+            return
+        }
+        
+        if tail == nil {
+            tail = node
+            head = tail
+        } else {
+            tail!.next = node
+            tail = node;
         }
     }
     
@@ -76,6 +120,23 @@ class ZAlgoList: NSObject {
             return oldTailNode
         }
         
+    }
+    
+    open func reverserList() -> ZAlgoListNode? {
+        guard head != nil else {
+            return nil
+        }
+        
+        var preNode: ZAlgoListNode?
+        var curNode: ZAlgoListNode? = head!
+        while curNode != nil {
+            let nextNode = curNode!.next
+            
+            curNode!.next = preNode
+            preNode = curNode
+            curNode = nextNode
+        }
+        return preNode
     }
     
     open func displayAllNodeValue() {

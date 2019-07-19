@@ -15,7 +15,7 @@ let leetCodeHeaderIdentifier = "ZAlgoLettCodeHeader"
 ///
 /// https://github.com/knightsj/awesome-algorithm-question-solution
 ///
-/// /Users/zjixin/Document/zjixin/Library/awesome-algorithm-question-solution
+/// /Users/zjixin/Documents/zjixin/Library/awesome-algorithm-question-solution/
 class ZAlgoDemoLeetCodeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var dataSource: Array<Dictionary<String, Any>>!
     var stepCount: Int = 0

@@ -31,6 +31,9 @@
                         @{@"title" : @"2. 其他",
                           @"subtitle": @"",
                           @"viewController" : @"ZAlgoStringViewController"},
+                        @{@"title" : @"3. 链表",
+                          @"subtitle" : @"",
+                          @"viewController" : @"ZAlgoLinkedListViewController"},
                         ];
     [self.tableView reloadData];
     

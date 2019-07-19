@@ -15,6 +15,8 @@
 		0998D5F422B8CF1600D4D6AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D5F322B8CF1600D4D6AB /* main.m */; };
 		09D2CBBB22BB71E000772B4D /* ZAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */; };
 		09D2CBBE22BB74CF00772B4D /* ZAlgoStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D2CBBD22BB74CF00772B4D /* ZAlgoStringViewController.m */; };
+		09F5A46322E159090042F792 /* ZAlgoLinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F5A46222E159090042F792 /* ZAlgoLinkedListViewController.m */; };
+		09F5A46622E1591A0042F792 /* ZAlgoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F5A46522E1591A0042F792 /* ZAlgoList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoViewController.m; sourceTree = "<group>"; };
 		09D2CBBC22BB74CF00772B4D /* ZAlgoStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoStringViewController.h; sourceTree = "<group>"; };
 		09D2CBBD22BB74CF00772B4D /* ZAlgoStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoStringViewController.m; sourceTree = "<group>"; };
+		09F5A46122E159090042F792 /* ZAlgoLinkedListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoLinkedListViewController.h; sourceTree = "<group>"; };
+		09F5A46222E159090042F792 /* ZAlgoLinkedListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoLinkedListViewController.m; sourceTree = "<group>"; };
+		09F5A46422E1591A0042F792 /* ZAlgoList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoList.h; sourceTree = "<group>"; };
+		09F5A46522E1591A0042F792 /* ZAlgoList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +80,12 @@
 				09D2CBB922BB71E000772B4D /* ZAlgoViewController.h */,
 				09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */,
 				09D2CBBF22BB760D00772B4D /* ZAlgoSort */,
+				09F5A46022E158BC0042F792 /* ZAlgoLinkedList */,
 				09D2CBC022BB762500772B4D /* ZAlgoString */,
+				09F5A45C22E1587B0042F792 /* ZAlgoBinarySearch */,
+				09F5A45D22E1588C0042F792 /* ZAlgoTree */,
+				09F5A45E22E158960042F792 /* ZAlgoHeap */,
+				09F5A45F22E158A50042F792 /* ZAlgoLeetCode */,
 			);
 			path = ZAlgoDemo;
 			sourceTree = "<group>";
@@ -95,6 +106,45 @@
 				09D2CBBD22BB74CF00772B4D /* ZAlgoStringViewController.m */,
 			);
 			path = ZAlgoString;
+			sourceTree = "<group>";
+		};
+		09F5A45C22E1587B0042F792 /* ZAlgoBinarySearch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZAlgoBinarySearch;
+			sourceTree = "<group>";
+		};
+		09F5A45D22E1588C0042F792 /* ZAlgoTree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZAlgoTree;
+			sourceTree = "<group>";
+		};
+		09F5A45E22E158960042F792 /* ZAlgoHeap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZAlgoHeap;
+			sourceTree = "<group>";
+		};
+		09F5A45F22E158A50042F792 /* ZAlgoLeetCode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZAlgoLeetCode;
+			sourceTree = "<group>";
+		};
+		09F5A46022E158BC0042F792 /* ZAlgoLinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				09F5A46122E159090042F792 /* ZAlgoLinkedListViewController.h */,
+				09F5A46222E159090042F792 /* ZAlgoLinkedListViewController.m */,
+				09F5A46422E1591A0042F792 /* ZAlgoList.h */,
+				09F5A46522E1591A0042F792 /* ZAlgoList.m */,
+			);
+			path = ZAlgoLinkedList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +220,9 @@
 				09D2CBBE22BB74CF00772B4D /* ZAlgoStringViewController.m in Sources */,
 				09D2CBBB22BB71E000772B4D /* ZAlgoViewController.m in Sources */,
 				0998D5E922B8CF1500D4D6AB /* ZAlgoSortViewController.m in Sources */,
+				09F5A46322E159090042F792 /* ZAlgoLinkedListViewController.m in Sources */,
 				0998D5F422B8CF1600D4D6AB /* main.m in Sources */,
+				09F5A46622E1591A0042F792 /* ZAlgoList.m in Sources */,
 				0998D5E622B8CF1500D4D6AB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
