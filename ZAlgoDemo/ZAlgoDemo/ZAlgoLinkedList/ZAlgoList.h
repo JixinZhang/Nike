@@ -72,5 +72,21 @@ void displayAllNodeValue(struct ZAlgoListNode *head);
  */
 struct ZAlgoListNode *getIntersectionNode(struct ZAlgoListNode *headA, struct ZAlgoListNode *headB);
 
+/**
+ 单向链表反转
+
+ @param head 链表的头结点
+ @return 翻转后的链表的头结点
+ */
 struct ZAlgoListNode *reverseList(struct ZAlgoListNode *head);
 
+struct ZAlgoListNode *mergeTwoLists(struct ZAlgoListNode *headA, struct ZAlgoListNode *headB);
+
+/**
+ 链表有序合并，通过递归的形式
+
+ @param headA 链表A的头结点
+ @param headB 链表B的头结点
+ @return 合并后的链表的头结点
+ */
+struct ZAlgoListNode *mergeTwoListsWithRecursion(struct ZAlgoListNode *headA, struct ZAlgoListNode *headB);

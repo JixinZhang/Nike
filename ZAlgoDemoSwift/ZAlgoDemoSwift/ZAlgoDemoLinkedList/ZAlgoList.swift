@@ -47,6 +47,17 @@ class ZAlgoListNode : NSObject {
         }
         return count
     }
+    
+    open func displayAllNodeValue() {
+        var listNode: ZAlgoListNode? = self
+        print(self)
+        var log = "\t"
+        while listNode != nil {
+            log += "\(listNode!.val)->"
+            listNode = listNode!.next
+        }
+        print(log)
+    }
 }
 
 /// 单向链表
@@ -142,9 +153,11 @@ class ZAlgoList: NSObject {
     open func displayAllNodeValue() {
         var listNode = head
         print(self)
+        var log = "\t"
         while listNode != nil {
-            print(listNode!.val)
-            listNode = listNode?.next
+            log += "\(listNode!.val)->"
+            listNode = listNode!.next
         }
+        print(log)
     }
 }

@@ -9,6 +9,13 @@
 #import "ZAlgoLinkedListViewController.h"
 #import "ZAlgoList.h"
 
+/**
+ LeetCode算法
+ 
+ https://github.com/knightsj/awesome-algorithm-question-solution
+ 
+ /Users/zjixin/Documents/zjixin/Library/awesome-algorithm-question-solution/
+ */
 @interface ZAlgoLinkedListViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -47,6 +54,12 @@
                         @{@"title" : @"5. 反转链表",
                           @"subtitle" : @"",
                           @"action" : @"reverseListDemo"},
+                        @{@"title" : @"6.1 链表合并（while循环）",
+                          @"subtitle" : @"",
+                          @"action" : @"mergeListDemo"},
+                        @{@"title" : @"6.2 链表合并（递归）",
+                          @"subtitle" : @"",
+                          @"action" : @"mergeListWithRecursionDemo"},
                         ];
     [self.tableView reloadData];
     
@@ -192,6 +205,60 @@
     displayAllNodeValue(list->head);
     struct ZAlgoListNode *newNode = reverseList(list->head);
     printf("reversed:");
+    displayAllNodeValue(newNode);
+}
+
+- (void)mergeListDemo {
+    int arrayA[] = {1, 2, 4};
+    list = malloc(sizeof(struct ZAlgoList));
+    for (int index = 0; index < 3; index++) {
+        int val = arrayA[index];
+        appendToTail(list, val);
+    }
+    
+    int arrayB[] = {1, 3, 4};
+    struct ZAlgoList *listB = malloc(sizeof(struct ZAlgoList));
+    for (int index = 0; index < 3; index++) {
+        int val = arrayB[index];
+        appendToTail(listB, val);
+    }
+    
+    struct ZAlgoListNode *newNode = mergeTwoLists(list->head, listB->head);
+    
+    printf("originalA:");
+    displayAllNodeValue(list->head);
+    
+    printf("originalB:");
+    displayAllNodeValue(listB->head);
+    
+    printf("mergeList:");
+    displayAllNodeValue(newNode);
+}
+
+- (void)mergeListWithRecursionDemo {
+    int arrayA[] = {1, 2, 4};
+    list = malloc(sizeof(struct ZAlgoList));
+    for (int index = 0; index < 3; index++) {
+        int val = arrayA[index];
+        appendToTail(list, val);
+    }
+    
+    int arrayB[] = {1, 3, 4};
+    struct ZAlgoList *listB = malloc(sizeof(struct ZAlgoList));
+    for (int index = 0; index < 3; index++) {
+        int val = arrayB[index];
+        appendToTail(listB, val);
+    }
+    
+    struct ZAlgoListNode *newNode = mergeTwoListsWithRecursion(list->head, listB->head);
+    
+    printf("originalA:");
+    displayAllNodeValue(list->head);
+    
+    printf("originalB:");
+    displayAllNodeValue(listB->head);
+    
+    printf("mergeList:");
     displayAllNodeValue(newNode);
 }
 

@@ -8,7 +8,11 @@
 
 import Foundation
 import UIKit
-
+/// 链表算法
+///
+/// https://github.com/knightsj/awesome-algorithm-question-solution
+///
+/// /Users/zjixin/Documents/zjixin/Library/awesome-algorithm-question-solution/
 class ZAlgoDemoLinkedListViewController: UITableViewController {
     var dataSource:Array<Dictionary<String, String>>!
     var originalArray:Array<Int>!
@@ -46,6 +50,10 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
              "action" : "getIntersectionNodeDemo"],
             ["title" : "5. 链表反转",
              "action" : "reverseListDemo"],
+            ["title" : "6.1 链表合并（while循环）",
+             "action" : "mergeListDemo"],
+            ["title" : "6.2 链表合并（递归）",
+             "action" : "mergeListWithRecursionDemo"],
         ]
     }
     
@@ -253,5 +261,75 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
         let newList = ZAlgoList.init()
         newList.head = list?.reverserList()
         newList.displayAllNodeValue()
+    }
+    
+    @objc func mergeListDemo() {
+        let array = [1, 2, 4];
+        list = createLinkedList(array: array)
+        print("originalA:");
+        list?.displayAllNodeValue()
+        let arrayB = [1, 3, 4];
+        let listB: ZAlgoList? = createLinkedList(array: arrayB)
+        print("originalB:");
+        listB?.displayAllNodeValue()
+        let headC: ZAlgoListNode? = mergeList(l1: list?.head, l2: listB?.head)
+        headC?.displayAllNodeValue()
+    }
+    
+    func mergeList(l1: ZAlgoListNode?, l2: ZAlgoListNode?) -> ZAlgoListNode? {
+        let list: ZAlgoList = ZAlgoList.init()
+        
+        var curHead1: ZAlgoListNode? = l1;
+        var curHead2: ZAlgoListNode? = l2;
+        
+        while curHead1 != nil && curHead2 != nil {
+            if curHead1 != nil && curHead2 == nil {
+                list.appendNodeToTail(node: curHead1)
+            } else if curHead1 == nil && curHead2 != nil {
+                list.appendNodeToTail(node: curHead2)
+            } else {
+                if curHead1!.val <= curHead2!.val {
+                    list.appendToTail(val: curHead1!.val)
+                    curHead1 = curHead1!.next
+                } else {
+                    list.appendToTail(val: curHead2!.val)
+                    curHead2 = curHead2!.next
+                }
+            }
+        }
+        return list.head
+    }
+    
+    @objc func mergeListWithRecursionDemo() {
+        let array = [1, 2, 4];
+        list = createLinkedList(array: array)
+        print("originalA:");
+        list?.displayAllNodeValue()
+        let arrayB = [1, 3, 4];
+        let listB: ZAlgoList? = createLinkedList(array: arrayB)
+        print("originalB:");
+        listB?.displayAllNodeValue()
+        let headC: ZAlgoListNode? = mergeTwoListsWithRecursion(l1: list?.head, l2: listB?.head)
+        headC?.displayAllNodeValue()
+    }
+    
+    func mergeTwoListsWithRecursion(l1: ZAlgoListNode?, l2: ZAlgoListNode?) -> ZAlgoListNode? {
+        guard l1 != nil else {
+            return l2;
+        }
+        
+        guard l2 != nil else {
+            return l1;
+        }
+        
+        var resultHead: ZAlgoListNode!
+        if l1!.val <= l2!.val {
+            resultHead = ZAlgoListNode.init(l1!.val)
+            resultHead.next = mergeTwoListsWithRecursion(l1: l1!.next, l2: l2!)
+        } else {
+            resultHead = ZAlgoListNode.init(l2!.val)
+            resultHead.next = mergeTwoListsWithRecursion(l1: l1!, l2: l2!.next)
+        }
+        return resultHead
     }
 }

@@ -125,5 +125,55 @@ struct ZAlgoListNode *reverseList(struct ZAlgoListNode *head) {
         curNode = nextNode;
     }
     return preNode;
+}
+
+struct ZAlgoListNode *mergeTwoLists(struct ZAlgoListNode *headA, struct ZAlgoListNode *headB){
+    struct ZAlgoList *list = malloc(sizeof(struct ZAlgoList));
     
+    struct ZAlgoListNode *curHeadA = headA;
+    struct ZAlgoListNode *curHeadB = headB;
+    
+    while (curHeadA != NULL || curHeadB != NULL) {
+        if (curHeadA != NULL && curHeadB == NULL) {
+            appendNodeToTail(list, curHeadA);
+            break;
+            
+        } else if (curHeadA == NULL && curHeadB != NULL) {
+            appendNodeToTail(list, curHeadB);
+            break;
+            
+        } else {
+            if (curHeadA->val <= curHeadB->val) {
+                appendToTail(list, curHeadA->val);
+                curHeadA = curHeadA->next;
+            } else {
+                appendToTail(list, curHeadB->val);
+                curHeadB = curHeadB->next;
+            }
+            
+        }
+    }
+    return list->head;
+}
+
+
+struct ZAlgoListNode *mergeTwoListsWithRecursion(struct ZAlgoListNode *headA, struct ZAlgoListNode *headB) {
+    if (headA == NULL) {
+        return headB;
+    }
+    
+    if (headB == NULL) {
+        return headA;
+    }
+    
+    struct ZAlgoListNode *resultHead = malloc(sizeof(struct ZAlgoListNode));
+    
+    if (headA->val <= headB->val) {
+        resultHead->val = headA->val;
+        resultHead->next = mergeTwoListsWithRecursion(headA->next, headB);
+    } else {
+        resultHead->val = headB->val;
+        resultHead->next = mergeTwoListsWithRecursion(headA, headB->next);
+    }
+    return resultHead;
 }
