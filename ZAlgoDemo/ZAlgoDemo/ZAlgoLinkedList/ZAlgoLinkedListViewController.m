@@ -60,6 +60,9 @@
                         @{@"title" : @"6.2 链表合并（递归）",
                           @"subtitle" : @"",
                           @"action" : @"mergeListWithRecursionDemo"},
+                        @{@"title" : @"7. 倒数第k个节点",
+                          @"subtitle" : @"",
+                          @"action" : @"findKthNodeToTailDemo"},
                         ];
     [self.tableView reloadData];
     

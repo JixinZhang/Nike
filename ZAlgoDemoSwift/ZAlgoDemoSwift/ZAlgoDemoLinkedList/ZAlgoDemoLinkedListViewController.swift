@@ -54,6 +54,8 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
              "action" : "mergeListDemo"],
             ["title" : "6.2 链表合并（递归）",
              "action" : "mergeListWithRecursionDemo"],
+            ["title" : "7. 找到倒数第k个节点",
+             "action" : "findKthNodeToTailDemo"],
         ]
     }
     
@@ -331,5 +333,37 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
             resultHead.next = mergeTwoListsWithRecursion(l1: l1!, l2: l2!.next)
         }
         return resultHead
+    }
+    
+    @objc func findKthNodeToTailDemo() {
+        let array = [1, 2, 4, 5, 9, 10, 13, 25, 34, 49, 51, 62, 70];
+        list = createLinkedList(array: array)
+        print("originalA:");
+        list?.displayAllNodeValue()
+        let kthNode = findKthNodeToTail(head: list?.head, k: 5)
+        print("5th to tail is \(String(describing: kthNode?.val))")
+    }
+    
+    func findKthNodeToTail(head: ZAlgoListNode?, k: Int) -> ZAlgoListNode? {
+        guard head != nil else {
+            return nil
+        }
+        
+        var pAhead: ZAlgoListNode? = head
+        var pBehind: ZAlgoListNode? = nil
+        for _ in 0 ..< k - 1 {
+            if pAhead?.next != nil {
+                pAhead = pAhead?.next
+            } else {
+                return nil;
+            }
+        }
+        
+        pBehind = head
+        while pAhead?.next != nil {
+            pAhead = pAhead?.next
+            pBehind = pBehind?.next
+        }
+        return pBehind
     }
 }
