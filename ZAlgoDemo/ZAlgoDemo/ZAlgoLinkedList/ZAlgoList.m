@@ -200,3 +200,28 @@ struct ZAlgoListNode *findKthNodeToTail(struct ZAlgoListNode *head, int k) {
     }
     return pBehind;
 }
+
+struct ZAlgoListNode *removeNthFromEnd(struct ZAlgoListNode *head, int n) {
+    if (head == NULL) {
+        return NULL;
+    }
+    
+    struct ZAlgoListNode *pAhead = head;
+    struct ZAlgoListNode *pBehind = NULL;
+    
+    for (int i = 0; i < n; i++) {
+        pAhead = pAhead->next;
+    }
+    
+    if (pAhead == NULL) {
+        return head->next;
+    }
+    
+    pBehind = head;
+    while (pAhead->next != NULL) {
+        pAhead = pAhead->next;
+        pBehind = pBehind->next;
+    }
+    pBehind->next = pBehind->next->next;
+    return head;
+}

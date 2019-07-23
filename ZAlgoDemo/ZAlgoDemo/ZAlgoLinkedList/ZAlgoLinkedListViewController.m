@@ -63,6 +63,9 @@
                         @{@"title" : @"7. 倒数第k个节点",
                           @"subtitle" : @"",
                           @"action" : @"findKthNodeToTailDemo"},
+                        @{@"title" : @"8. 删除倒数第n个节点",
+                          @"subtitle" : @"",
+                          @"action" : @"removeNthFromEndDemo"},
                         ];
     [self.tableView reloadData];
     
@@ -278,6 +281,22 @@
         printf("kth node to tail is %d", kthNode->val);
     } else {
         printf("can not fin kth node");
+    }
+}
+
+- (void)removeNthFromEndDemo {
+    int array[] = {1, 2, 4, 5, 9, 10, 13, 25, 34, 49, 51, 62, 70};
+    list = malloc(sizeof(struct ZAlgoList));
+    for (int index = 0; index < 13; index++) {
+        int val = array[index];
+        appendToTail(list, val);
+    }
+    displayAllNodeValue(list->head);
+    struct ZAlgoListNode *newHead = removeNthFromEnd(list->head, 5);
+    if (newHead != NULL) {
+        displayAllNodeValue(newHead);
+    } else {
+        
     }
 }
 

@@ -91,4 +91,13 @@ struct ZAlgoListNode *mergeTwoLists(struct ZAlgoListNode *headA, struct ZAlgoLis
  */
 struct ZAlgoListNode *mergeTwoListsWithRecursion(struct ZAlgoListNode *headA, struct ZAlgoListNode *headB);
 
+/**
+ 查找链表倒数第k个节点
+
+ @param head 链表的头结点
+ @param k k
+ @return 倒数第k个节点
+ */
 struct ZAlgoListNode *findKthNodeToTail(struct ZAlgoListNode *head, int k);
+
+struct ZAlgoListNode *removeNthFromEnd(struct ZAlgoListNode *head, int n);

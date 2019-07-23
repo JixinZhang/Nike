@@ -56,6 +56,9 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
              "action" : "mergeListWithRecursionDemo"],
             ["title" : "7. 找到倒数第k个节点",
              "action" : "findKthNodeToTailDemo"],
+            ["title" : "8. 删除倒数第n个节点",
+             "action" : "removeNthFromEndDemo"],
+            
         ]
     }
     
@@ -365,5 +368,38 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
             pBehind = pBehind?.next
         }
         return pBehind
+    }
+    
+    @objc func removeNthFromEndDemo() {
+        let array = [1]; //, 2, 4, 5, 9, 10, 13, 25, 34, 49, 51, 62, 70
+        list = createLinkedList(array: array)
+        print("originalA:");
+        list?.displayAllNodeValue()
+        let nthNode = removeNthFromEnd(head: list?.head, n: 1)
+        nthNode?.displayAllNodeValue();
+    }
+    
+    func removeNthFromEnd(head: ZAlgoListNode?, n: Int) -> ZAlgoListNode? {
+        guard head != nil else {
+            return nil
+        }
+        //找到倒数第n+1个节点
+        var pAhead: ZAlgoListNode? = head
+        var pBehind: ZAlgoListNode? = nil
+        for _ in 0 ..< n  {
+            pAhead = pAhead?.next
+        }
+        
+        if pAhead == nil {
+            return head?.next
+        }
+        
+        pBehind = head;
+        while pAhead?.next != nil {
+            pAhead = pAhead?.next
+            pBehind = pBehind?.next
+        }
+        pBehind?.next = pBehind?.next?.next;
+        return head;
     }
 }
