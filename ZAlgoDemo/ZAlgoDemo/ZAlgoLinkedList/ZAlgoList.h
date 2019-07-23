@@ -90,3 +90,5 @@ struct ZAlgoListNode *mergeTwoLists(struct ZAlgoListNode *headA, struct ZAlgoLis
  @return 合并后的链表的头结点
  */
 struct ZAlgoListNode *mergeTwoListsWithRecursion(struct ZAlgoListNode *headA, struct ZAlgoListNode *headB);
+
+struct ZAlgoListNode *findKthNodeToTail(struct ZAlgoListNode *head, int k);

@@ -177,3 +177,26 @@ struct ZAlgoListNode *mergeTwoListsWithRecursion(struct ZAlgoListNode *headA, st
     }
     return resultHead;
 }
+
+struct ZAlgoListNode *findKthNodeToTail(struct ZAlgoListNode *head, int k) {
+    if (head == NULL) {
+        return NULL;
+    }
+    
+    struct ZAlgoListNode *pAhead = head;
+    struct ZAlgoListNode *pBehind = NULL;
+    
+    for (int i = 0; i < k - 1; i++) {
+        if (pAhead->next != NULL) {
+            pAhead = pAhead->next;
+        } else {
+            return NULL;
+        }
+    }
+    pBehind = head;
+    while (pAhead->next != NULL) {
+        pAhead = pAhead->next;
+        pBehind = pBehind->next;
+    }
+    return pBehind;
+}
