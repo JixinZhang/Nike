@@ -58,6 +58,16 @@ class ZAlgoListNode : NSObject {
         }
         print(log)
     }
+    
+    open func printListReversingly() {
+        var node: ZAlgoListNode? = self;
+        if node != nil {
+            if node!.next != nil {
+                node?.next?.printListReversingly()
+            }
+            print("\(node!.val)")
+        }
+    }
 }
 
 /// 单向链表

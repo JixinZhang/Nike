@@ -58,6 +58,8 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
              "action" : "findKthNodeToTailDemo"],
             ["title" : "8. 删除倒数第n个节点",
              "action" : "removeNthFromEndDemo"],
+            ["title" : "9. 倒序打印链表",
+             "action" : "printListReversinglyDemo"],
             
         ]
     }
@@ -401,5 +403,14 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
         }
         pBehind?.next = pBehind?.next?.next;
         return head;
+    }
+    
+    @objc func printListReversinglyDemo() {
+        let array = [1, 2, 4, 5, 9, 10, 13, 25, 34, 49, 51, 62, 70];
+        list = createLinkedList(array: array)
+        print("originalA:");
+        list?.displayAllNodeValue()
+        print("reversingly:")
+        list?.head?.printListReversingly()
     }
 }

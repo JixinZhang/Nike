@@ -311,6 +311,5 @@ class ZAlgoDemoSortViewController: UITableViewController {
         let string:String = #function + " step = " + String.init(format: "%ld", self.stepCount)
         print(string)
         print(temp)
-
     }
 }
