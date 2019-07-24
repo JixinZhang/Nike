@@ -225,3 +225,11 @@ struct ZAlgoListNode *removeNthFromEnd(struct ZAlgoListNode *head, int n) {
     pBehind->next = pBehind->next->next;
     return head;
 }
+
+void printListReversingly(struct ZAlgoListNode *head) {
+    struct ZAlgoListNode *node = head;
+    if (node != NULL) {
+        printListReversingly(node->next);
+        printf("%d->", node->val);
+    }
+}

@@ -66,6 +66,9 @@
                         @{@"title" : @"8. 删除倒数第n个节点",
                           @"subtitle" : @"",
                           @"action" : @"removeNthFromEndDemo"},
+                        @{@"title" : @"9. 倒序打印链表",
+                          @"subtitle" : @"",
+                          @"action" : @"printListReversinglyDemo"},
                         ];
     [self.tableView reloadData];
     
@@ -298,6 +301,17 @@
     } else {
         
     }
+}
+
+- (void)printListReversinglyDemo {
+    int array[] = {1, 2, 4, 5, 9, 10, 13, 25, 34, 49, 51, 62, 70};
+    list = malloc(sizeof(struct ZAlgoList));
+    for (int index = 0; index < 13; index++) {
+        int val = array[index];
+        appendToTail(list, val);
+    }
+    displayAllNodeValue(list->head);
+    printListReversingly(list->head);
 }
 
 @end

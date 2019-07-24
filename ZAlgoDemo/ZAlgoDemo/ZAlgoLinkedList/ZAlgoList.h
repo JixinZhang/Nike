@@ -101,3 +101,5 @@ struct ZAlgoListNode *mergeTwoListsWithRecursion(struct ZAlgoListNode *headA, st
 struct ZAlgoListNode *findKthNodeToTail(struct ZAlgoListNode *head, int k);
 
 struct ZAlgoListNode *removeNthFromEnd(struct ZAlgoListNode *head, int n);
+
+void printListReversingly(struct ZAlgoListNode *head);
