@@ -172,7 +172,7 @@ int main(int argc, const char * argv[]) {
 
 /*
  以下为验证instance， class， meta-class 和 NSObject之间的isa指针指向
- 注意：isa的地址需要做一次运算才能得到class的指针地址 运算方式为：isa的内存地址 & 0x0000000ffffffff8ULL
+ 注意：从64bit开始，isa需要进行一次位运算，才能计算出真实地址 运算方式为：isa的内存地址 & 0x0000000ffffffff8ULL
  源码下载地址：https://opensource.apple.com/tarballs/objc4/
  列表中，数组越大表示代码越新
  
