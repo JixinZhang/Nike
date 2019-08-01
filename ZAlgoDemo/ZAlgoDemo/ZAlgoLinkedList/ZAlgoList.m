@@ -233,3 +233,23 @@ void printListReversingly(struct ZAlgoListNode *head) {
         printf("%d->", node->val);
     }
 }
+
+struct ZAlgoListNode *deleteDuplicates(struct ZAlgoListNode *head) {
+    if (head == NULL) {
+        return head;
+    }
+    
+    if (head->next == NULL) {
+        return head;
+    }
+    
+    struct ZAlgoListNode *curNode = head;
+    while (curNode->next != NULL) {
+        if (curNode->val == curNode->next->val) {
+            curNode->next = curNode->next->next;
+        } else {
+            curNode = curNode->next;
+        }
+    }
+    return head;
+}

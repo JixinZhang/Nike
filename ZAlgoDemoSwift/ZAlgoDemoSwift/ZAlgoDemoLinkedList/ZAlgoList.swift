@@ -60,7 +60,7 @@ class ZAlgoListNode : NSObject {
     }
     
     open func printListReversingly() {
-        var node: ZAlgoListNode? = self;
+        let node: ZAlgoListNode? = self;
         if node != nil {
             if node!.next != nil {
                 node?.next?.printListReversingly()
@@ -169,5 +169,25 @@ class ZAlgoList: NSObject {
             listNode = listNode!.next
         }
         print(log)
+    }
+    
+    open func deleteDuplicates() -> ZAlgoListNode? {
+        guard self.head != nil else {
+            return nil;
+        }
+        
+        if self.head!.next == nil {
+            return self.head;
+        }
+        
+        var curNode: ZAlgoListNode? = self.head
+        while curNode?.next != nil {
+            if curNode!.val == curNode!.next!.val {
+                curNode!.next = curNode!.next?.next
+            } else {
+                curNode = curNode!.next;
+            }
+        }
+        return self.head;
     }
 }

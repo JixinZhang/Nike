@@ -69,6 +69,9 @@
                         @{@"title" : @"9. 倒序打印链表",
                           @"subtitle" : @"",
                           @"action" : @"printListReversinglyDemo"},
+                        @{@"title" : @"10. 删除有序链表的重复的节点，保留单个节点",
+                          @"subtitle": @"",
+                          @"action" : @"deleteDuplicatesDemo"},
                         ];
     [self.tableView reloadData];
     
@@ -312,6 +315,22 @@
     }
     displayAllNodeValue(list->head);
     printListReversingly(list->head);
+}
+
+- (void)deleteDuplicatesDemo {
+    int array[] = {1, 1, 4, 5, 5, 8, 8, 9, 9, 9, 51, 62, 70};
+    list = malloc(sizeof(struct ZAlgoList));
+    for (int index = 0; index < 13; index++) {
+        int val = array[index];
+        appendToTail(list, val);
+    }
+    printf("original:");
+    displayAllNodeValue(list->head);
+    printf("deleteDuplicates:");
+    struct ZAlgoListNode *result = deleteDuplicates(list->head);
+    if (result) {
+        displayAllNodeValue(result);
+    }
 }
 
 @end
