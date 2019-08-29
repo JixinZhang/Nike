@@ -171,6 +171,7 @@ class ZAlgoList: NSObject {
         print(log)
     }
     
+    //删除有序链表的重复的节点，保留单个节点
     open func deleteDuplicates() -> ZAlgoListNode? {
         guard self.head != nil else {
             return nil;
@@ -189,5 +190,34 @@ class ZAlgoList: NSObject {
             }
         }
         return self.head;
+    }
+    
+    //删除有序链表的重复节点，不保留单个节点
+    open func deleteDuplicatesII() -> ZAlgoListNode? {
+        guard self.head != nil else {
+            return nil;
+        }
+        
+        if self.head!.next == nil {
+            return self.head;
+        }
+        
+        let newListNode: ZAlgoListNode = ZAlgoListNode.init(0)
+        newListNode.next = self.head;
+        var preNode: ZAlgoListNode? = newListNode
+        var curNode: ZAlgoListNode? = self.head
+        while curNode != nil {
+            while (curNode!.next != nil && curNode!.val == curNode!.next?.val) {
+                curNode = curNode!.next
+            }
+            
+            if preNode!.next === curNode {
+                preNode = preNode!.next
+            } else {
+                preNode?.next = curNode?.next
+            }
+            curNode = curNode!.next
+        }
+        return newListNode.next
     }
 }

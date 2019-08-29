@@ -349,7 +349,7 @@ class ZAlgoBinarySearchTree: NSObject {
                     //如果当前节点不是第一次处理 或者 当前节点没有右子节点
                     //将当前节点记录
                     result.append(node!)
-                    //结束当前节点的查询，继续查询栈顶的节点（代码的第283行 `node = stack.removeLast()`）
+                    //结束当前节点的查询，继续查询栈顶的节点（代码的第340行 `node = stack.removeLast()`）
                     node = nil
                 }
             }
@@ -373,7 +373,7 @@ class ZAlgoBinarySearchTree: NSObject {
         var node = self.root
         
         //解法二：记录上次处理的节点
-        //一下数组记录已经查询过得右子节点
+        //以下数组记录已经查询过的右子节点
         var lastNodeArray = Array<ZAlgoTreeNode>.init()
         
         while !stack.isEmpty || node != nil {

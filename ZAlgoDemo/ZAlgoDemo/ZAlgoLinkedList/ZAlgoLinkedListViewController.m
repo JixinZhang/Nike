@@ -72,6 +72,9 @@
                         @{@"title" : @"10. 删除有序链表的重复的节点，保留单个节点",
                           @"subtitle": @"",
                           @"action" : @"deleteDuplicatesDemo"},
+                        @{@"title" : @"11. 删除链表里所以有重复的节点",
+                          @"action" : @"deleteDuplicatesDemoII"},
+                        
                         ];
     [self.tableView reloadData];
     
@@ -330,6 +333,29 @@
     struct ZAlgoListNode *result = deleteDuplicates(list->head);
     if (result) {
         displayAllNodeValue(result);
+    }
+}
+
+- (void)deleteDuplicatesDemoII {
+//    int array[] = {1, 2, 3, 3, 4, 4, 5, 9, 9, 9, 51, 62, 70};   //13
+    int array[4] = {3, 2, 2, 2};   //3
+    list = malloc(sizeof(struct ZAlgoList));
+    for (int index = 0; index < 4; index++) {
+        int val = array[index];
+        appendToTail(list, val);
+    }
+    printf("original:");
+    displayAllNodeValue(list->head);
+    printf("deleteDuplicatesII:");
+    struct ZAlgoListNode *result = deleteDuplicatesII(list->head);
+    if (result) {
+        displayAllNodeValue(result);
+    }
+    
+    int num = 0;
+    for (int i = 0; i < 4; i++) {
+        num = num^array[i];
+        printf("num = %x\n", num);
     }
 }
 

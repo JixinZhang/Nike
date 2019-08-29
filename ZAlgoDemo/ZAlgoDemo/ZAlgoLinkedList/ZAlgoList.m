@@ -253,3 +253,40 @@ struct ZAlgoListNode *deleteDuplicates(struct ZAlgoListNode *head) {
     }
     return head;
 }
+
+struct ZAlgoListNode *deleteDuplicatesII(struct ZAlgoListNode *head) {
+    if (head == NULL) {
+        return NULL;
+    }
+    
+    if (head->next == NULL) {
+        return head;
+    }
+    
+    struct ZAlgoListNode *newNode = malloc(sizeof(struct ZAlgoListNode));
+    newNode->val = 0;
+    newNode->next = head;
+    struct ZAlgoListNode *preNode = newNode;
+    struct ZAlgoListNode *curNode = head;
+    //本质上还是链表的节点删除
+    // a->b->c 删除b，a->next = b->next
+    while (curNode != NULL) {
+        
+        bool duplicateNode = false;
+        while (curNode->next != NULL && curNode->next->val == curNode->val) {
+            duplicateNode = true;
+            curNode = curNode->next;
+        }
+        
+        if (duplicateNode) {
+            //如果是重复的节点，需要跳过
+            preNode->next = curNode->next;
+        } else {
+            preNode = curNode;
+        }
+        if (curNode != NULL) {
+            curNode = curNode->next;
+        }
+    }
+    return newNode->next;
+}

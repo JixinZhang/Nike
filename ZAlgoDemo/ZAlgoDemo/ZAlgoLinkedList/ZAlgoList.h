@@ -105,9 +105,17 @@ struct ZAlgoListNode *removeNthFromEnd(struct ZAlgoListNode *head, int n);
 void printListReversingly(struct ZAlgoListNode *head);
 
 /**
- 删除有序链表中的重复节点
+ 删除有序链表中的重复节点，保留单个节点
 
  @param head 头节点
  @return 去重的链表的头节点
  */
 struct ZAlgoListNode *deleteDuplicates(struct ZAlgoListNode *head);
+
+/**
+ 删除有序链表中的重复节点
+ 
+ @param head 头节点
+ @return 去重的链表的头节点
+ */
+struct ZAlgoListNode *deleteDuplicatesII(struct ZAlgoListNode *head);

@@ -44,19 +44,19 @@ class ZAlgoDemoTreeViewController: UITableViewController {
             
             ["title" : "2.1 前序遍历(根左右) -- 递归",
              "action" : "bstPreOrderRecursionDemo"],
-            ["title" : "2.2 前序遍历(根左右) -- 队列",
+            ["title" : "2.2 前序遍历(根左右) -- 栈",
              "action" : "preOrderStackDemo"],
             
             ["title" : "3.1 中序遍历(左根右) -- 递归",
              "action" : "inOrderRecursionDemo"],
-            ["title" : "3.2 中序遍历(左根右) -- 队列",
+            ["title" : "3.2 中序遍历(左根右) -- 栈",
              "action" : "inOrderStackDemo"],
         
             ["title" : "3.1 后序遍历(左右根) -- 递归",
              "action" : "postOrderRecursionDemo"],
-            ["title" : "3.2 后序遍历(左右根) -- 队列 -- 标记量",
+            ["title" : "3.2 后序遍历(左右根) -- 栈 -- 标记量",
              "action" : "postOrderStackDemo"],
-            ["title" : "3.3 后序遍历(左右根) -- 队列 -- 记录",
+            ["title" : "3.3 后序遍历(左右根) -- 栈 -- 记录",
              "action" : "postOrderStackWithRecordDemo"],
             
             ["title" : "4. 层级遍历 -- 队列",

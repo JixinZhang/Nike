@@ -62,6 +62,8 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
              "action" : "printListReversinglyDemo"],
             ["title" : "10. 删除有序链表的重复的节点，保留单个节点",
              "action" : "deleteDuplicatesDemo"],
+            ["title" : "11. 删除链表里所以有重复的节点",
+             "action" : "deleteDuplicatesDemoII"],
             
         ]
     }
@@ -422,6 +424,17 @@ class ZAlgoDemoLinkedListViewController: UITableViewController {
         print("originalA:");
         list?.displayAllNodeValue()
         let head: ZAlgoListNode? = list?.deleteDuplicates()
+        print("finalList:")
+        head?.displayAllNodeValue()
+    }
+    
+    @objc func deleteDuplicatesDemoII() {
+//        let array = [1, 2, 3, 3, 4, 4, 5];
+        let array = [1, 2, 2];
+        list = createLinkedList(array: array);
+        print("originalA:");
+        list?.displayAllNodeValue()
+        let head: ZAlgoListNode? = list?.deleteDuplicatesII()
         print("finalList:")
         head?.displayAllNodeValue()
     }

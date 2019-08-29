@@ -28,12 +28,18 @@
                         @{@"title" : @"1. 排序算法",
                           @"subtitle": @"",
                           @"viewController" : @"ZAlgoSortViewController"},
-                        @{@"title" : @"2. 其他",
-                          @"subtitle": @"",
-                          @"viewController" : @"ZAlgoStringViewController"},
-                        @{@"title" : @"3. 链表",
+                        @{@"title" : @"2. 链表",
                           @"subtitle" : @"",
                           @"viewController" : @"ZAlgoLinkedListViewController"},
+                        @{@"title" : @"3. 二分查找(Binary search)",
+                          @"subtitle": @"",
+                          @"viewController" : @"ZAlgoStringViewController"},
+                        @{@"title" : @"4. 二叉搜索树(Binary Search Tree)",
+                          @"subtitle": @"",
+                          @"viewController" : @"ZAlgoTreeViewController"},
+                        @{@"title" : @"0. 其他",
+                          @"subtitle": @"",
+                          @"viewController" : @"ZAlgoStringViewController"},
                         ];
     [self.tableView reloadData];
     
