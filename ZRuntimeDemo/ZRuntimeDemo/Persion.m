@@ -35,7 +35,7 @@
     self = [super init];
     if (self) {
         //执行foo函数
-        [self performSelector:@selector(foo:) withObject:@"object"];
+        [self performSelector:@selector(foo:) withObject:@"object" afterDelay:<#(NSTimeInterval)#> inModes:<#(nonnull NSArray<NSRunLoopMode> *)#>];
     }
     return self;
 }

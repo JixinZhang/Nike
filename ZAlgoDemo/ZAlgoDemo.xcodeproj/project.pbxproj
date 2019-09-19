@@ -8,42 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		0998D5E622B8CF1500D4D6AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D5E522B8CF1500D4D6AB /* AppDelegate.m */; };
-		0998D5E922B8CF1500D4D6AB /* ZAlgoSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D5E822B8CF1500D4D6AB /* ZAlgoSortViewController.m */; };
 		0998D5EC22B8CF1500D4D6AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0998D5EA22B8CF1500D4D6AB /* Main.storyboard */; };
 		0998D5EE22B8CF1600D4D6AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0998D5ED22B8CF1600D4D6AB /* Assets.xcassets */; };
 		0998D5F122B8CF1600D4D6AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0998D5EF22B8CF1600D4D6AB /* LaunchScreen.storyboard */; };
 		0998D5F422B8CF1600D4D6AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D5F322B8CF1600D4D6AB /* main.m */; };
+		099B6336233379D700637C1E /* ZAlgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099B6335233379D700637C1E /* ZAlgo.framework */; };
 		09D2CBBB22BB71E000772B4D /* ZAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */; };
-		09D2CBBE22BB74CF00772B4D /* ZAlgoStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D2CBBD22BB74CF00772B4D /* ZAlgoStringViewController.m */; };
-		09F5A46322E159090042F792 /* ZAlgoLinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F5A46222E159090042F792 /* ZAlgoLinkedListViewController.m */; };
-		09F5A46622E1591A0042F792 /* ZAlgoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F5A46522E1591A0042F792 /* ZAlgoList.m */; };
-		09FE36602317B57700C5587B /* ZAlgoTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FE365F2317B57700C5587B /* ZAlgoTreeViewController.m */; };
-		09FE36632317B9A900C5587B /* ZAlgoTreeOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FE36622317B9A900C5587B /* ZAlgoTreeOC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0998D5E122B8CF1500D4D6AB /* ZAlgoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZAlgoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0998D5E422B8CF1500D4D6AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0998D5E522B8CF1500D4D6AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0998D5E722B8CF1500D4D6AB /* ZAlgoSortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoSortViewController.h; sourceTree = "<group>"; };
-		0998D5E822B8CF1500D4D6AB /* ZAlgoSortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoSortViewController.m; sourceTree = "<group>"; };
 		0998D5EB22B8CF1500D4D6AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0998D5ED22B8CF1600D4D6AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0998D5F022B8CF1600D4D6AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0998D5F222B8CF1600D4D6AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0998D5F322B8CF1600D4D6AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		099B6335233379D700637C1E /* ZAlgo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZAlgo.framework; path = ../Products/ZAlgo.framework; sourceTree = "<group>"; };
+		099B6337233379FE00637C1E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		09D2CBB922BB71E000772B4D /* ZAlgoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoViewController.h; sourceTree = "<group>"; };
 		09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoViewController.m; sourceTree = "<group>"; };
-		09D2CBBC22BB74CF00772B4D /* ZAlgoStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoStringViewController.h; sourceTree = "<group>"; };
-		09D2CBBD22BB74CF00772B4D /* ZAlgoStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoStringViewController.m; sourceTree = "<group>"; };
-		09F5A46122E159090042F792 /* ZAlgoLinkedListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoLinkedListViewController.h; sourceTree = "<group>"; };
-		09F5A46222E159090042F792 /* ZAlgoLinkedListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoLinkedListViewController.m; sourceTree = "<group>"; };
-		09F5A46422E1591A0042F792 /* ZAlgoList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoList.h; sourceTree = "<group>"; };
-		09F5A46522E1591A0042F792 /* ZAlgoList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoList.m; sourceTree = "<group>"; };
-		09FE365E2317B57700C5587B /* ZAlgoTreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoTreeViewController.h; sourceTree = "<group>"; };
-		09FE365F2317B57700C5587B /* ZAlgoTreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoTreeViewController.m; sourceTree = "<group>"; };
-		09FE36612317B9A900C5587B /* ZAlgoTreeOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoTreeOC.h; sourceTree = "<group>"; };
-		09FE36622317B9A900C5587B /* ZAlgoTreeOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoTreeOC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099B6336233379D700637C1E /* ZAlgo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +48,7 @@
 			children = (
 				0998D5E322B8CF1500D4D6AB /* ZAlgoDemo */,
 				0998D5E222B8CF1500D4D6AB /* Products */,
+				099B6334233379D600637C1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,76 +72,17 @@
 				0998D5F322B8CF1600D4D6AB /* main.m */,
 				09D2CBB922BB71E000772B4D /* ZAlgoViewController.h */,
 				09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */,
-				09D2CBBF22BB760D00772B4D /* ZAlgoSort */,
-				09F5A46022E158BC0042F792 /* ZAlgoLinkedList */,
-				09D2CBC022BB762500772B4D /* ZAlgoString */,
-				09F5A45C22E1587B0042F792 /* ZAlgoBinarySearch */,
-				09F5A45D22E1588C0042F792 /* ZAlgoTree */,
-				09F5A45E22E158960042F792 /* ZAlgoHeap */,
-				09F5A45F22E158A50042F792 /* ZAlgoLeetCode */,
+				099B6337233379FE00637C1E /* PrefixHeader.pch */,
 			);
 			path = ZAlgoDemo;
 			sourceTree = "<group>";
 		};
-		09D2CBBF22BB760D00772B4D /* ZAlgoSort */ = {
+		099B6334233379D600637C1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0998D5E722B8CF1500D4D6AB /* ZAlgoSortViewController.h */,
-				0998D5E822B8CF1500D4D6AB /* ZAlgoSortViewController.m */,
+				099B6335233379D700637C1E /* ZAlgo.framework */,
 			);
-			path = ZAlgoSort;
-			sourceTree = "<group>";
-		};
-		09D2CBC022BB762500772B4D /* ZAlgoString */ = {
-			isa = PBXGroup;
-			children = (
-				09D2CBBC22BB74CF00772B4D /* ZAlgoStringViewController.h */,
-				09D2CBBD22BB74CF00772B4D /* ZAlgoStringViewController.m */,
-			);
-			path = ZAlgoString;
-			sourceTree = "<group>";
-		};
-		09F5A45C22E1587B0042F792 /* ZAlgoBinarySearch */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ZAlgoBinarySearch;
-			sourceTree = "<group>";
-		};
-		09F5A45D22E1588C0042F792 /* ZAlgoTree */ = {
-			isa = PBXGroup;
-			children = (
-				09FE365E2317B57700C5587B /* ZAlgoTreeViewController.h */,
-				09FE365F2317B57700C5587B /* ZAlgoTreeViewController.m */,
-				09FE36612317B9A900C5587B /* ZAlgoTreeOC.h */,
-				09FE36622317B9A900C5587B /* ZAlgoTreeOC.m */,
-			);
-			path = ZAlgoTree;
-			sourceTree = "<group>";
-		};
-		09F5A45E22E158960042F792 /* ZAlgoHeap */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ZAlgoHeap;
-			sourceTree = "<group>";
-		};
-		09F5A45F22E158A50042F792 /* ZAlgoLeetCode */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ZAlgoLeetCode;
-			sourceTree = "<group>";
-		};
-		09F5A46022E158BC0042F792 /* ZAlgoLinkedList */ = {
-			isa = PBXGroup;
-			children = (
-				09F5A46122E159090042F792 /* ZAlgoLinkedListViewController.h */,
-				09F5A46222E159090042F792 /* ZAlgoLinkedListViewController.m */,
-				09F5A46422E1591A0042F792 /* ZAlgoList.h */,
-				09F5A46522E1591A0042F792 /* ZAlgoList.m */,
-			);
-			path = ZAlgoLinkedList;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,14 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FE36602317B57700C5587B /* ZAlgoTreeViewController.m in Sources */,
-				09D2CBBE22BB74CF00772B4D /* ZAlgoStringViewController.m in Sources */,
 				09D2CBBB22BB71E000772B4D /* ZAlgoViewController.m in Sources */,
-				0998D5E922B8CF1500D4D6AB /* ZAlgoSortViewController.m in Sources */,
-				09F5A46322E159090042F792 /* ZAlgoLinkedListViewController.m in Sources */,
 				0998D5F422B8CF1600D4D6AB /* main.m in Sources */,
-				09F5A46622E1591A0042F792 /* ZAlgoList.m in Sources */,
-				09FE36632317B9A900C5587B /* ZAlgoTreeOC.m in Sources */,
 				0998D5E622B8CF1500D4D6AB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,12 +301,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/../Products";
+				GCC_PREFIX_HEADER = ZAlgoDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = ZAlgoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = app.jixin.ZAlgoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,12 +322,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/../Products";
+				GCC_PREFIX_HEADER = ZAlgoDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = ZAlgoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = app.jixin.ZAlgoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

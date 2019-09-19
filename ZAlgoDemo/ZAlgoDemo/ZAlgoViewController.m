@@ -22,6 +22,8 @@
     self.title = @"algorithm by Objective-C";
     [self.view addSubview:self.tableView];
     
+    NSLog(@"%@", [NSRunLoop currentRunLoop]);
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ZAlgoDemoCell"];
     
     self.dataSource = @[

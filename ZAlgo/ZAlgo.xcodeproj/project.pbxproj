@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		099B630F2333775500637C1E /* ZAlgoAggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 099B63102333775500637C1E /* Build configuration list for PBXAggregateTarget "ZAlgoAggregate" */;
+			buildPhases = (
+				099B63132333776B00637C1E /* Build Framework */,
+				099B63142333778500637C1E /* Copy Framework */,
+			);
+			dependencies = (
+			);
+			name = ZAlgoAggregate;
+			productName = ZAlgoAggregate;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		099B63092333773500637C1E /* ZAlgo.h in Headers */ = {isa = PBXBuildFile; fileRef = 099B63072333773500637C1E /* ZAlgo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		099B63282333781600637C1E /* ZAlgoStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B63162333781600637C1E /* ZAlgoStringViewController.m */; };
+		099B63292333781600637C1E /* ZAlgoStringViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 099B63172333781600637C1E /* ZAlgoStringViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		099B632A2333781600637C1E /* ZAlgoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B63192333781600637C1E /* ZAlgoList.m */; };
+		099B632B2333781600637C1E /* ZAlgoLinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B631A2333781600637C1E /* ZAlgoLinkedListViewController.m */; };
+		099B632C2333781600637C1E /* ZAlgoList.h in Headers */ = {isa = PBXBuildFile; fileRef = 099B631B2333781600637C1E /* ZAlgoList.h */; };
+		099B632D2333781600637C1E /* ZAlgoLinkedListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 099B631C2333781600637C1E /* ZAlgoLinkedListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		099B632E2333781600637C1E /* ZAlgoTreeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 099B631E2333781600637C1E /* ZAlgoTreeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		099B632F2333781600637C1E /* ZAlgoTreeOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B631F2333781600637C1E /* ZAlgoTreeOC.m */; };
+		099B63302333781600637C1E /* ZAlgoTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B63202333781600637C1E /* ZAlgoTreeViewController.m */; };
+		099B63312333781600637C1E /* ZAlgoTreeOC.h in Headers */ = {isa = PBXBuildFile; fileRef = 099B63212333781600637C1E /* ZAlgoTreeOC.h */; };
+		099B63322333781600637C1E /* ZAlgoSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B63232333781600637C1E /* ZAlgoSortViewController.m */; };
+		099B63332333781600637C1E /* ZAlgoSortViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 099B63242333781600637C1E /* ZAlgoSortViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		099B63042333773500637C1E /* ZAlgo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZAlgo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		099B63072333773500637C1E /* ZAlgo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgo.h; sourceTree = "<group>"; };
+		099B63082333773500637C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		099B63162333781600637C1E /* ZAlgoStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAlgoStringViewController.m; sourceTree = "<group>"; };
+		099B63172333781600637C1E /* ZAlgoStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAlgoStringViewController.h; sourceTree = "<group>"; };
+		099B63192333781600637C1E /* ZAlgoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAlgoList.m; sourceTree = "<group>"; };
+		099B631A2333781600637C1E /* ZAlgoLinkedListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAlgoLinkedListViewController.m; sourceTree = "<group>"; };
+		099B631B2333781600637C1E /* ZAlgoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAlgoList.h; sourceTree = "<group>"; };
+		099B631C2333781600637C1E /* ZAlgoLinkedListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAlgoLinkedListViewController.h; sourceTree = "<group>"; };
+		099B631E2333781600637C1E /* ZAlgoTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAlgoTreeViewController.h; sourceTree = "<group>"; };
+		099B631F2333781600637C1E /* ZAlgoTreeOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAlgoTreeOC.m; sourceTree = "<group>"; };
+		099B63202333781600637C1E /* ZAlgoTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAlgoTreeViewController.m; sourceTree = "<group>"; };
+		099B63212333781600637C1E /* ZAlgoTreeOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAlgoTreeOC.h; sourceTree = "<group>"; };
+		099B63232333781600637C1E /* ZAlgoSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAlgoSortViewController.m; sourceTree = "<group>"; };
+		099B63242333781600637C1E /* ZAlgoSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAlgoSortViewController.h; sourceTree = "<group>"; };
+		099B633823337E4A00637C1E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		099B63012333773500637C1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		099B62FA2333773500637C1E = {
+			isa = PBXGroup;
+			children = (
+				099B63062333773500637C1E /* ZAlgo */,
+				099B63052333773500637C1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		099B63052333773500637C1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				099B63042333773500637C1E /* ZAlgo.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		099B63062333773500637C1E /* ZAlgo */ = {
+			isa = PBXGroup;
+			children = (
+				099B63082333773500637C1E /* Info.plist */,
+				099B63072333773500637C1E /* ZAlgo.h */,
+				099B63272333781600637C1E /* ZAlgoBinarySearch */,
+				099B63252333781600637C1E /* ZAlgoHeap */,
+				099B63262333781600637C1E /* ZAlgoLeetCode */,
+				099B63182333781600637C1E /* ZAlgoLinkedList */,
+				099B63222333781600637C1E /* ZAlgoSort */,
+				099B63152333781600637C1E /* ZAlgoString */,
+				099B631D2333781600637C1E /* ZAlgoTree */,
+				099B633823337E4A00637C1E /* README.md */,
+			);
+			path = ZAlgo;
+			sourceTree = "<group>";
+		};
+		099B63152333781600637C1E /* ZAlgoString */ = {
+			isa = PBXGroup;
+			children = (
+				099B63172333781600637C1E /* ZAlgoStringViewController.h */,
+				099B63162333781600637C1E /* ZAlgoStringViewController.m */,
+			);
+			path = ZAlgoString;
+			sourceTree = "<group>";
+		};
+		099B63182333781600637C1E /* ZAlgoLinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				099B631C2333781600637C1E /* ZAlgoLinkedListViewController.h */,
+				099B631A2333781600637C1E /* ZAlgoLinkedListViewController.m */,
+				099B631B2333781600637C1E /* ZAlgoList.h */,
+				099B63192333781600637C1E /* ZAlgoList.m */,
+			);
+			path = ZAlgoLinkedList;
+			sourceTree = "<group>";
+		};
+		099B631D2333781600637C1E /* ZAlgoTree */ = {
+			isa = PBXGroup;
+			children = (
+				099B63212333781600637C1E /* ZAlgoTreeOC.h */,
+				099B631F2333781600637C1E /* ZAlgoTreeOC.m */,
+				099B631E2333781600637C1E /* ZAlgoTreeViewController.h */,
+				099B63202333781600637C1E /* ZAlgoTreeViewController.m */,
+			);
+			path = ZAlgoTree;
+			sourceTree = "<group>";
+		};
+		099B63222333781600637C1E /* ZAlgoSort */ = {
+			isa = PBXGroup;
+			children = (
+				099B63242333781600637C1E /* ZAlgoSortViewController.h */,
+				099B63232333781600637C1E /* ZAlgoSortViewController.m */,
+			);
+			path = ZAlgoSort;
+			sourceTree = "<group>";
+		};
+		099B63252333781600637C1E /* ZAlgoHeap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZAlgoHeap;
+			sourceTree = "<group>";
+		};
+		099B63262333781600637C1E /* ZAlgoLeetCode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZAlgoLeetCode;
+			sourceTree = "<group>";
+		};
+		099B63272333781600637C1E /* ZAlgoBinarySearch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZAlgoBinarySearch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		099B62FF2333773500637C1E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099B632D2333781600637C1E /* ZAlgoLinkedListViewController.h in Headers */,
+				099B63332333781600637C1E /* ZAlgoSortViewController.h in Headers */,
+				099B63292333781600637C1E /* ZAlgoStringViewController.h in Headers */,
+				099B632C2333781600637C1E /* ZAlgoList.h in Headers */,
+				099B63092333773500637C1E /* ZAlgo.h in Headers */,
+				099B63312333781600637C1E /* ZAlgoTreeOC.h in Headers */,
+				099B632E2333781600637C1E /* ZAlgoTreeViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		099B63032333773500637C1E /* ZAlgo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 099B630C2333773500637C1E /* Build configuration list for PBXNativeTarget "ZAlgo" */;
+			buildPhases = (
+				099B62FF2333773500637C1E /* Headers */,
+				099B63002333773500637C1E /* Sources */,
+				099B63012333773500637C1E /* Frameworks */,
+				099B63022333773500637C1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZAlgo;
+			productName = ZAlgo;
+			productReference = 099B63042333773500637C1E /* ZAlgo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		099B62FB2333773500637C1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = zjixin;
+				TargetAttributes = {
+					099B63032333773500637C1E = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					099B630F2333775500637C1E = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 099B62FE2333773500637C1E /* Build configuration list for PBXProject "ZAlgo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 099B62FA2333773500637C1E;
+			productRefGroup = 099B63052333773500637C1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				099B63032333773500637C1E /* ZAlgo */,
+				099B630F2333775500637C1E /* ZAlgoAggregate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		099B63022333773500637C1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		099B63132333776B00637C1E /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator build\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\n#open \"${INSTALL_DIR}\"\n";
+		};
+		099B63142333778500637C1E /* Copy Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# copy the framework to root product category\nFMK_NAME=${PROJECT_NAME}\nINSTALL_SOURCE_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\nINSTALL_TARGET_DIR=${SRCROOT}/../Products/${FMK_NAME}.framework\n# Cleaning the oldest.\nif [ -d \"${INSTALL_TARGET_DIR}\" ]\nthen\nrm -rf \"${INSTALL_TARGET_DIR}\"\nfi\nmkdir -p \"${INSTALL_TARGET_DIR}\"\ncp -R \"${INSTALL_SOURCE_DIR}/\" \"${INSTALL_TARGET_DIR}/\"\nrm -rf \"${INSTALL_TARGET_DIR}/_CodeSignature\"\nrm -rf \"${INSTALL_TARGET_DIR}/Info.plist\"\nopen \"${INSTALL_TARGET_DIR}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		099B63002333773500637C1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099B632B2333781600637C1E /* ZAlgoLinkedListViewController.m in Sources */,
+				099B63282333781600637C1E /* ZAlgoStringViewController.m in Sources */,
+				099B63322333781600637C1E /* ZAlgoSortViewController.m in Sources */,
+				099B632A2333781600637C1E /* ZAlgoList.m in Sources */,
+				099B632F2333781600637C1E /* ZAlgoTreeOC.m in Sources */,
+				099B63302333781600637C1E /* ZAlgoTreeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		099B630A2333773500637C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		099B630B2333773500637C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		099B630D2333773500637C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZAlgo/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = app.jixin.ZAlgo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		099B630E2333773500637C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZAlgo/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = app.jixin.ZAlgo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		099B63112333775500637C1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		099B63122333775500637C1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		099B62FE2333773500637C1E /* Build configuration list for PBXProject "ZAlgo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099B630A2333773500637C1E /* Debug */,
+				099B630B2333773500637C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		099B630C2333773500637C1E /* Build configuration list for PBXNativeTarget "ZAlgo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099B630D2333773500637C1E /* Debug */,
+				099B630E2333773500637C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		099B63102333775500637C1E /* Build configuration list for PBXAggregateTarget "ZAlgoAggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099B63112333775500637C1E /* Debug */,
+				099B63122333775500637C1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 099B62FB2333773500637C1E /* Project object */;
+}

@@ -11,6 +11,9 @@
       location = "group:ZAlgoDemoSwift/ZAlgoDemoSwift.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:ZAlgo/ZAlgo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ZAlgoDemo/ZAlgoDemo.xcodeproj">
    </FileRef>
    <FileRef

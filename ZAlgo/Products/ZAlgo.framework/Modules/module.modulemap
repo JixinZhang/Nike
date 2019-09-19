@@ -1,0 +1,6 @@
+framework module ZAlgo {
+  umbrella header "ZAlgo.h"
+
+  export *
+  module * { export * }
+}
