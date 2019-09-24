@@ -29,23 +29,29 @@
  */
 
 
+void fooMethod(id self, SEL _cmd) {
+    NSLog(@"fooMethod - %@, %@", self, NSStringFromSelector(_cmd));
+}
+
 @implementation Persion
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         //执行foo函数
-        [self performSelector:@selector(foo:) withObject:@"object" afterDelay:<#(NSTimeInterval)#> inModes:<#(nonnull NSArray<NSRunLoopMode> *)#>];
+        [self performSelector:@selector(foo:) withObject:@"object"];
     }
     return self;
 }
+
+#pragma mark -- 实例方法动态解析和消息转发
 
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     return YES;
     if (sel == @selector(foo:)) {
         //如果执行foo函数, 就动态解析，置顶新的IMP
-//        class_addMethod([self class], sel, (IMP)fooMethod, "v@:");
-//        return YES;
+        class_addMethod([self class], sel, (IMP)fooMethod, "v16@0:8");
+        return YES;
     }
     return [super resolveInstanceMethod:sel];
 }
@@ -76,6 +82,43 @@
     } else {
         [self doesNotRecognizeSelector:sel];
     }
+    NSLog(@"-(void)forwardInvocation");
+}
+
+#pragma mark -- 类方法的动态解析和消息转发
+
+//+ (BOOL)resolveClassMethod:(SEL)sel {
+//    if (sel == @selector(test)) {
+//        Class metaClass = object_getClass(self);
+//        class_addMethod(metaClass, sel, (IMP)fooMethod, "v16@0:8");
+//        return YES;
+//    }
+//    return [super resolveClassMethod:sel];
+//}
+
+//+ (id)forwardingTargetForSelector:(SEL)aSelector {
+//    if (aSelector == @selector(test)) {
+//        return object_getClass([Man new]);
+//    }
+//    return [super forwardingTargetForSelector:aSelector];
+//}
+
++ (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    if ([NSStringFromSelector(aSelector) isEqualToString:@"test"]) {
+        return [NSMethodSignature signatureWithObjCTypes:"v@:"];
+    }
+    return [super methodSignatureForSelector:aSelector];
+}
+
++ (void)forwardInvocation:(NSInvocation *)anInvocation {
+    SEL sel = anInvocation.selector;
+    
+    if ([Man respondsToSelector:sel]) {
+        [anInvocation invokeWithTarget:[Man class]];
+    } else {
+        [self doesNotRecognizeSelector:sel];
+    }
+    NSLog(@"+(void)forwardInvocation");
 }
 
 @end

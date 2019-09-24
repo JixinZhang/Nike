@@ -39,6 +39,13 @@
     self.tableView.tableFooterView = [UIView new];
     [self.tableView reloadData];
     
+    NSLog(@"log 1");
+    [self performSelector:@selector(test) withObject:nil afterDelay:0];
+    NSLog(@"log 3");
+}
+
+- (void)test {
+    NSLog(@"log 2");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -58,6 +58,8 @@ static NSString *cellIdentifier = @"ZGCDCell";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
     [self.tableView reloadData];
     
+//    [self performSelector:@selector(viewDidLoad) withObject:nil afterDelay:0];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

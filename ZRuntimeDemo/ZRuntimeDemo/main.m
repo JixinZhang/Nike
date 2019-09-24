@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 #import "Man.h"
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -14,6 +15,15 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Hello, World!");
         
         Persion *persion = [[Persion alloc] init];
+        
+        [Persion test];
+        
+        imp_implementationWithBlock(^{
+            
+        });
+        
+//        method_exchangeImplementations()
+        
     }
     return 0;
 }

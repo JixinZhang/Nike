@@ -52,7 +52,7 @@
         }
         var id = callbackIndex.toString();
         innerArgs['callbackId'] = id;
-        callBackFns[id] = fn;。
+        callBackFns[id] = fn;
         callbackIndex++;
         if (window.webkit && window.webkit.messageHandlers) {
             var newObj = {methodName: methodName, args: innerArgs};

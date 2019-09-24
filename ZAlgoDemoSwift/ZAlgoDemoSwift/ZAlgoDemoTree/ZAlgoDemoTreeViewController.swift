@@ -277,7 +277,7 @@ class ZAlgoDemoTreeViewController: UITableViewController {
     }
     
     @objc func deleteDemo() {
-        let targe = 50//13
+        let targe = 13
         self.tree?.delete(value: targe)
         preOrderStackDemo()
     }

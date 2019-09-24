@@ -66,10 +66,10 @@
     NSString *string = @"the sky is blue";
     const char *stringChar = string.UTF8String;
     char *ch = reverse_str(stringChar);
-    NSString * str = [NSString stringWithUTF8String:ch];
-    NSLog(@"reversedString = %@", str);
-//    NSString *reversedString = [self reverseStringWith:string];
-//    NSLog(@"reversedString = %@", reversedString);
+//    NSString * str = [NSString stringWithUTF8String:ch];
+//    NSLog(@"reversedString = %@", str);
+    NSString *reversedString = [self reverseStringWith:string];
+    NSLog(@"reversedString = %@", reversedString);
 }
 
 char * reverse_str(const char *s) {
@@ -102,7 +102,8 @@ char * reverse_str(const char *s) {
         j--;
     }
     
-    char *newStr;
+    char *newStr[length];
+    
     for (NSInteger index = 0; index < length; index++) {
         newStr[index] = copyStr[index];
     }

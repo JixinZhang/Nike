@@ -29,7 +29,13 @@
     [self.view addSubview:self.tableView];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ZAlgoDemoCell"];
-    
+    NSString *string = @"Hello, world";
+    NSMutableString *mutaString = [[NSMutableString alloc] init];
+    for (int i = 0; i < string.length; i++) {
+        unichar c = [string characterAtIndex:string.length-1-i];
+        [mutaString appendFormat:@"%c", c];
+    }
+    NSLog(@"mutaString = %@", mutaString);
     self.dataSource = @[
                         @{@"title" : @"1. 冒泡排序",
                           @"subtitle": @"(O(n^2))",
@@ -195,7 +201,7 @@
 - (void)quickSortWithArray:(NSMutableArray *)array
                       left:(NSInteger)left
                      right:(NSInteger)right {
-    if (left > right) {
+    if (left >= right) {
         return;
     }
     

@@ -24,8 +24,11 @@
     [self.view addSubview:self.webView];
     NSBundle *manager = [NSBundle mainBundle];
     NSString *filePath = [manager pathForResource:@"Yuta" ofType:@"html"];
-    NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:fileUrl]];
+    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
+    NSURL *baseURL = [NSURL fileURLWithPath:manager.bundlePath];
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:fileURL]];
+    NSString *html = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    [self.webView loadHTMLString:html baseURL:baseURL];
     [self setupToolView];
     // Do any additional setup after loading the view, typically from a nib.
     

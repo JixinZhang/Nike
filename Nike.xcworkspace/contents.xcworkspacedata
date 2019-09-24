@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ZRunLoopDemo/ZRunLoopDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ZRuntimeDemo/ZRuntimeDemo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ZClassInternalImp/ZClassInternalImp.xcodeproj">
    </FileRef>
    <FileRef
@@ -21,9 +27,6 @@
    </FileRef>
    <FileRef
       location = "group:ZGCDDemoApp/ZGCDDemoApp.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:ZRuntimeDemo/ZRuntimeDemo.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:ZShoppingCart/ZShoppingCart/ZShoppingCart.xcodeproj">

@@ -14,4 +14,8 @@
     NSLog(@"Doing foo");
 }
 
++ (void)test {
+    NSLog(@"Man +%@", NSStringFromSelector(_cmd));
+}
+
 @end

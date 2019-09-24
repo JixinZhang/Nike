@@ -15,6 +15,7 @@
 		0900FDD822A66EA6004535D3 /* Yuta.js in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDD022A66EA6004535D3 /* Yuta.js */; };
 		0900FDD922A66EA6004535D3 /* camera.html in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDD122A66EA6004535D3 /* camera.html */; };
 		0900FDDA22A66EA6004535D3 /* share.html in Resources */ = {isa = PBXBuildFile; fileRef = 0900FDD222A66EA6004535D3 /* share.html */; };
+		099B633B23346C0C00637C1E /* WKWebViewMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 099B633A23346C0C00637C1E /* WKWebViewMessageHandler.m */; };
 		789FBF1F1E9731720087B364 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF1E1E9731720087B364 /* main.m */; };
 		789FBF221E9731720087B364 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF211E9731720087B364 /* AppDelegate.m */; };
 		789FBF251E9731720087B364 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789FBF241E9731720087B364 /* ViewController.m */; };
@@ -56,6 +57,8 @@
 		0900FDD022A66EA6004535D3 /* Yuta.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Yuta.js; sourceTree = "<group>"; };
 		0900FDD122A66EA6004535D3 /* camera.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = camera.html; sourceTree = "<group>"; };
 		0900FDD222A66EA6004535D3 /* share.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = share.html; sourceTree = "<group>"; };
+		099B633923346C0C00637C1E /* WKWebViewMessageHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewMessageHandler.h; sourceTree = "<group>"; };
+		099B633A23346C0C00637C1E /* WKWebViewMessageHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewMessageHandler.m; sourceTree = "<group>"; };
 		789FBF1A1E9731720087B364 /* Yuta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yuta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		789FBF1E1E9731720087B364 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		789FBF201E9731720087B364 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 				789FBF241E9731720087B364 /* ViewController.m */,
 				789FBF3E1E9735AE0087B364 /* WKViewController.h */,
 				789FBF3F1E9735AE0087B364 /* WKViewController.m */,
+				099B633923346C0C00637C1E /* WKWebViewMessageHandler.h */,
+				099B633A23346C0C00637C1E /* WKWebViewMessageHandler.m */,
 				789FBF261E9731720087B364 /* Main.storyboard */,
 				789FBF291E9731720087B364 /* Assets.xcassets */,
 				789FBF2B1E9731720087B364 /* LaunchScreen.storyboard */,
@@ -364,6 +369,7 @@
 				789FBF841E973E6F0087B364 /* HybridJsBridge.m in Sources */,
 				789FBF8A1E973E6F0087B364 /* UIImage+HybrideImage.m in Sources */,
 				789FBF401E9735AE0087B364 /* WKViewController.m in Sources */,
+				099B633B23346C0C00637C1E /* WKWebViewMessageHandler.m in Sources */,
 				789FBF1F1E9731720087B364 /* main.m in Sources */,
 				789FBF801E973E6F0087B364 /* HybridImagePickerViewController.m in Sources */,
 				789FBF871E973E6F0087B364 /* HybridJsManager+View.m in Sources */,
