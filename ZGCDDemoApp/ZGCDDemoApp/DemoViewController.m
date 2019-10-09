@@ -41,11 +41,14 @@
     
     NSLog(@"log 1");
     [self performSelector:@selector(test) withObject:nil afterDelay:0];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"log 2.2");
+    });
     NSLog(@"log 3");
 }
 
 - (void)test {
-    NSLog(@"log 2");
+    NSLog(@"log 2.1");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

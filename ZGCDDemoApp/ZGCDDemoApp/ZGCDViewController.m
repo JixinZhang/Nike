@@ -51,6 +51,8 @@ static NSString *cellIdentifier = @"ZGCDCell";
                           @"action" : @"dispatchSemaphoreNotSafe"},
                         @{@"title" : @"10.2 dispatch_semaphore(线程安全)",
                           @"action" : @"dispatchSemaphore"},
+//                        @{@"title" : @"11. 串行同步异步",
+//                        @"action" : @"serialConcurrent"},
                         ];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -451,7 +453,7 @@ static NSString *cellIdentifier = @"ZGCDCell";
     NSLog(@"currentThread --- %@", [NSThread currentThread]);
     NSLog(@"semaphore --- begin");
     
-    self.ticketCount = 50;
+    self.ticketCount = 25;
     
     //表示上海窗口
     dispatch_queue_t queueSH = dispatch_queue_create("app.jixin.queue.shanghai", DISPATCH_QUEUE_SERIAL);
@@ -486,6 +488,63 @@ static NSString *cellIdentifier = @"ZGCDCell";
         }
         //相当于解锁，当信号量大于0时，执行
         dispatch_semaphore_signal(_semaphoreLock);
+        
+    }
+}
+
+#pragma mark -- 串行队列同步异步
+
+static dispatch_semaphore_t _lock;
+
+- (void)serialConcurrent {
+    NSLog(@"currentThread --- %@", [NSThread currentThread]);
+    NSLog(@"serialConcurrent --- begin");
+    
+    _lock = dispatch_semaphore_create(1);
+    __weak typeof (self)weakSelf = self;
+    dispatch_queue_t queueSerial = dispatch_queue_create("app.jixin.queue.serial", DISPATCH_QUEUE_SERIAL);
+    
+    self.ticketCount = 25;
+    
+    dispatch_async(queueSerial, ^{
+        //表示上海站的多个窗口
+        dispatch_queue_t queueSH = dispatch_queue_create("app.jixin.queue.shanghai", DISPATCH_QUEUE_CONCURRENT);
+        
+        //表示北京站的多个窗口
+        dispatch_queue_t queueBJ = dispatch_queue_create("app.jixin.queue.beijing", DISPATCH_QUEUE_CONCURRENT);
+        
+        dispatch_async(queueSH, ^{
+            [weakSelf saleTicketWithMultiple];
+        });
+        
+        dispatch_async(queueBJ, ^{
+            [weakSelf saleTicketWithMultiple];
+        });
+    });
+    
+    dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
+    dispatch_async(queueSerial, ^{
+        NSLog(@"准备增加新的票 %@", [NSThread currentThread]);
+    });
+    dispatch_semaphore_signal(_lock);
+    NSLog(@"serialConcurrent --- end");
+}
+
+- (void)saleTicketWithMultiple {
+    while (1) {
+        //相当于加锁 dispatch_semaphore_wait，当信号量为0时，等待。
+        dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
+        if (self.ticketCount > 0) {
+            self.ticketCount--;
+            NSLog(@"%@", [NSString stringWithFormat:@"剩余票数：%ld 窗口：%@", (long)self.ticketCount, [NSThread currentThread]]);
+            [NSThread sleepForTimeInterval:0.2];
+        } else {
+            NSLog(@"所有车票已售完");
+            dispatch_semaphore_signal(_lock);
+            break;
+        }
+        //相当于解锁，当信号量大于0时，执行
+        dispatch_semaphore_signal(_lock);
         
     }
 }
