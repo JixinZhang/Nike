@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ZLeaksFinder/ZLeaksFinder.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:AZMonitor/AZMonitor.xcodeproj">
    </FileRef>
    <FileRef

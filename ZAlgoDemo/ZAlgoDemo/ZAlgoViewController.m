@@ -22,7 +22,7 @@
     self.title = @"algorithm by Objective-C";
     [self.view addSubview:self.tableView];
     
-    NSLog(@"%@", [NSRunLoop currentRunLoop]);
+//    NSLog(@"%@", [NSRunLoop currentRunLoop]);
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ZAlgoDemoCell"];
     
@@ -42,6 +42,9 @@
                         @{@"title" : @"0. 其他",
                           @"subtitle": @"",
                           @"viewController" : @"ZAlgoStringViewController"},
+                        @{@"title" : @"测试内存泄漏",
+                          @"subtitle": @"",
+                          @"viewController" : @"ZAlgoLeakDemoViewController"},
                         ];
     [self.tableView reloadData];
     
