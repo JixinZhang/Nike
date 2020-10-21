@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import "JDMonitor.h"
 #import "JDSHPMUIStuckMonitor.h"
+#import "JDSHGPUFPS.h"
 
 @implementation UIViewController (JDProfiler)
 
@@ -36,18 +37,21 @@
 }
 
 - (void)jd_swizzleViewDidAppear:(BOOL)animated {
-    [[JDSHPMUIStuckMonitor sharedMonitor] startMonitorForViewController:self];
+//    [[JDSHPMUIStuckMonitor sharedMonitor] startMonitorForViewController:self];
+//    [[JDSHGPUFPS sharedInstance] startGPUFPSMonitor:self];
+    
     [self jd_swizzleViewDidAppear:animated];
 }
 
 - (void)jd_swizzleViewWillDisappear:(BOOL)animated {
     [self jd_swizzleViewWillDisappear:animated];
-    [[JDSHPMUIStuckMonitor sharedMonitor] finishMonitor];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSDictionary *stucInfo = [JDSHPMUIStuckMonitor getStuckInfo];
-        NSLog(@"jd_swizzleViewWillDisappear %@\n\n", stucInfo);
-    });
+//    [[JDSHPMUIStuckMonitor sharedMonitor] finishMonitor];
+//    [[JDSHGPUFPS sharedInstance] stopGPUFPSMonitor:self];
+//
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        NSDictionary *stucInfo = [JDSHPMUIStuckMonitor getStuckInfo];
+//        NSLog(@"jd_swizzleViewWillDisappear %@\n\n", stucInfo);
+//    });
 }
 
 @end

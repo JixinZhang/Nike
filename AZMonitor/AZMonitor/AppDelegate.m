@@ -6,9 +6,14 @@
 //  Copyright © 2019 app.jixin. All rights reserved.
 //
 
+// 
+
+
 #import "AppDelegate.h"
 #import "JDMonitor.h"
 #import "JDSHPMUIStuckMonitor.h"
+#import "FPSAsyController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -19,6 +24,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    [JDSHPMUIStuckMonitor enableMonitor];
 //    [JDMonitor enableMonitor];
+//    [[FPSAsyController sharedInstance] openFPSMonitor];
+
+    self.bgTaskId = [[UIApplication sharedApplication] beginBackgroundTaskWithName:@"app.jixin.background.test" expirationHandler:^{
+        [self.myTimer invalidate];
+        [[UIApplication sharedApplication] endBackgroundTask:self.bgTaskId];
+        self.bgTaskId = UIBackgroundTaskInvalid;
+        NSLog(@"endBackgroundTask");
+    }];
+    NSLog(@"beginBackgroundTaskWithName %lu", (unsigned long)self.bgTaskId);
+    
     return YES;
 }
 
@@ -30,13 +45,21 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    if ([self isMultitaskingSupported] == NO) {
+        return;
+    }
+    
+    self.myTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerMthod:) userInfo:nil repeats:YES];
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    if (self.bgTaskId != UIBackgroundTaskInvalid) {
+//        [self endBackgroundTast];
+        [self.myTimer invalidate];
+        [[UIApplication sharedApplication] endBackgroundTask:self.bgTaskId];
+        self.bgTaskId = UIBackgroundTaskInvalid;
+    }
 }
 
 
@@ -47,7 +70,33 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSLog(@"Background app is killed");
 }
 
+- (BOOL)isMultitaskingSupported {
+    BOOL result = NO;
+    if ([[UIDevice currentDevice] respondsToSelector:@selector(isMultitaskingSupported)]) {
+        result = [[UIDevice currentDevice] isMultitaskingSupported];
+    }
+    return result;
+}
+
+NSInteger count = 0;
+
+- (void)timerMthod:(NSTimer *)sender {
+    NSTimeInterval backgroundTimeRemaining = [UIApplication sharedApplication].backgroundTimeRemaining;
+    if (backgroundTimeRemaining == DBL_MAX) {
+        count++;
+        NSLog(@"Background Time goes = %ld", (long)count);
+    } else {
+        NSLog(@"Background Time Remaining = %.0f Seconds", backgroundTimeRemaining);
+        if (backgroundTimeRemaining <= 25) {
+//            [self.myTimer invalidate];
+            [[UIApplication sharedApplication] endBackgroundTask:self.bgTaskId];
+            self.bgTaskId = UIBackgroundTaskInvalid;
+            NSLog(@"BackgroundTask complate");
+        }
+    }
+}
 
 @end

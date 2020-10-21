@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+    self.tableView.backgroundColor = [UIColor redColor];
 }
 
 #pragma mark - tableView delegate
@@ -31,7 +32,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return 2000;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -41,12 +42,15 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identify];
     }
     if (indexPath.row % 20 == 0 || indexPath.row % 20 == 1 || indexPath.row % 20 == 2) {
-        usleep((20 + indexPath.row * 5.0) * 1000); // ms
+//        usleep((20 + indexPath.row * 5.0) * 1000); // ms
         cell.textLabel.text = @"卡顿";
     }else{
-        cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ -> %ld", self.title, (long)indexPath.row];
     }
-    
+    cell.clipsToBounds = YES;
+    cell.layer.cornerRadius = 18;
+//    cell.layer.shouldRasterize = YES;
+    cell.opaque = NO;
     return cell;
 }
 

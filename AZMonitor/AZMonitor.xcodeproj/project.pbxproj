@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6E3F334723A22D0800FA47A3 /* JDSHPMStackBacktrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3F334623A22D0800FA47A3 /* JDSHPMStackBacktrace.m */; };
+		6E5411A124EB775500D5B370 /* UINavigationController+JDScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5411A024EB775500D5B370 /* UINavigationController+JDScreenShot.m */; };
+		6E5AE17F25185735009144DB /* FPSAsyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5AE17E25185735009144DB /* FPSAsyController.m */; };
+		6E5AE18225187E4A009144DB /* JDSHGPUFPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5AE18125187E4A009144DB /* JDSHGPUFPS.m */; };
+		6E6CD59D253EE5A100E3D548 /* 梁祝.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6E6CD59C253EE5A100E3D548 /* 梁祝.mp3 */; };
 		6EE00C1C2396822B003A90D7 /* JDMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE00C1B2396822B003A90D7 /* JDMonitor.m */; };
 		6EE00C1F23978538003A90D7 /* UIViewController+JDProfiler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE00C1E23978538003A90D7 /* UIViewController+JDProfiler.m */; };
 		6EE00C282398B435003A90D7 /* JDSHPMUIStuckMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE00C272398B435003A90D7 /* JDSHPMUIStuckMonitor.m */; };
@@ -19,11 +23,21 @@
 		6EEAD12F2396603200062A13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEAD12E2396603200062A13 /* main.m */; };
 		6EEAD13A2396604200062A13 /* MJCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEAD1372396604100062A13 /* MJCallStack.m */; };
 		6EEAD13E2396608900062A13 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEAD13D2396608900062A13 /* DemoViewController.m */; };
+		6EF7EA6C2521930800481E2C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF7EA6B2521930800481E2C /* GLKit.framework */; };
+		6EF7EA6E2521931300481E2C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF7EA6D2521931300481E2C /* OpenGLES.framework */; };
+		6EF7EA712521C0CF00481E2C /* ThreeDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF7EA702521C0CF00481E2C /* ThreeDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E3F334523A22D0800FA47A3 /* JDSHPMStackBacktrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDSHPMStackBacktrace.h; sourceTree = "<group>"; };
 		6E3F334623A22D0800FA47A3 /* JDSHPMStackBacktrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDSHPMStackBacktrace.m; sourceTree = "<group>"; };
+		6E54119F24EB775500D5B370 /* UINavigationController+JDScreenShot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JDScreenShot.h"; sourceTree = "<group>"; };
+		6E5411A024EB775500D5B370 /* UINavigationController+JDScreenShot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JDScreenShot.m"; sourceTree = "<group>"; };
+		6E5AE17D25185735009144DB /* FPSAsyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPSAsyController.h; sourceTree = "<group>"; };
+		6E5AE17E25185735009144DB /* FPSAsyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPSAsyController.m; sourceTree = "<group>"; };
+		6E5AE18025187E4A009144DB /* JDSHGPUFPS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDSHGPUFPS.h; sourceTree = "<group>"; };
+		6E5AE18125187E4A009144DB /* JDSHGPUFPS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDSHGPUFPS.m; sourceTree = "<group>"; };
+		6E6CD59C253EE5A100E3D548 /* 梁祝.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "梁祝.mp3"; sourceTree = "<group>"; };
 		6EE00C1A2396822B003A90D7 /* JDMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDMonitor.h; sourceTree = "<group>"; };
 		6EE00C1B2396822B003A90D7 /* JDMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDMonitor.m; sourceTree = "<group>"; };
 		6EE00C1D23978538003A90D7 /* UIViewController+JDProfiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JDProfiler.h"; sourceTree = "<group>"; };
@@ -44,6 +58,10 @@
 		6EEAD1392396604100062A13 /* MJCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCallStack.h; sourceTree = "<group>"; };
 		6EEAD13C2396608900062A13 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		6EEAD13D2396608900062A13 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		6EF7EA6B2521930800481E2C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		6EF7EA6D2521931300481E2C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6EF7EA6F2521C0CF00481E2C /* ThreeDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeDViewController.h; sourceTree = "<group>"; };
+		6EF7EA702521C0CF00481E2C /* ThreeDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +69,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF7EA6C2521930800481E2C /* GLKit.framework in Frameworks */,
+				6EF7EA6E2521931300481E2C /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E5AE17C25185704009144DB /* GPUFPs */ = {
+			isa = PBXGroup;
+			children = (
+				6E5AE17D25185735009144DB /* FPSAsyController.h */,
+				6E5AE17E25185735009144DB /* FPSAsyController.m */,
+				6E5AE18025187E4A009144DB /* JDSHGPUFPS.h */,
+				6E5AE18125187E4A009144DB /* JDSHGPUFPS.m */,
+			);
+			path = GPUFPs;
+			sourceTree = "<group>";
+		};
 		6EEAD1132396603100062A13 = {
 			isa = PBXGroup;
 			children = (
 				6EEAD11E2396603100062A13 /* AZMonitor */,
 				6EEAD11D2396603100062A13 /* Products */,
+				6EF7EA6A2521930700481E2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +108,7 @@
 		6EEAD11E2396603100062A13 /* AZMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				6E5AE17C25185704009144DB /* GPUFPs */,
 				6EEAD1352396604100062A13 /* Monitor */,
 				6EEAD11F2396603100062A13 /* AppDelegate.h */,
 				6EEAD1202396603100062A13 /* AppDelegate.m */,
@@ -83,6 +116,9 @@
 				6EEAD1232396603100062A13 /* ViewController.m */,
 				6EEAD13C2396608900062A13 /* DemoViewController.h */,
 				6EEAD13D2396608900062A13 /* DemoViewController.m */,
+				6EF7EA6F2521C0CF00481E2C /* ThreeDViewController.h */,
+				6EF7EA702521C0CF00481E2C /* ThreeDViewController.m */,
+				6E6CD59C253EE5A100E3D548 /* 梁祝.mp3 */,
 				6EEAD1252396603100062A13 /* Main.storyboard */,
 				6EEAD1282396603200062A13 /* Assets.xcassets */,
 				6EEAD12A2396603200062A13 /* LaunchScreen.storyboard */,
@@ -101,12 +137,23 @@
 				6EE00C1B2396822B003A90D7 /* JDMonitor.m */,
 				6EE00C1D23978538003A90D7 /* UIViewController+JDProfiler.h */,
 				6EE00C1E23978538003A90D7 /* UIViewController+JDProfiler.m */,
+				6E54119F24EB775500D5B370 /* UINavigationController+JDScreenShot.h */,
+				6E5411A024EB775500D5B370 /* UINavigationController+JDScreenShot.m */,
 				6EE00C262398B434003A90D7 /* JDSHPMUIStuckMonitor.h */,
 				6EE00C272398B435003A90D7 /* JDSHPMUIStuckMonitor.m */,
 				6E3F334523A22D0800FA47A3 /* JDSHPMStackBacktrace.h */,
 				6E3F334623A22D0800FA47A3 /* JDSHPMStackBacktrace.m */,
 			);
 			path = Monitor;
+			sourceTree = "<group>";
+		};
+		6EF7EA6A2521930700481E2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EF7EA6D2521931300481E2C /* OpenGLES.framework */,
+				6EF7EA6B2521930800481E2C /* GLKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +215,7 @@
 			files = (
 				6EEAD12C2396603200062A13 /* LaunchScreen.storyboard in Resources */,
 				6EEAD1292396603200062A13 /* Assets.xcassets in Resources */,
+				6E6CD59D253EE5A100E3D548 /* 梁祝.mp3 in Resources */,
 				6EEAD1272396603100062A13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,12 +228,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EEAD1242396603100062A13 /* ViewController.m in Sources */,
+				6EF7EA712521C0CF00481E2C /* ThreeDViewController.m in Sources */,
+				6E5AE18225187E4A009144DB /* JDSHGPUFPS.m in Sources */,
 				6EE00C1F23978538003A90D7 /* UIViewController+JDProfiler.m in Sources */,
 				6EEAD13A2396604200062A13 /* MJCallStack.m in Sources */,
 				6EE00C1C2396822B003A90D7 /* JDMonitor.m in Sources */,
 				6EEAD13E2396608900062A13 /* DemoViewController.m in Sources */,
 				6EEAD12F2396603200062A13 /* main.m in Sources */,
 				6EE00C282398B435003A90D7 /* JDSHPMUIStuckMonitor.m in Sources */,
+				6E5AE17F25185735009144DB /* FPSAsyController.m in Sources */,
+				6E5411A124EB775500D5B370 /* UINavigationController+JDScreenShot.m in Sources */,
 				6E3F334723A22D0800FA47A3 /* JDSHPMStackBacktrace.m in Sources */,
 				6EEAD1212396603100062A13 /* AppDelegate.m in Sources */,
 			);
@@ -329,8 +381,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				DEVELOPMENT_TEAM = 853ULVL8ZJ;
 				INFOPLIST_FILE = AZMonitor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,6 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.jixin.AZMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -348,7 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4RTMSXL9KV;
+				DEVELOPMENT_TEAM = 853ULVL8ZJ;
 				INFOPLIST_FILE = AZMonitor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8;
 				LD_RUNPATH_SEARCH_PATHS = (

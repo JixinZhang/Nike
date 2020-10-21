@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, assign) UIBackgroundTaskIdentifier bgTaskId;
+@property (nonatomic, strong) NSTimer *myTimer;
 
 @end
 
