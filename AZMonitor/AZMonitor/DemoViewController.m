@@ -24,6 +24,18 @@
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
     self.tableView.backgroundColor = [UIColor redColor];
+    
+    printf("height1 = %.0f, %.0f\n", [[UIApplication sharedApplication] statusBarFrame].size.height, self.navigationController.navigationBar.frame.origin.y);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    printf("height2 = %.0f, %.0f\n", [[UIApplication sharedApplication] statusBarFrame].size.height,  self.navigationController.navigationBar.frame.origin.y);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    printf("height3 = %.0f, %.0f\n", [[UIApplication sharedApplication] statusBarFrame].size.height,  self.navigationController.navigationBar.frame.origin.y);
 }
 
 #pragma mark - tableView delegate

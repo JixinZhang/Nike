@@ -13,20 +13,21 @@
 		0998D5F122B8CF1600D4D6AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0998D5EF22B8CF1600D4D6AB /* LaunchScreen.storyboard */; };
 		0998D5F422B8CF1600D4D6AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D5F322B8CF1600D4D6AB /* main.m */; };
 		09D2CBBB22BB71E000772B4D /* ZAlgoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */; };
+		6E0816C925AD9EDF000AEC34 /* UINavigationController+Categorhy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0816C825AD9EDF000AEC34 /* UINavigationController+Categorhy.m */; };
 		6E1477AE24C6D15F009C3B17 /* ZAlgoLeakDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1477AD24C6D15F009C3B17 /* ZAlgoLeakDemoViewController.m */; };
-		6E1477DF24C6DB97009C3B17 /* ZAlgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099B6335233379D700637C1E /* ZAlgo.framework */; };
-		6E1477EA24C6E9CF009C3B17 /* ZLeaksFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1477A824C6D01B009C3B17 /* ZLeaksFinder.framework */; };
-		6E1477EB24C6E9CF009C3B17 /* ZLeaksFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1477A824C6D01B009C3B17 /* ZLeaksFinder.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E4A0A25256CDF4A00EF2EF1 /* ZLeaksFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4A0A23256CDEDE00EF2EF1 /* ZLeaksFinder.framework */; };
+		6E4A0A26256CDF4A00EF2EF1 /* ZLeaksFinder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4A0A23256CDEDE00EF2EF1 /* ZLeaksFinder.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E7C30C2256CDC740046638C /* ZAlgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099B6335233379D700637C1E /* ZAlgo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6E1477EC24C6E9CF009C3B17 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6E1477EB24C6E9CF009C3B17 /* ZLeaksFinder.framework in Embed Frameworks */,
+				6E4A0A26256CDF4A00EF2EF1 /* ZLeaksFinder.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,9 +47,11 @@
 		099B6337233379FE00637C1E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		09D2CBB922BB71E000772B4D /* ZAlgoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoViewController.h; sourceTree = "<group>"; };
 		09D2CBBA22BB71E000772B4D /* ZAlgoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoViewController.m; sourceTree = "<group>"; };
-		6E1477A824C6D01B009C3B17 /* ZLeaksFinder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZLeaksFinder.framework; path = ../Products/ZLeaksFinder.framework; sourceTree = "<group>"; };
+		6E0816C725AD9EDF000AEC34 /* UINavigationController+Categorhy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Categorhy.h"; sourceTree = "<group>"; };
+		6E0816C825AD9EDF000AEC34 /* UINavigationController+Categorhy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Categorhy.m"; sourceTree = "<group>"; };
 		6E1477AC24C6D15F009C3B17 /* ZAlgoLeakDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAlgoLeakDemoViewController.h; sourceTree = "<group>"; };
 		6E1477AD24C6D15F009C3B17 /* ZAlgoLeakDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAlgoLeakDemoViewController.m; sourceTree = "<group>"; };
+		6E4A0A23256CDEDE00EF2EF1 /* ZLeaksFinder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZLeaksFinder.framework; path = ZAlgoDemo/ZLeaksFinder.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E1477EA24C6E9CF009C3B17 /* ZLeaksFinder.framework in Frameworks */,
-				6E1477DF24C6DB97009C3B17 /* ZAlgo.framework in Frameworks */,
+				6E4A0A25256CDF4A00EF2EF1 /* ZLeaksFinder.framework in Frameworks */,
+				6E7C30C2256CDC740046638C /* ZAlgo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +70,7 @@
 		0998D5D822B8CF1500D4D6AB = {
 			isa = PBXGroup;
 			children = (
+				6E4A0A23256CDEDE00EF2EF1 /* ZLeaksFinder.framework */,
 				0998D5E322B8CF1500D4D6AB /* ZAlgoDemo */,
 				0998D5E222B8CF1500D4D6AB /* Products */,
 				099B6334233379D600637C1E /* Frameworks */,
@@ -96,6 +100,8 @@
 				6E1477AC24C6D15F009C3B17 /* ZAlgoLeakDemoViewController.h */,
 				6E1477AD24C6D15F009C3B17 /* ZAlgoLeakDemoViewController.m */,
 				099B6337233379FE00637C1E /* PrefixHeader.pch */,
+				6E0816C725AD9EDF000AEC34 /* UINavigationController+Categorhy.h */,
+				6E0816C825AD9EDF000AEC34 /* UINavigationController+Categorhy.m */,
 			);
 			path = ZAlgoDemo;
 			sourceTree = "<group>";
@@ -103,7 +109,6 @@
 		099B6334233379D600637C1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6E1477A824C6D01B009C3B17 /* ZLeaksFinder.framework */,
 				099B6335233379D700637C1E /* ZAlgo.framework */,
 			);
 			name = Frameworks;
@@ -184,6 +189,7 @@
 				0998D5F422B8CF1600D4D6AB /* main.m in Sources */,
 				6E1477AE24C6D15F009C3B17 /* ZAlgoLeakDemoViewController.m in Sources */,
 				0998D5E622B8CF1500D4D6AB /* AppDelegate.m in Sources */,
+				6E0816C925AD9EDF000AEC34 /* UINavigationController+Categorhy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +331,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4RTMSXL9KV;
-				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/../Products/**";
+				DEVELOPMENT_TEAM = 853ULVL8ZJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"${PROJECT_DIR}/../Products/**",
+					"$(PROJECT_DIR)/ZAlgoDemo",
+				);
 				GCC_PREFIX_HEADER = ZAlgoDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = ZAlgoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -338,6 +348,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = app.jixin.ZAlgoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -346,9 +357,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4RTMSXL9KV;
-				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/../Products/**";
+				DEVELOPMENT_TEAM = 853ULVL8ZJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"${PROJECT_DIR}/../Products/**",
+					"$(PROJECT_DIR)/ZAlgoDemo",
+				);
 				GCC_PREFIX_HEADER = ZAlgoDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = ZAlgoDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -359,6 +374,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = app.jixin.ZAlgoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -20,6 +20,13 @@
 @property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) UISwitch *monitorSwitch;
 @property (nonatomic, strong) AVAudioPlayer *player;
+
+
+@property (nonatomic, strong) UILabel       *searchWordLabel1;
+@property (nonatomic, strong) UILabel       *searchWordLabel2;
+@property (nonatomic, strong) NSTimer       *timer;
+@property (nonatomic, assign) NSInteger     count;
+
 @end
 
 @implementation ViewController
@@ -27,14 +34,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"root VC";
-    [self.view addSubview:self.button];
-    [self.view addSubview:self.monitorSwitch];
+//    [self.view addSubview:self.button];
+//    [self.view addSubview:self.monitorSwitch];
     
-    BOOL enable = [[JDSHPMUIStuckMonitor sharedMonitor] monitorEnable];
-    [self.monitorSwitch setOn:enable];
-    
-    double time = CFAbsoluteTimeGetCurrent();
-    NSLog(@"time = %f", time);
+//    BOOL enable = [[JDSHPMUIStuckMonitor sharedMonitor] monitorEnable];
+//    [self.monitorSwitch setOn:enable];
+//
+//    double time = CFAbsoluteTimeGetCurrent();
+//    NSLog(@"time = %f", time);
     
 //    _count1 = 10000;
 //    _count2 = 10000;
@@ -56,15 +63,56 @@
     
     
     
-    UIImageView *blurImgv = [[UIImageView alloc]initWithFrame:CGRectMake(50, 500, 150, 150)];
-    blurImgv.image = [UIImage imageNamed:@"redio"];
-    [self.view addSubview:blurImgv];
-    UIBlurEffect *beffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    UIVisualEffectView *view = [[UIVisualEffectView alloc]initWithEffect:beffect];
-    view.frame = blurImgv.frame;
-    [self.view addSubview:view];
+//    UIImageView *blurImgv = [[UIImageView alloc]initWithFrame:CGRectMake(50, 500, 150, 150)];
+//    blurImgv.image = [UIImage imageNamed:@"redio"];
+//    [self.view addSubview:blurImgv];
+//    UIBlurEffect *beffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+//    UIVisualEffectView *view = [[UIVisualEffectView alloc]initWithEffect:beffect];
+//    view.frame = blurImgv.frame;
+//    [self.view addSubview:view];
     
 //    [self playAudio];
+    
+    self.searchWordLabel1.frame = CGRectMake(20, 200, 100 - 20 - 12.5, 40);
+    self.searchWordLabel2.frame = CGRectMake(20, 240, 100 - 20 - 12.5, 40);
+    
+    self.searchWordLabel1.text = @"0";
+    self.searchWordLabel1.backgroundColor = self.searchWordLabel2.backgroundColor = [UIColor grayColor];
+    self.searchWordLabel1.textColor = self.searchWordLabel2.textColor = UIColor.blackColor;
+    
+    [self.view addSubview:self.searchWordLabel1];
+    [self.view addSubview:self.searchWordLabel2];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    _count = 0;
+}
+
+- (void)tick {
+    BOOL labelOnewillLeavel = _searchWordLabel2.frame.origin.y >= 240;
+
+    UILabel *willLeavel = labelOnewillLeavel ? _searchWordLabel1 : _searchWordLabel2;
+    UILabel *willCome   = labelOnewillLeavel ? _searchWordLabel2 : _searchWordLabel1;
+        
+    willCome.alpha = 0;
+    
+    willCome.text = [NSString stringWithFormat:@"%ld", (long)_count++];
+    UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseOut;
+    [UIView animateWithDuration:0.5 delay:0 options:options animations:^{
+        willCome.alpha = 1;
+        willCome.frame = CGRectMake(20, 200, 100 - 20 - 12.5, 40);;
+        
+        willLeavel.alpha = 0;
+        willLeavel.frame = CGRectMake(20, 160, 100 - 20 - 12.5, 40);;
+        
+        
+    } completion:^(BOOL finished) {
+        willCome.alpha = 1;
+        willCome.frame = CGRectMake(20, 200, 100 - 20 - 12.5, 40);
+        
+        willLeavel.alpha = 0;
+        willLeavel.frame = CGRectMake(20, 240, 100 - 20 - 12.5, 40);
+    }];
 }
 
 - (void)playAudio {
@@ -130,9 +178,18 @@
 }
 
 - (void)buttonAction:(UIButton *)button {
+//    for (long idx = 0; idx < 100000000; idx++) {
+////        printf("index = %ld\n", idx);
+//        NSString *string = @"sdfsf";
+//        string = [string stringByAppendingFormat:@"_%ld", idx];
+//    }
+//    
+    
+    
+    
     Class cls1 = NSClassFromString(@"ThreeDViewController");
     Class cls2 = NSClassFromString(@"DemoViewController");
-    UIViewController *demoVC = [[cls1 alloc] init];
+    UIViewController *demoVC = [[cls2 alloc] init];
     demoVC.title = @"0";
     [self.navigationController pushViewController:demoVC animated:YES];
 }
@@ -163,6 +220,29 @@ void func2() {
 
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
     
+}
+
+- (void)viewWillLayoutSubviews {
+    
+}
+
+
+- (UILabel *)searchWordLabel1 {
+    if (!_searchWordLabel1) {
+        _searchWordLabel1 = [[UILabel alloc] init];
+        _searchWordLabel1.userInteractionEnabled = NO;
+        _searchWordLabel1.font = [UIFont systemFontOfSize:13];
+    }
+    return _searchWordLabel1;
+}
+
+- (UILabel *)searchWordLabel2 {
+    if (!_searchWordLabel2) {
+        _searchWordLabel2 = [[UILabel alloc] init];
+        _searchWordLabel2.userInteractionEnabled = NO;
+        _searchWordLabel2.font = [UIFont systemFontOfSize:13];
+    }
+    return _searchWordLabel2;
 }
 
 @end

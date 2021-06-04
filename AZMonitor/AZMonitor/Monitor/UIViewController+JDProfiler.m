@@ -37,7 +37,7 @@
 }
 
 - (void)jd_swizzleViewDidAppear:(BOOL)animated {
-//    [[JDSHPMUIStuckMonitor sharedMonitor] startMonitorForViewController:self];
+    [[JDSHPMUIStuckMonitor sharedMonitor] startMonitorForViewController:self];
 //    [[JDSHGPUFPS sharedInstance] startGPUFPSMonitor:self];
     
     [self jd_swizzleViewDidAppear:animated];
@@ -45,7 +45,7 @@
 
 - (void)jd_swizzleViewWillDisappear:(BOOL)animated {
     [self jd_swizzleViewWillDisappear:animated];
-//    [[JDSHPMUIStuckMonitor sharedMonitor] finishMonitor];
+    [[JDSHPMUIStuckMonitor sharedMonitor] finishMonitor];
 //    [[JDSHGPUFPS sharedInstance] stopGPUFPSMonitor:self];
 //
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

@@ -155,7 +155,7 @@
 static void jdshRunLoop_CFRunLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) {
     JDSHPMUIStuckMonitor *monitor = (__bridge JDSHPMUIStuckMonitor *)info;
     monitor->_runLoopActivity = activity;
-//    printf("JDSHPMUIStuckMonitor ======= activity: %ld\n", activity);
+    printf("JDSHPMUIStuckMonitor ======= activity: %ld\n", activity);
     dispatch_semaphore_t lock = monitor->_lock;
     if (lock != NULL) {
         // RunLoop状态改变

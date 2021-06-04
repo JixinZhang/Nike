@@ -1,0 +1,6 @@
+framework module ZLeaksFinder {
+  umbrella header "ZLeaksFinder.h"
+
+  export *
+  module * { export * }
+}
